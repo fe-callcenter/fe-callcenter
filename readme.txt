@@ -1,1 +1,1 @@
-init project
+add gitignore
