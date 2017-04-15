@@ -669,3 +669,16 @@ html,body{
     background-color: rgb(105,121,215);
     color: white;
 }
+.z_dia_e_span_btn2{
+	display: inline-block;
+	float: left;
+	width: 40px;
+	border: none;
+	height: 28px;
+	border: solid 1px #cccccc;
+	border-left: none;
+	background-color: rgb(105,121,215);
+	color:#ffffff;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+}
