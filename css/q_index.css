@@ -1,0 +1,79 @@
+/*用于首页的CSS样式*/
+.e_container{
+	width: 100%;
+	height: 40px;
+	background-color:#C9CAD3;
+}
+
+.e_container span{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width: 8%;
+	text-align: center;
+	cursor: pointer;
+}
+.e_container span:hover{
+	background-color: #ffffff;
+}
+.e_con_title{
+	width: 100%;
+	height: 75px;
+}
+.e_con_title span{
+	display: inline-block;
+	color: #6876DA;
+	font-size: 18px;
+	line-height: 75px;
+	margin-left: 4.5%;
+}
+.e_content{
+	width: 93%;
+	min-height: 20px;
+	margin-left: 4%;
+	margin-right: 3%;
+}
+.e_content div{
+	height: 200px;
+	width: 22%;
+	float: left;
+	margin-bottom: 50px;
+	margin-right: 3%;
+	cursor: pointer;
+}
+
+.e_content div div{
+	width: 100%;
+	height: 90px;
+	background-color: #F2F3FA;
+	border-bottom:solid 1px #6876DA;
+	margin: 0;
+}
+.e_content div p{
+	display: inline-block;
+	width: 100%;
+	height: 109px;
+	background-color: #ffffff;
+}
+.e_content_div2_span{
+	display:inline-block;
+	width: 100%;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	font-size: 18px;
+	font-weight:100;
+}
+.e_content_div_p_span{
+	display:inline-block;
+	width: 100%;
+	text-align: center;
+	margin-top: 80px;
+}
+.e_content_div_img{
+	display: inline-block;
+	position: absolute;
+	left: 35%;
+	top:60px;
+}
+

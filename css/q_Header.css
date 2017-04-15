@@ -1,0 +1,84 @@
+/*用于头部的自定义文件*/
+.e_header{
+	height: 72px;
+	width: 100%;
+	background-color: #444444;
+}
+.e_header_left{
+	height: 72px;
+	width:13%;
+	background-color: #333333;
+}
+.e_header_left img{
+	display: inline-block;
+	margin:20px 5% 0 5%;
+}
+.e_header_left span{
+	display: inline-block;
+	font-size: 20px;
+	color: #ffffff;
+	height: 72px;
+	line-height: 72px;
+	font-family: "微软雅黑";
+}
+.e_header_middle{
+	height: 72px;
+	width:76%;
+}
+.e_header_right{
+	height: 72px;
+	width:11%;
+	background-color: #333333;
+}
+.e_header_right img{
+	display: inline-block;
+	cursor: pointer;
+}
+.e_header_right_img_1{
+	margin-left: 7%;
+	margin-top: 35px;
+	
+}
+.e_header_right span{
+	display: inline-block;
+	height: 72px;
+	line-height: 72px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #ffffff;
+	margin-left: 4%;
+	cursor: pointer;
+}
+.e_header_right_img_2{
+	margin-left: 5%;
+	margin-top: 26px;
+}
+.e_header_middle ul{
+	height: 72px;
+	margin-left: 15%;
+}
+.e_header_middle ul li{
+	float: left;
+	display: inline-block;
+	width: 9%;
+	height: 100%;
+}
+.e_header_middle ul li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	text-align: center;
+}
+.e_header_middle ul li a:hover{
+	background-color: #6876DA;
+}
+.e_header_middle ul li a img{
+	display: inline-block;
+	margin-top: 13px;
+}
+.e_header_middle ul li a span{
+	display: inline-block;
+	margin-top: 12px;
+	
+}

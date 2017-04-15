@@ -1,0 +1,56 @@
+/*用于重要通知的样式文件*/
+
+.e_notice{
+	width: 100%;
+	min-height: 20px;
+}
+.eN_header{
+	width: 100%;
+	height: 45px;
+	background-color:#cccccc ;
+}
+.eN_header_span1{
+	line-height: 45px;
+	height: 45px;
+	color: #ffffff;
+	margin-left: 1%;
+	font-size: 18px;
+	float: left;
+}
+.eN_header_div1{
+	float: right;
+	width: 15%;
+	height: 45px;
+	display: inline-block;
+	text-align: right;
+}
+.eN_header_div1_span{
+	height: 45px;
+	line-height: 45px;
+	color: #000000;
+	font-weight: 100;
+	font-size: 18px;
+}
+.eN_header_div2{
+	height: 40px;
+	float: left;
+	display: inline-block;
+	line-height:55px;
+	margin-left: 2%;
+}
+.eN_header_div2_inp{
+	display: inline-block;
+	margin-top: 15px;
+}
+.eN_content{
+	width: 96%;
+	margin-top: 20px;
+	margin-left: 2%;
+	margin-right: 2%;
+	
+}
+.eN_content_div1{
+	width: 100%;
+	border-bottom: dashed 1px #cccccc;
+	margin-bottom: 20px;
+}

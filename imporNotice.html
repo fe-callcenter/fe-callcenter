@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>重要通知</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    	<link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
+    	<!--自定义样式文件-->
+    	<link rel="stylesheet" href="css/q_common.css" />
+    	<link rel="stylesheet" href="css/q_imporNotice.css" />
+	</head>
+	<body style="background-color: #EAEBED;">
+		<div class="e_notice">
+			<div class="eN_header">
+				<span class="eN_header_span1">重要通知</span>
+				<div class="eN_header_div1">
+					<span class="eN_header_div1_span">当前城市:</span>
+					<span class="eN_header_div1_span">廊坊</span>
+					<span onclick="digCity()" style="display: inline-block;margin-left: 5%; margin-right: 5%; font-size: 15px; cursor: pointer;">切换</span>
+				</div>
+			</div>
+			<div style="height: 40px; background: none; margin-bottom: 30px;" class="eN_header">
+				<div class="eN_header_div2">
+					 <input class="eN_header_div2_inp" type="checkbox">
+					<span>只显示有效期内通知</span>
+				</div>
+				
+				<div style="float: right; margin-right: 2%; ">
+			    	<img style="display: inline-block;margin-top: 17px; margin-left:5px; cursor: pointer; " src="img/z_wb_search.png" />
+					
+				</div>
+				<div style="float: right; margin-left: 30px; margin-top: 10px; width: 20%; " class="layui-input-block">
+			      <input type="text" name="title" style="width:100%;" lay-verify="title" autocomplete="off" placeholder="请输入要搜索的内容" class="layui-input">
+			    </div>
+				<div style=" margin-top: 10px; width: 10%; float: right;" class="layui-inline">
+				  <input class="layui-input" style="width:100%;" placeholder="按日期搜索" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})">
+				</div>
+				
+				
+			</div>	
+			
+			<div class="eN_content">
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span onclick="detailNotice()" style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div class="eN_content_div1">
+					<p style="height: 25px; line-height: 25px;">
+						<span style="color:#6876DA; cursor: pointer; font-size: 16px; float: left;">廊坊部分小区停气通知</span>
+						<span  style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-primary">置顶</span>
+						<span style="display: inline-block; margin-top: 5px; margin-left: 8px; float: left;" class="label label-danger">无效</span>
+						<span style="display:inline-block; margin-top:2px;color:#6876DA; margin-left:20px; font-size: 14px; float: left;">通知有效期 : <span>2017-03-08 10:00</span> 至 <span>2017-03-09 10:00</span></span>
+						<span style="display: inline-block;float: right;">分类: <span style="display: inline-block;margin-right: 10px;">停气通知</span>创建时间: <span>2017-09-09 23:21</span></span>
+					</p>
+					<p style="height: 25px; line-height: 25px; clear: both;">
+						<span style="color:#6876DA;">石家庄,廊坊市,保定,北京,燕郊</span>
+					</p>
+					<p style="display:inline-block; margin-top:8px; margin-bottom:8px;line-height: 20px;">
+						由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。由于国庆假期期间放假，现对以下小区挺起，停气时间3小时，如有改动，短信通知。
+					</p>
+				</div>
+				<div style="clear: both;  width:100%; ">
+					<nav style=" float: right;" aria-label=''>
+						<span style="display: inline-block; float: left; margin-top: 28px; margin-right: 10px;">共<span>50</span>页</span>
+						<span style="display: inline-block; float: left; margin-top: 28px; margin-right: 10px;">共<span>12345</span>条数据</span>
+						<ul style="float: left;" class='pagination' id='pagination'></ul>
+						<input  style="display: inline-block; text-align: left; width: 40px; height: 33px; float: left; margin-top: 21px; margin-left: 10px;" type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
+						<button style="display: inline-block; float: left; margin-left: 10px; margin-top: 20px;" type="button" class="btn btn-primary">确定</button>
+					</nav>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="modal fade" id="cityChoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="exampleModalLabel">选择城市</h4>
+		      </div>
+		      <div class="modal-body">
+		       		<div class="e_common_SPAN_div">
+		       			<span class="e_common_SPAN_COLOR">H</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">湖州</span>
+		       			</span>
+		       		</div>
+		       		<div class="e_common_SPAN_div">
+		       			<span class="e_common_SPAN_COLOR">L</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">廊坊</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">浏阳</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">连云港</span>
+		       			</span>
+		       		</div>
+		       		
+		       		<div class="e_common_SPAN_div">
+		       			<span class="e_common_SPAN_COLOR">Y</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">廊坊</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">浏阳</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">连云港</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">浏阳</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">连云港</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">浏阳</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">连云港</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">浏阳</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">连云港</span>
+		       			</span>
+		       		</div>
+		       		
+		       		<div class="e_common_SPAN_div">
+		       			<span class="e_common_SPAN_COLOR">R</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">廊坊</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">浏阳</span>
+		       			</span>
+		       			<span class="e_common_SPAN_COLOR_span">
+		       				<input class="e_city_inp" type="checkbox"/>
+		       				<span class="e_city_span">连云港</span>
+		       			</span>
+		       		</div>
+		       		
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary">确定</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.pagination.min.js" ></script>
+	<script src="layui/layui.js"></script>
+	<script type="text/javascript">
+	
+		layui.use(['laydate'], function(){
+	  		var laydate = layui.laydate;
+	  		
+		});
+		
+		$('#pagination').twbsPagination({
+            totalPages: 10000,/*Math.ceil(_total / 10),*/
+            visiblePages: 10,
+            first: '首页',
+            prev: '上一页',
+            next: '下一页',
+            last:"尾页",
+           /* onPageClick: function (event, page) {
+            	$(_this).listgrid(page);
+            }*/
+        });
+
+		$(document).ready(function(){
+			//用于ifarme自适应高度
+			var $hHeight = $('html,body').height();
+			$('#'+localStorage.id,window.parent.document).css('height',$hHeight);
+		});	
+		
+		//跳转详情页面
+		detailNotice = function(){
+			parent.getTab('廊坊部分小区停气通知','imporNoticeDetail.html','890');
+		};
+		//选择城市
+		digCity = function(){
+			$('#cityChoice').modal('show');
+		};
+	</script>
+</html>

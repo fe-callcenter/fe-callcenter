@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>呼叫工作台</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/layui.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
+    <!--自定义CSS样式-->
+    <!--<link rel="stylesheet" type="text/css" href="css/q_common.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="css/q_Header.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="css/q_index.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/z_workbench.css" />
+</head>
+<body style="position: relative; background-color: #EAEBED;">
+
+
+
+
+         <!--第三部分,和代码的部分-->
+         <div class="z_workbench">
+
+             <div class="z_wb_title z_mt10">
+
+                 <span>主叫号码:</span><span>&nbsp;&nbsp;15011546520</span><span style="margin-left: 15px">归属地:</span>
+                 <span>&nbsp;&nbsp;北京市北京市</span><span style="margin-left: 15px">渠道:</span><span>&nbsp;&nbsp;新奥燃气</span>
+                 <span style="margin-left: 15px">列队:</span><span>&nbsp;&nbsp;新_新奥</span>
+             </div>
+
+
+             <!--搜索部分-->
+             <form class="z_wb_search z_mt10 layui-form">
+
+                 <div class="pull-left">
+                     <span>电话</span>
+                     <input class="z_input" style="width: 130px;margin-left: 5px" type="text">
+                 </div>
+
+                 <div class="pull-left" style="margin-left: 25px">
+                     <span>姓名</span>
+                     <input class="z_input" style="width: 97px;margin-left: 5px" type="text">
+                 </div>
+
+                 <div class="pull-left" style="margin-left: 25px;position: relative">
+                     <span>地址</span>
+                     <div class="layui-form-item"> 
+                         <div class="layui-input-inline"> 
+                             <select name="quiz1"> 
+                                 <option value="1">请选择省</option> 
+                                 <option value="2" selected="">浙江省</option> 
+                                 <option value="3">江西省</option> 
+                                 <option value="4">福建省</option> 
+                             </select> 
+                         </div> 
+                         <div class="layui-input-inline" style="left: 155px"> 
+                             <select name="quiz2"> 
+                                 <option value="1">请选小区</option> 
+                                 <option value="2">银鹭小区</option> 
+                                 <option value="3" disabled="">银鹭夏鸥q</option> 
+                                 <option value="4">搜索</option> 
+                                 <option value="5">台州</option> 
+                                 <option value="6">绍兴</option> 
+                             </select> 
+                         </div> 
+                     </div>
+                 </div>
+
+                 <div class="pull-left" style="margin-left: 242px">
+                     <span>小区</span>
+                     <input class="z_address_input" type="text">
+                     <span>栋</span>
+                     <input class="z_address_input" type="text">
+                     <span>单元</span>
+                     <input class="z_address_input" type="text">
+                     <span>室</span>
+                     <span style="margin-left: 20px">合同号</span>
+                     <input class="z_address_input" style="width: 100px" type="text">
+                 </div>
+
+                 <div class="z_wb_searchBox"></div>
+                 <div class="z_wb_refreshBox"></div>
+
+             </form>
+
+
+             <!--内容-->
+             <div class="z_wb_content">
+
+                 <!--左侧内容-->
+                 <div class="z_wb_content_left">
+
+                     <!--人员简介-->
+                     <div class="z_profile">
+                         <span class="z_vipspan">VIP</span>
+                         <img class="z_vipPic" src="img/z_vipPic.png" alt="">
+
+                         <div class="z_line">
+                             <span style="font-size: 16px;margin-top: -2px">张珊珊</span>
+                             <span class="gayColor">&nbsp;女士</span>
+                             <span style="margin-left: 25px">联系电话:</span>
+                             <span class="gayColor">&nbsp;&nbsp;181818181818</span>
+                             <span style="margin-left: 25px">ID号:</span>
+                             <span class="gayColor">&nbsp;&nbsp;181818181818</span>
+                             <img class="z_suotouPic pull-left" src="img/z_suotou.png" alt="">
+                             <div class="z_leibiePic">新奥燃气</div>
+                             <div class="z_leibiePic">户主</div>
+                             <span class="pull-right" style="color: rgb(134,215,245);margin-left: 3px;cursor: default;">添加地址</span>
+                             <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 5px;margin-right: 1px"></span>
+                             <span class="pull-right" style="color: rgb(134,215,245);margin-left: 3px;cursor: default;margin-right: 8px">添加联系人</span>
+                             <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 5px;margin-right: 1px"></span>
+                         </div>
+
+                         <div class="z_line" style="margin-top: 15px">
+                             <span>地址:</span>
+                             <span class="gayColor">&nbsp;&nbsp;湖北省小武士大悟县杭后东路12号东路小区16栋6单元109</span>
+                             <span style="margin-left: 25px">房产合同号:</span>
+                             <span class="gayColor">&nbsp;&nbsp;17979789217982179</span>
+                         </div>
+
+                         <div class="z_lable">
+                             <button>营业厅</button>
+                             <button>卡证</button>
+                             <button>表记</button>
+                             <button>缴费</button>
+                             <button>隐患</button>
+                             <button>设备</button>
+                             <button>保险</button>
+                         </div>
+
+                     </div>
+
+                     <!--问题-->
+                     <div class="z_question">
+
+                         <div class="z_addquestion">
+
+                             <!--左侧-->
+                             <div class="addleft">
+                                 <div class="z_questionNum z_action">问题1</div>
+                                 <div class="z_addquestionNum">+</div>
+                             </div>
+
+
+                             <!--右侧-->
+                             <form class="z_addright layui-form"  action="">
+
+                                 <div>
+                                     <div class="layui-input-inline" style="margin-top: -18px"> 
+                                         <select name="quiz1"> 
+                                             <option value="1">咨询一级分类</option> 
+                                             <option value="2">咨询二级分类</option> 
+                                             <option value="3">咨询三级分类</option> 
+                                             <option value="4">咨询四级分类</option> 
+                                         </select>
+                                     </div>
+
+                                     <div class="layui-input-inline" style="margin-top: -18px;margin-left: 12px"> 
+                                         <select name="quiz2"> 
+                                             <option value="2">咨询二级分类</option> 
+                                             <option value="3">咨询三级分类</option> 
+                                             <option value="4">咨询四级分类</option> 
+                                         </select>
+                                     </div>
+                                 </div>
+
+                                 <div style="margin-top: -3px">
+                                     <div class="layui-input-inline"> 
+                                         <select name="quiz3"> 
+                                             <option value="1">请选择大类</option> 
+                                             <option value="2">一类</option> 
+                                             <option value="3">二类</option> 
+                                             <option value="4">三类</option> 
+                                         </select>
+                                     </div>
+
+                                     <div class="layui-input-inline" style="margin-left: 12px"> 
+                                         <select name="quiz4"> 
+                                             <option value="2">请选择设备</option> 
+                                             <option value="3">1</option> 
+                                             <option value="4">2</option> 
+                                         </select>
+                                     </div>
+
+                                     <div class="layui-input-inline" style="margin-left: 12px"> 
+                                         <select name="quiz5"> 
+                                             <option value="2">请选择品类</option> 
+                                             <option value="3">2</option> 
+                                             <option value="4">4</option> 
+                                         </select>
+                                     </div>
+                                 </div>
+
+                                 <input type="text" class="z_input z_questionInput" placeholder="请输入咨询内容">
+                                 <input  type="text" class="z_input z_questionInput" placeholder="请输入处理方法">
+                                 <div style="margin-top: 20px">
+                                 	<!--第一版本-->
+                                     <!--<div class="pull-left" style="width: 70px;">是否回复:</div>
+                                     <div class=" pull-left z_radio z_radio_check">
+                                         <div></div>
+                                     </div>
+                                     <div class="pull-left">否</div>
+                                     <div class=" pull-left z_radio">
+                                         <div></div>
+                                     </div>
+                                     <div class="pull-left">是</div>-->
+                                     <!--第二版本-->
+                                     <div style="position: relative;" class="z_two_fang">
+									  	<span onclick="userNotice()" class="z_two_fang_span"></span>
+									  	<span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span>
+                                     	<img class="z_two_fang_img_e" src="img/duihao.png" />
+                                     </div>
+
+                                     <input type="button" value="保 存" class="z_saveQuestionBtn">
+
+                                 </div>
+                             </form>
+
+                         </div>
+
+                         <div class="z_questionlb">
+
+                             <button>+ 上门服务</button>
+                             <button>+ 抢修</button>
+                             <button>+ 表扬</button>
+                             <button>+ 投诉</button>
+                             <button>+ 反馈</button>
+                             <button>+ 投诉</button>
+
+                         </div>
+
+                         <p>本次通话已创建</p>
+
+                         <div class="z_huihua">
+                             <span class="gayColor pull-left">16:18</span>
+                             <span class="gayColor pull-left" style="margin-left: 25px">咨询问题:</span>
+                             <span class="gayColor pull-left">&nbsp;&nbsp;燃气-维修</span>
+
+                             <span class="pull-left" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-left: 100px"></span>
+                             <span class="pull-left" style="color: rgb(134,215,245);margin-left: 5px;cursor: default;margin-right: 8px">查看更多</span>
+
+                         </div>
+
+                     </div>
+
+                     <div class="z_peopleDTask">
+
+                         <div class="z_btns">
+                             <button class="greenBColor pull-left">话务历史</button>
+                             <!--<button class="prupleBColor pull-right">按地址</button>-->
+                             <button class="prupleBColor pull-right">按客户ID</button>
+                             <!--<button class="prupleBColor pull-right">按电话</button>-->
+                         </div>
+
+                         <div class="z_peopleIntro">
+
+                             <span class="pull-left">ID号:</span>
+                             <span class="pull-left gayColor">&nbsp;&nbsp;20802898028080802</span>
+                             <span class="pull-left" style="margin-left: 10px">创建时间:</span>
+                             <span class="pull-left gayColor">&nbsp;&nbsp;2018-2-22 12:22</span>
+
+
+                             <button class="pull-left" style="background-image: url('img/z_hwls1.png')">表扬99</button>
+                             <button class="pull-left" style="background-image: url('img/z_huls2.png')">订单9</button>
+                             <button class="pull-left" style="background-image: url('img/z_hwls3.png')">咨询1</button>
+                             <button class="pull-left" style="background-image: url('img/z_hwls4.png')">抢险1</button>
+                             <button class="pull-left" style="background-image: url('img/z_hwls5.png')">流转9</button>
+                             <button class="pull-left" style="background-image: url('img/z_hwls6.png')">建议9</button>
+                             <button class="pull-left" style="background-image: url('img/z_hwls7.png')">反馈1</button>
+                             <button class="pull-left" style="background-image: url('img/z_hwls8.png')">投诉1</button>
+
+                         </div>
+
+
+                         <div class="z_order">
+
+                             <div class="z_order_titleBar">
+                                 <div class="z_order_action pull-left">呼入单据</div>
+                                 <div class="pull-left">上门服务</div>
+                             </div>
+
+                             <div class="z_order_content">
+
+                                 <div class="z_order_content_box">
+
+                                     <div class="z_content_box_leftPicXUN">询</div>
+
+                                     <div >
+                                         <span>咨询单编号:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
+                                         <span style="margin-left: 25px">分类:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;维护-灶具</span>
+                                         <span style="margin-left: 25px">业务分类:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;燃气-维护-灶具</span>
+                                         <span style="margin-left: 25px">创建时间:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
+                                     </div>
+
+                                     <div style="margin-top: 18px">
+                                         <span>姓名:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;张珊珊</span>
+                                         <span class="gayColor">&nbsp;(女士)</span>
+                                         <span style="margin-left: 80px">地址:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;湖北省孝感市大悟县皇后东路12号银鹭小区2栋6单元109</span>
+                                     </div>
+
+                                     <div class="z_content_box_question">
+
+                                         <div class="gayColor">
+                                             <span>咨询问题:</span>
+                                             <span style="margin-left: 17px">灶具坏了,不通气了,怎么修?</span>
+                                         </div>
+                                         <div class="gayColor">
+                                             <span>处理方法:</span>
+                                             <span style="margin-left: 17px">以告知维修方法,以维修!</span>
+                                         </div>
+                                     </div>
+
+                                     <img src="img/z_zjt.png" alt="">
+                                     
+                                 </div>
+
+                                 <div class="z_order_content_box">
+
+                                     <div class="z_content_box_leftPicBIAO">表</div>
+
+                                     <div >
+                                         <span>咨询单编号:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
+                                         <span style="margin-left: 25px">分类:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;维护-灶具</span>
+                                         <span style="margin-left: 25px">业务分类:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;燃气-维护-灶具</span>
+                                         <span style="margin-left: 25px">创建时间:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
+                                     </div>
+
+                                     <div style="margin-top: 18px">
+                                         <span>姓名:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;张珊珊</span>
+                                         <span class="gayColor">&nbsp;(女士)</span>
+                                         <span style="margin-left: 80px">地址:</span>
+                                         <span class="gayColor">&nbsp;&nbsp;湖北省孝感市大悟县皇后东路12号银鹭小区2栋6单元109</span>
+                                     </div>
+
+                                     <div class="z_content_box_question">
+
+                                         <div class="gayColor">
+                                             <span>咨询问题:</span>
+                                             <span style="margin-left: 17px">建议上门时间可以早点</span>
+                                         </div>
+                                     </div>
+
+                                     <img src="img/z_zjt.png" alt="">
+
+                                 </div>
+
+                             </div>
+                         </div>
+
+
+                     </div>
+
+                 </div>
+
+
+                 <!--右侧广告-->
+                 <div class="z_wb_content_right">
+
+                     <!--便签-->
+                     <div class="z_bianqian">
+                         <span style="font-size: 16px">便签</span>
+                         <span class="pull-right z_openBQ z_openBQT" style="color: rgb(134,215,245);margin-left: 3px;cursor: default">展开</span>
+                         <span class="pull-right z_openBQ" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 12px;font-size: 15px"></span>
+
+
+                         <textarea name="MSG" cols=40 rows=3 placeholder="请输入便签!"></textarea>
+
+                     </div>
+
+                     <!--重要通知-->
+                     <div class="z_zytz">
+
+                         <div class="z_line">
+
+                             <span class="pull-left" style="background-image: url('img/z_laba.png');width: 21px;height: 20px;"></span>
+                             <span class="pull-left" style="font-size: 16px;margin-left: 5px">重要通知</span>
+                             <span class="pull-right" style="font-size: 15px">廊坊</span>
+                         </div>
+                         <div style="height: 100px; overflow: hidden;"  class="z_line">
+                         	<p style="display: block;"  class="z_line_e_p_hide">
+                         		
+                             廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!廊坊部分小区听其中重要通知!
+                         		
+                         	</p>
+							<p class="z_line_e_p_hide">
+								if的和覅hi爱搜覅外覅我房间卡萨附件三姐夫我饿风纪委房间卡萨了非叫我佛网
+                         	</p>
+                         	
+                         	<p  class="z_line_e_p_hide">
+
+                         		蝴蝶结凤凰卡机丰盛的开发度搜佛菩萨的佛大风刀霜剑非打死哦偶皮婆婆
+                         	</p>
+                         	<p class="z_line_e_p_hide">
+								和iiahdiojidojaid和呼吸大家手机端的骄傲死哦打算单位ioedjiw
+                         	</p>
+                         	<p class="z_line_e_p_hide">
+								档次哦为单位纪检委多陪我家的地位快带我判断为记得忘记下午继续还叫我将宠物貂会
+                         	</p>
+                         </div>
+                         <div class="z_line">
+                             <span style="color: rgb(144,144,144);font-size: 12px">2017-1-1 12:22</span>
+                             <span class="pull-right" style="color: rgb(134,215,245);margin-left: 3px;cursor: default;">查看更多</span>
+                             <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 5px;"></span>
+                         </div>
+
+                     </div>
+
+                     <!--优惠活动-->
+                     <div class="z_yhhd">
+
+                         <div class="z_line">
+
+                             <span class="pull-left" style="background-image: url('img/z_yhhd.png');width: 21px;height: 20px;"></span>
+                             <span class="pull-left" style="font-size: 16px;margin-left: 5px">优惠活动</span>
+                             <span class="pull-right z_openyhhd" style="color: rgb(134,215,245);margin-left: 3px;cursor: default;">展开</span>
+                             <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 5px;"></span>
+                         </div>
+                         <div class="z_line z_yhhd_line">
+                             <div><span>水盆下水疏通</span><span> (次)</span></div>
+                             <div class="z_mt10"><span>活动时间:</span><span>&nbsp;&nbsp;2018-1-1 12:22</span></div>
+                             <div class="z_mt10"><span>原价:</span><span>100元</span><span style="margin-left: 5px">APP优惠价:</span><span style="color: rgb(253,109,100);">80元</span><span style="margin-left: 5px">CRM优惠价:</span><span style="color: rgb(253,109,100);">80元</span></div>
+                         </div>
+                         <div class="z_line z_yhhd_line">
+                             <div><span>水盆下水疏通</span><span> (次)</span></div>
+                             <div class="z_mt10"><span>活动时间:</span><span>&nbsp;&nbsp;2018-1-1 12:22</span></div>
+                             <div class="z_mt10"><span>原价:</span><span>100元</span><span style="margin-left: 5px">APP优惠价:</span><span style="color: rgb(253,109,100);">80</span><span style="margin-left: 5px">CRM优惠价:</span><span style="color: rgb(253,109,100);">80元</span></div>
+                         </div>
+                         <div class="z_line z_yhhd_line">
+                             <div><span>水盆下水疏通</span><span> (次)</span></div>
+                             <div class="z_mt10"><span>活动时间:</span><span>&nbsp;&nbsp;2018-1-1 12:22</span></div>
+                             <div class="z_mt10"><span>原价:</span><span>100元</span><span style="margin-left: 5px">APP优惠价:</span><span style="color: rgb(253,109,100);">80</span><span style="margin-left: 5px">CRM优惠价:</span><span style="color: rgb(253,109,100);">80元</span></div>
+                         </div>
+                         <div class="z_line z_yhhd_bottom">
+                             <p>*以上报价为维修人工费, 不包含材料配件费</p>
+                             <nav aria-label=''>
+                                 <ul  class='pagination' id='pagination'></ul>
+                             </nav>
+                         </div>
+
+                     </div>
+
+
+                     <!--提示话术-->
+                     <div class="z_tshs">
+
+                         <div class="z_tshs_title">提示话术</div>
+                         <span class="z_tshs_content" style="color: rgb(143,154,225);margin-top: 20px">我们预约是师傅为您上门服务,大概半个小时后达到,请等候啊!</span>
+                         <span class="z_tshs_content" style="color: rgb(144,144,144)">请问您的小区叫什么?,请问您的小区叫什么?</span>
+                         <span class="z_tshs_content" style="color: rgb(144,144,144)">亲爱的用户您好,请问您的小区叫什么?</span>
+                     </div>
+
+
+                     <!--注意点-->
+                     <div class="z_zyd">
+                         <div class="z_zyd_title">注意点</div>
+
+                         <span style="display: block;margin-top: 18px;color: rgb(143,154,225);line-height: 16px">流星花园小区不支持安装</span>
+
+                         <!--图片-->
+                         <div class="z_pic"></div>
+
+                     </div>
+
+
+                 </div>
+
+
+
+             </div>
+
+         </div>
+
+		<div class="modal fade" id="userNotice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="exampleModalLabel">用户回复设置</h4>
+		      </div>
+		      <div style="height: 300px;" class="modal-body">
+		       		<div class="z_modl_dial">
+		       			<span style="float: left; text-align: right; line-height: 40px;">回复时间</span>
+				  		<input style="width: 300px; margin-left: 10px; float: left;" placeholder="请选择时间" class="layui-input" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm'})">
+		       		</div>
+		       		
+		       		<div class="z_modl_dial">
+		       			<span style="float: left; margin-left: 14px; text-align: right; line-height: 40px;">联系人</span>
+						<input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
+		       		</div>
+		       		
+		       		<div class="z_modl_dial">
+		       			<span style="float: left;  text-align: right; line-height: 40px;">联系电话</span>
+						<input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
+		       		</div>
+		       		
+		       		<div class="z_modl_dial">
+		       			<span style="float: left;  text-align: right; line-height: 40px;">回复内容</span>
+		       			<textarea  style="width: 300px; resize:none; margin-top: 12px; margin-left: 10px; float: left;" class="layui-textarea"></textarea>
+
+		       		</div>
+		      </div>
+		      <div class="modal-footer">
+		      	<button onclick="btnNO()" type="button" class="btn btn-default">取消</button>
+		        <button onclick="btnOK()" type="button" class="btn btn-primary">确定</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+</body>
+
+	 <script src="layui/layui.js" type="text/javascript"></script>
+     <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+     <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+     <script src="js/jquery.pagination.min.js" type="text/javascript"></script>
+     <script>
+         $(function(){
+			//用于重要通知内容的滚动显示
+			var $pScroll = $('.z_line_e_p_hide').length;
+			var numP = 1;
+			setInterval(function(){
+				$('.z_line_e_p_hide').hide();
+				$('.z_line_e_p_hide').eq(numP).fadeIn('100');
+				numP++;
+				if(numP>=$pScroll){
+					numP = 0;
+				}
+			},3000);
+
+
+
+             $('#pagination').twbsPagination({
+                 totalPages: 10000,/*Math.ceil(_total / 10),*/
+                 visiblePages: 5,
+                 first: '首页',
+                 prev: '上一页',
+                 next: '下一页',
+                 last:"尾页",
+                 /* onPageClick: function (event, page) {
+                  $(_this).listgrid(page);
+                  }*/
+             });
+
+            /*$('.z_radio').click(function () {
+                //单选框的点击
+                $(this).addClass('z_radio_check').siblings().removeClass('z_radio_check');
+
+            });*/
+           //用户回复设置
+           userNotice = function(){
+           		$('.z_two_fang_img_e').hide();
+           		$('#userNotice').modal('show');
+           };
+		   //用户确定回复信息
+		   btnOK = function(){
+		   		$('.z_two_fang_img_e').show();
+		   		
+		   		//隐藏弹出框
+		   		$('#userNotice').modal('hide');
+		   };
+		   //用户取消回复信息
+		   btnNO = function(){
+		   		$('.z_two_fang_img_e').hide();
+		   		
+		   		//隐藏弹出框
+		   		$('#userNotice').modal('hide');
+		   };
+             //展开收回优惠活动
+             $('.z_openyhhd').on('click', function () {
+                 if($('.z_yhhd').css('height')=='40px'){
+                     $('.z_yhhd').css('height','476px');
+                     $('.z_openyhhd').html('收回');
+                 }else {
+                     $('.z_yhhd').css('height','40px');
+                     $('.z_openyhhd').html('展开');
+                 }
+             });
+
+             //展开和收回便签
+             $('.z_openBQ').click(function () {
+
+                 if($('.z_bianqian').css('height')=='35px'){
+                     $('.z_bianqian').css('height','120px');
+                     $('.z_openBQT').html('收回');
+                 }else {
+                     $('.z_bianqian').css('height','35px');
+                     $('.z_openBQT').html('展开');
+                 }
+
+             });
+
+//             //点击添加问题的+
+             var num = 1;
+             $('.z_addquestionNum').on('click',function () {
+
+                 num = num + 1;
+
+                 $(".z_questionNum").removeClass('z_action');
+                 $(this).before("<div class='z_questionNum z_action'>问题"+num+"</div>");
+
+//                 $('.z_addright').css('display','none');
+//                 $('.z_addquestion').append("<form class='z_addright layui-form' > <div> <div class='layui-input-inline' style='margin-top: -18px'> <select name='quiz1'> <option value='1'>咨询一级分类</option> <option value='2'>咨询二级分类</option> <option value='3'>咨询三级分类</option> <option value='4'>咨询四级分类</option> </select> </div> <div class='layui-input-inline' style='margin-top: -18px;margin-left: 12px'> <select name='quiz2'> <option value='2'>咨询二级分类</option> <option value='3'>咨询三级分类</option></select> </div> </div> <div style='margin-top: -3px'> <div class='layui-input-inline'> <select name='quiz3'> <option value='1'>请选择大类</option> <option value='2'>一类</option> </select> </div> <div class='layui-input-inline' style='margin-left: 12px'> <select name='quiz4'> <option value='2'>请选择设备</option> <option value='3'>1</option> <option value='4'>2</option> </select> </div> <div class='layui-input-inline' style='margin-left: 12px'> <select name='quiz5'> <option value='2'>请选择品类</option>  </select> </div> </div> <input type='text' class='z_input z_questionInput' placeholder='请输入咨询内容'> <input type='text' class='z_input z_questionInput' placeholder='请输入处理方法'> <div style='margin-top: 20px'> <div class='pull-left' style='width: 70px;'>是否回复:</div> <div class='pull-left z_radio z_radio_check'> <div></div> </div> <div class='pull-left'>否</div> <div class='pull-left z_radio'> <div></div> </div> <div class='pull-left'>是</div> <input type='button' value='保 存' class='z_saveQuestionBtn'> </div> </form>");
+                 //$('.z_addquestion').append('<form class="z_addright layui-form" > <div> <div class="layui-input-inline" style="margin-top: -18px"> <select name="quiz1"> <option value="1">咨询一级分类</option> <option value="2">咨询二级分类</option> <option value="3">咨询三级分类</option> <option value="4">咨询四级分类</option> </select> </div> <div class="layui-input-inline" style="margin-top: -18px;margin-left: 12px"> <select name="quiz2"> <option value="2">咨询二级分类</option> <option value="3">咨询三级分类</option></select> </div> </div> <div style="margin-top: -3px"> <div class="layui-input-inline"> <select name="quiz3"> <option value="1">请选择大类</option> <option value="2">一类</option> </select> </div> <div class="layui-input-inline" style="margin-left: 12px"> <select name="quiz4"> <option value="2">请选择设备</option> <option value="3">1</option> <option value="4">2</option> </select> </div> <div class="layui-input-inline" style="margin-left: 12px"> <select name="quiz5"> <option value="2">请选择品类</option>  </select> </div> </div> <input type="text" class="z_input z_questionInput" placeholder="请输入咨询内容"> <input type="text" class="z_input z_questionInput" placeholder="请输入处理方法"> <div style="margin-top: 20px"> <div class="pull-left" style="width: 70px;">是否回复:</div> <div class="pull-left z_radio z_radio_check"> <div></div> </div> <div class="pull-left">否</div> <div class="pull-left z_radio"> <div></div> </div> <div class="pull-left">是</div> <input type="button" value="保 存" class="z_saveQuestionBtn"> </div> </form>');
+
+             });
+
+             //点击问题
+             $('body').on('click','.z_questionNum',function(){
+                 $(this).addClass('z_action').siblings('.z_questionNum').removeClass('z_action');
+             });
+
+             //问题的保存按钮点击
+             $('.z_saveQuestionBtn').on('click', function () {
+
+                 $('.z_addquestion').append('<div style="position: absolute;background-color: red;width: 4px;height: 4px;border-radius: 50%;left: 70px;z-index: 889;" class="z_questionRedPic'+$('.z_action').index()+'"></div>');
+
+                 var top = 15 + $('.z_action').index() * 40;
+
+                 $('.z_questionRedPic'+$('.z_action').index()+'').css('top',top+'px');
+             })
+
+         });
+
+
+         layui.use(['form', 'layedit', 'laydate'], function(){
+             var form = layui.form()
+                     ,layer = layui.layer
+                     ,layedit = layui.layedit
+                     ,laydate = layui.laydate;
+
+         });
+
+     </script>
+</html>

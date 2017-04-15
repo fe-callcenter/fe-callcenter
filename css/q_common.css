@@ -1,0 +1,44 @@
+/*公共Css样式*/
+html,body{
+	font-family: "微软雅黑";
+}
+.e_main{
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	min-width: 1280px;
+}
+.e_fontStyle{
+	font-size: 14px;
+	color: #ffffff;
+}
+.e_cb{
+	float: left;
+}
+.e_common_SPAN_COLOR{
+	display: inline-block;
+	margin-right: 5px;
+	color:#2E6DA4;
+	float: left;
+}
+.e_city_inp{
+	display: inline-block;
+	float: left;
+}
+.e_city_span{
+	display: inline-block;
+	float: left;
+}
+
+.e_common_SPAN_div{
+	display:inline-block ;
+	margin-bottom: 8px;
+	margin-left: 20px;
+}
+.e_common_SPAN_COLOR_span{
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+}
+
+

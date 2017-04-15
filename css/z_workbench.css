@@ -1,0 +1,650 @@
+
+.z_workbench {
+    width: 100%;
+    min-height: 40px;
+    font-size: 14px;
+    min-width: 1280px;
+    color: #333;
+}
+
+.gayColor {
+    color: rgb(144,144,144);
+}
+
+.z_mt10 {
+    margin-top: 10px;
+}
+
+.z_radio {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid #EAEBED;
+    background-color: white;
+    margin-left: 30px;
+    margin-right: 10px;
+
+}
+
+.z_radio div {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.z_radio_check {
+
+    background-color: #1E9FFF;
+
+}
+
+.z_input {
+    border: 1px solid #EAEBED;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.z_wb_title,.z_wb_search {
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+}
+
+.z_wb_search input {
+    text-align: center;
+    height: 28px;
+}
+
+.z_wb_search .layui-form-item {
+    height:28px;
+
+    margin-bottom: 0;
+}
+
+.z_wb_search .layui-input-inline {
+    height: 28px;
+    width: 107px;
+    position: absolute;
+    top: -34px;
+    left: 40px;
+}
+
+.z_address_input {
+    width: 36px;
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #EAEBED;
+}
+
+.z_wb_searchBox,.z_wb_refreshBox{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: 10px;
+}
+.z_wb_searchBox {
+    background-image: url("../img/z_wb_search.png");
+    margin-right: 10px;
+}
+
+.z_wb_refreshBox {
+    background-image: url("../img/z_wb_refresh.png");
+    margin-right: 25px;
+}
+
+/*
+*  内容
+*/
+.z_wb_content {
+
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    min-height: 30px;
+    position: relative;
+
+}
+
+
+/*
+*  内容 -----右侧
+*/
+.z_wb_content_right {
+    width: 350px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /*background-color: #01AAED;*/
+    min-height: 300px;
+
+}
+
+.z_wb_content_right .z_bianqian {
+    height: 35px;
+    line-height: 35px;
+    background-color: white;
+    padding: 0 10px;
+    overflow: hidden;
+
+}
+.z_wb_content_right .z_bianqian textarea {
+    width:100%;
+    height: 60px;
+    margin-top: 10px;
+    line-height: 18px;
+    resize:none;
+    text-indent: 10px;
+    padding-top: 5px;
+}
+.z_wb_content_right .z_zytz,.z_wb_content_right .z_yhhd {
+    min-height: 40px;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.z_wb_content_right .z_zytz .z_line ,.z_wb_content_right .z_yhhd .z_line{
+    min-height: 20px;
+    line-height: 18px;
+}
+
+.z_wb_content_right .z_zytz .z_line:nth-of-type(1),.z_wb_content_right .z_yhhd .z_line:nth-of-type(1) {
+    border-bottom: 1px solid #EAEBED;
+    height: 30px;
+    line-height: 23px;
+}
+
+.z_wb_content_right .z_zytz .z_line:nth-of-type(2),.z_wb_content_right .z_yhhd .z_line:nth-of-type(2),.z_yhhd_line {
+    padding: 10px 0;
+    margin-top: 4px;
+    font-size: 12px;
+    color: rgb(144,144,144);
+}
+.z_wb_content_right .z_yhhd {
+    height: 40px;
+    overflow: hidden;
+}
+
+.z_yhhd_line {
+    border-bottom: 1px solid rgb(247,247,247);
+}
+.z_yhhd_bottom {
+    padding-top: 10px;
+}
+
+.z_yhhd_bottom >p {
+    color: rgb(253,109,100);
+    font-size: 12px;
+
+}
+.z_yhhd_bottom .pagination {
+    margin-bottom: 0;
+}
+
+.z_wb_content_right .z_tshs {
+    min-height: 180px;
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.z_wb_content_right .z_tshs .z_tshs_title {
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    border-bottom: 1px solid #EAEBED;
+}
+
+.z_wb_content_right .z_tshs .z_tshs_content {
+    margin-top: 18px;
+    display: block;
+    line-height: 16px;
+}
+
+.z_wb_content_right .z_zyd {
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+}
+
+.z_wb_content_right .z_zyd .z_zyd_title {
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    border-bottom: 1px solid #EAEBED;
+}
+
+.z_wb_content_right .z_zyd .z_pic {
+    margin-top: 7px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 120px;
+    background: url("../img/z_pic.JPG") center center;
+}
+
+.z_wb_content_right .z_zyd .z_zyd_content {
+    display: block;
+    margin-top: 7px;
+    line-height: 16px;
+    color: rgb(144,144,144);
+}
+.z_wb_content_right .z_zyd button {
+    width: 120px;
+    height: 30px;
+    background-color: rgb(81,202,132);
+    margin-top: 35px;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+/*
+*  内容 -----左侧
+*/
+.z_wb_content_left {
+    width: 100%;
+    padding-right: 366px;
+    min-height: 300px;
+
+}
+
+.z_wb_content_left .z_profile {
+    min-height: 136px;
+    background-color: white;
+    width: 100%;
+    padding: 20px 20px 10px 20px;
+    position: relative;
+}
+
+.z_profile .z_vipPic {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.z_profile .z_vipspan {
+    color: white;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 888;
+}
+.z_profile .z_line {
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+    z-index: 888;
+}
+
+.z_profile .z_suotouPic {
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+    margin-top: -2px;
+}
+
+.z_profile span {
+    float: left;
+}
+
+.z_profile .z_leibiePic {
+    width: 68px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    background-image: url("../img/z_leibiePic.png");
+    float: left;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.z_profile .z_lable {
+
+    height: 22px;
+    margin-top: 20px;
+
+}
+
+.z_profile .z_lable button {
+    float: left;
+    margin-right: 10px;
+    border: 1px solid rgb(81,202,132);
+    color: rgb(81,202,132);
+    text-align: center;
+    width: 70px;
+    height: 20px;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;
+    /*line-height: 20px;*/
+
+}
+
+.z_wb_content_left .z_question {
+
+    width: 100%;
+    min-height: 390px;
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.z_question .z_addquestion{
+
+    width: 100%;
+    height: 252px;
+    border: 1px solid rgb(247,247,247);
+    position: relative;
+
+}
+
+.z_addquestion .z_questionRedPic {
+
+    position: absolute;
+    background-color: red;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    left: 70px;
+    z-index: 889;
+}
+
+.z_addquestion .addleft {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 98px;
+    border: 1px solid #EAEBED;
+    height: 100%;
+    background-color: rgb(242,242,242);
+}
+
+.z_addquestion .z_questionNum,.z_addquestion .z_addquestionNum{
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.z_action {
+    background-color: white;
+    width: 99px!important;
+}
+
+.z_addquestion .z_addright {
+    width: 100%;
+    height: 100%;
+    padding: 18px 8px 10px 110px;
+
+}
+
+.z_addquestion .z_addright .z_saveQuestionBtn {
+    width: 120px;
+    height: 30px;
+    float: right;
+    background: rgb(105,121,215);
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: -7px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+}
+
+.z_addquestion .z_addright .layui-input-inline {
+    width: 31.5%;
+}
+
+.z_addquestion .z_questionInput {
+    width: 99%;
+    height: 28px;
+    margin-top: 15px;
+
+}
+
+.z_addquestion .z_addright .layui-form-label {
+    padding: 0;
+    margin-top: 10px;
+    width: 56px;
+
+}
+
+.z_question .z_questionlb {
+    margin-top: 20px;
+}
+
+
+.z_questionlb button {
+    width: 105px;
+    height: 26px;
+    color: rgb(105,121,215);
+    margin-left: 10px;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(105,121,215);
+}
+
+.z_question p {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.z_question .z_huihua {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.z_wb_content_left .z_peopleDTask {
+    /*min-height: 440px;*/
+    padding: 20px 10px 10px 10px;
+    background-color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.z_peopleDTask .z_btns {
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+}
+
+.z_peopleDTask .z_btns > button {
+    width: 102px;
+    height: 24px;
+    /*border: 0;*/
+    outline: none;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.greenBColor {
+    border: 1px solid rgb(81,202,132);
+    color: rgb(81,202,132);
+}
+
+.prupleBColor {
+    border: 1px solid rgb(183,134,218);
+    color: rgb(183,134,218);
+    margin-left: 10px;
+}
+
+.z_peopleDTask .z_peopleIntro {
+    height: 20px;
+    width: 100%;
+    line-height: 20px;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.z_peopleDTask .z_peopleIntro > button {
+    outline: none;
+    border: 0;
+    height: 20px;
+    width: 50px;
+    margin-left: 10px;
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+    background-color: transparent;
+    font-size: 12px;
+
+}
+
+.z_peopleDTask .z_order{
+
+    margin-top: 10px;
+    /*min-height: 350px;*/
+    width: 100%;
+    border: 1px solid rgb(247,247,247);
+}
+
+.z_order .z_order_titleBar {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #EAEBED;
+    background-color: rgb(242,242,242);
+
+}
+.z_order .z_order_titleBar div {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.z_order_action {
+    background-color: white;
+    height: 41px!important;
+}
+
+.z_order .z_order_content {
+    width: 100%;
+    /*min-height: 310px;*/
+}
+
+.z_order .z_order_content .z_order_content_box {
+
+    min-height: 128px;
+    width: 100%;
+    border-bottom: 1px solid rgb(247,247,247);
+    padding: 20px 96px 20px 44px;
+    position: relative;
+}
+
+.z_order .z_order_content .z_order_content_box img {
+
+    width: 15px;
+    height: 28px;
+    position: absolute;
+    right: 28px;
+    top: 70px;
+}
+
+
+.z_order .z_order_content .z_order_content_box .z_content_box_leftPicXUN {
+
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(140,209,207);
+    color: white;
+    position: absolute;
+    top:20px;
+    left: 12px;
+    font-size: 12px;
+
+}
+
+.z_order .z_order_content .z_order_content_box .z_content_box_leftPicBIAO {
+
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(253,109,100);
+    color: white;
+    position: absolute;
+    top:20px;
+    left: 12px;
+    font-size: 12px;
+
+}
+
+.z_order .z_order_content .z_order_content_box .z_content_box_question {
+    min-height: 38px;
+    border: 1px solid #EAEBED;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    margin-top: 17px;
+}
+
+.z_order .z_order_content .z_order_content_box .z_content_box_question div {
+    margin-top: 10px;
+}
+.z_line_e_p_hide{
+	display: none;
+}
+
+.z_two_fang_span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border:solid 1px #333333;
+	margin-left: 5px;
+	cursor: pointer;
+	float: left;
+	position: absolute;
+	z-index: 100;
+	
+}
+
+.z_two_fang_span2{
+	display: inline-block;
+	float:left ;
+	margin-top: -2px;
+	margin-left: 25px;
+}
+.z_modl_dial{
+	display: inline-block;
+	width: 80%;
+	height: 30px;
+	margin-left: 15%;
+	margin-bottom: 20px;
+	
+}
+.z_two_fang_img_e{
+	position: absolute;
+	left: 7px;
+	top:2px;
+	z-index: 80;
+	display: none;
+}

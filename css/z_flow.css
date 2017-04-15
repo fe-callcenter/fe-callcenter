@@ -1,0 +1,60 @@
+.z_flow_gldj {
+    width: 100%;
+    /*min-height: 300px;*/
+    background-color: white;
+    padding: 15px 12px 0 12px;
+}
+
+.z_gldj_list {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+
+}
+
+
+.z_flow_gldj {
+    position: relative;
+}
+
+.layui-form {
+    margin-top: 0;
+}
+
+.z_flow_gldj .layui-form-item {
+    height:28px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.z_flow_gldj .layui-input-inline {
+    height: 28px;
+    width: 120px;
+    position: absolute;
+    top: -20px;
+    left: 95px;
+}
+
+.z_flow_gldj .layui-input {
+    height: 28px;
+}
+
+.z_flow_input {
+    width: 260px;
+    height: 28px;
+    margin-left: 6px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #EAEBED;
+    position: absolute;
+    top: 20px;
+    left: 230px;
+}
+
+.z_gldj_detail {
+    width: 100%;
+    min-height: 20px;
+    padding: 15px 10px 15px 10px;
+    border: 1px dashed rgb(229,229,229);
+    margin-top: 10px;
+}
