@@ -1,0 +1,32 @@
+
+
+.btnTypes {
+    width:100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.UserInfo {
+    padding: 15px 10px;
+    border: 1px solid #EAEBED;
+}
+
+.UserInfoD {
+    padding: 0 10px;
+    border: 1px solid #EAEBED;
+}
+.UserInfoD >div {
+    padding: 15px 0;
+    border-bottom: 1px dashed #EAEBED;
+}
+
+.pageCount {
+    margin-top: 30px;
+    margin-right: 20px;
+    color: rgb(144,144,144);
+    float: right;
+}
+
+.z_show {
+    display: block;
+}

@@ -1,0 +1,135 @@
+.vit_main{
+	width: 98%;
+	height: 30px;
+	margin-left: 1%;
+	
+}
+.vit_main_header_span{
+	display: inline-block;
+	width: 98%;
+	height: 40px; 
+	line-height: 40px;  
+	padding: 0 1%; 
+	border-bottom: solid 1px #e0e0e0;
+	background-color: #ffffff;
+	color:#333333;
+	font-size: 16px;
+}
+.vit_main_header_span2{
+	width: 98%;
+	height: 35px; 
+	line-height: 35px;  
+	padding: 0 1%; 
+	background-color: #ffffff;
+}
+.vit_main_header_span2 span{
+	color:#666666;
+}
+.vit_main_table{
+	width: 98%;
+	margin-bottom: 8px;
+}
+.vit_main_table_left{
+	width: 50%;
+	float: left;
+	height: 100%;
+	min-height: 30px;
+}
+.vit_main_table_right{
+	width: 50%;
+	float: left;
+	height: 100%;
+	min-height: 30px;
+}
+.vit_main_table table th{
+	text-align: center;
+}
+.vit_main_table table{
+	text-align: center;
+}
+.vit_content{
+	clear: left;
+	width: 98%;
+	
+}
+.vit_content_left{
+	width: 60%;
+	min-height: 30px;
+	background-color: #ffffff;
+	margin-top: 8px;
+	float: left;
+}
+.vit_content_left_span{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin-top: 12px;
+	font-size: 20px;
+	color:#6876DA;
+	font-weight: 300;
+	margin-bottom: 12px;
+}
+.vit_content_left_title{
+	width: 98%;
+	margin-left:1%;
+	border-bottom: dashed 1px #cccccc;
+	margin-bottom: 8px;
+}
+.vit_content_left_title_span{
+	display: inline-block;
+	font-size: 14px;
+	color: #000000;
+}
+.vit_content_left_title_span2{
+	display: inline-block;
+	text-indent: 28px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+.vit_content_left_title_p{
+	display: inline-block;
+	margin-top: 8px;
+	text-indent: 24px;
+	color:#000000;
+	margin-bottom: 8px;
+}
+.vit_content_left_title_p span{
+	color: #cccccc;
+}
+.vit_lable_inp{
+	display: inline-block;
+	border: none;
+	border-bottom: solid 1px #cccccc;
+	width: 200px;
+}
+.vit_content_right{
+	float: left;
+	margin-left: 1%;
+	width: 39%;
+	min-height: 30px;
+	background-color: #ffffff;
+	margin-top: 8px;
+}
+.vit_right_form_info{
+	width: 96%;
+	margin-left: 12px;
+	margin-top: 8px;
+}
+.vit_content_right_btn{
+	width: 95%;
+	margin-left: 12px;
+}
+.vit_content_right_btn button{
+	display: inline-block;
+	border:none;
+	background-color: #ffffff;
+	width: 102px;
+	height: 24px;
+	line-height: 24px;
+	color: #6876DA;
+	border: solid 1px #6876DA;
+	border-radius: 3px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	margin-left: 12px;
+}
