@@ -2,6 +2,9 @@
 html,body{
     font-family: "微软雅黑";
 }
+.z_fs16 {
+    font-size: 16px;
+}
 .marginT10 {
     margin-top: 10px;
 }
@@ -24,6 +27,20 @@ html,body{
 
 .gayColor {
     color: rgb(144,144,144);
+}
+.zColor {
+    color: rgb(105,121,215);
+}
+
+.redColor {
+    color: rgb(253,109,100);
+}
+
+.z_pointer {
+    cursor: pointer;
+}
+.z_lineH20{
+    line-height: 20px;
 }
 
 /*单选框*/
@@ -51,6 +68,15 @@ html,body{
 
     background-color: #1E9FFF;
 
+}
+
+.z_w100textarea {
+    width:100%;
+    height: 60px;
+    line-height: 18px;
+    resize:none;
+    text-indent: 10px;
+    border: 1px solid #EAEBED;
 }
 
 .z_main{
@@ -362,6 +388,7 @@ html,body{
     color: white;
     text-align: center;
     background-image: url("../img/z_leibiePic.png");
+    //background: center center;
     float: left;
     margin-left: 10px;
     font-size: 12px;
@@ -656,7 +683,7 @@ html,body{
 
      width: 80px;
      height: 24px;
-     line-height: 24px;
+     line-height: 23px;
      outline:none;
      border: 1px solid rgb(105,121,215);
      background-color: transparent;

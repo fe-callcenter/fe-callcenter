@@ -67,6 +67,10 @@
 }
 .e_code_p img{
 	display: inline-block;
-	margin-top: -6px;
+	margin-top: -8px;
 	margin-left: 0;
+	position: absolute;
+	left: -46px;
+	top: 0;
+	width: 100px;
 }
