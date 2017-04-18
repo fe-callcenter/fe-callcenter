@@ -14,6 +14,10 @@
 		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 		<script src="layui/layui.js" type="text/javascript"></script>
 		<script src="js/dialog.js"></script>
+		
+		<style>
+			.admin-nav-card .layui-tab-item iframe { width: 100%; border: 0; height: 100%; }
+		</style>
 	</head>
 	<body style=" background-color: #EAEBED;">
 		<div class="e_main">
@@ -81,12 +85,12 @@
 				</div>
 			</header>
 
-			<div style="margin: 0;" class="layui-tab admin-nav-card layui-tab-brief" lay-filter="index" lay-allowclose="true">
+			<div style="margin: 0;" class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-nav-card" >
 				<ul class="layui-tab-title">
-					<li lay-id="wer" class="layui-this" >首页</li>
-				    <li lay-id="dfg">呼叫工作台</li>
+					<li lay-id="index" class="layui-this" >首页</li>
+				    <li lay-id="callworking">呼叫工作台</li>
 				</ul>
-				<div  class="layui-tab-content">
+				<div  class="layui-tab-content" >
 				    <div   class="layui-tab-item layui-show ">
 				    	<iframe style="width: 100%; border:none; " id="index_main" onload="iFrameHeight()"    src="index_Main.html"></iframe>
 				    </div>
@@ -99,72 +103,30 @@
 	</body>
 
 	<script type="text/javascript">
-		var active;
-		layui.use('element', function(){
-		  var $ = layui.jquery
-		  ,element = layui.element(); //Tab的切换功能，切换事件监听等，需要依赖element模块
-		  
-		  //触发事件
-		  active = {
-		    tabAdd: function(name,url,id){
-		      //新增一个Tab项
-		      element.tabAdd('index', {
-		        title: name //用于演示
-		        ,content:url//需要跳转的url
-		        ,id: id //实际使用一般是规定好的id
-		      });
-		      //用于监听关闭的标签信息
-		      $('.layui-unselect').on('click',function(){
-			  	  var id = $(this).parent().attr('lay-id');//获取的标签id
-			  	  //deleteTab(id);//用于删除标签时获取信息的函数
-			  });
-			  
-			  
-		    }
-		  };
-		  
-		  hideI();//隐藏首页的差号,让其不能关闭	 
+		layui.config({base:'layui/modules/'}).use(['element','layer','tab'],function(){
+			var element = layui.element()
+			$ = layui.jquery,
+			layer = layui.layer,
+			tab = layui.tab({
+				elem: '.admin-nav-card' //设置选项卡容器
+			});
+			$(window).on('resize', function() {
+				var $content = $('.admin-nav-card .layui-tab-content');
+				$content.height($(this).height() - 147);
+				$content.find('iframe').each(function() {
+					$(this).height($content.height());
+				});
+			}).resize();
+
 		});
 		
+		/**********************************************************************************************************/
+
 		//用于动态生成tab标签
-		function getTab(text,url,id){
-			//需要把获取的url,动态插入到iframe当中
-			$url = "<iframe id='"+id+"' style='width: 100%; border:none; ' src='"+url+"'></iframe>";
-		  	var $length = $('.layui-tab-title li').length;
-			for(var i = 0; i<$length;i++){
-		  		$text = $('.layui-tab-title li').eq(i).text();
-		  		$text =$text.substring(0,$text.length-1);
-		  		if(text == $text){
-		  			removeStyle(i);
-		  			return false;
-		  		}
-		  	}   
-		  	active.tabAdd(text,$url,id);//动态生成tab标签
-			localStorage.id = id;//缓存当前标签的id		  	
-		  	removeStyle($('.layui-tab-title li').length-1);
-		  	
+		function addTab(text,url,id){
+		  	tab.tabAdd({"title":text,"href":url,"id":id});
 		};
-		//用于删除标签时清除缓存的id的函数
-		function deleteTab(id){
-			alert(id);
-		};
-		//清除和添加样式
-		function removeStyle(i){
-			$('.layui-tab-title li').removeClass('layui-this');
-			$('.layui-tab-item').removeClass('layui-show');
-			$('.layui-tab-title li').eq(i).addClass('layui-this');
-	  		$('.layui-tab-item').eq(i).addClass('layui-show');
-		};
-		//隐藏首页的差号,让其不能关闭
-		function hideI(){
-			$('.layui-tab-title li').eq(0).find('i').hide();
-			$('.layui-tab-title li').eq(1).find('i').hide();
-		};
-		
-		
-		$(document).ready(function(){
-			
-		});
+
 	</script>
 
 </html>
