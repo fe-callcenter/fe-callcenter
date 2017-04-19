@@ -446,7 +446,7 @@ html,body{
 
 #z_ljbft_bottom .layui-input-inline {
     height: 28px;
-    width: 120px;
+    width: 160px;
     position: absolute;
     top: -24px;
     left: 95px;
@@ -500,7 +500,7 @@ html,body{
 }
 
 #z_ljbft_bottom .z_classify .input-inline2 {
-    left: 235px;
+    left: 275px;
 }
 
 #z_ljbft_bottom .z_object_list {
@@ -630,6 +630,20 @@ html,body{
     left: 200px;
     border-radius: 5px;
 }
+
+.z_tabUngentPic {
+    width: 30px;
+    height: 20px;
+    background-color: rgb(255,108,96);
+    color: white;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+}
+
 
 .z_two_fang_span{
 	display: inline-block;

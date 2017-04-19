@@ -58,3 +58,10 @@
     border: 1px dashed rgb(229,229,229);
     margin-top: 10px;
 }
+
+.z_qx_input {
+    width: 160px;
+    height: 24px;
+    border: 1px solid #EAEBED;
+    padding-left: 5px;
+}
