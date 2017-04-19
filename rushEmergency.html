@@ -5,7 +5,7 @@
     <title>抢险</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/layui.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="css/q_common.css" />
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
 
@@ -32,8 +32,14 @@
         </div>
 
         <div class="pull-left" style="margin-left: 25px">
-            <span>姓名</span>
-            <input class="z_input" style="width: 97px;margin-left: 5px" type="text">
+            <span class="pull-left">姓名</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 100px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="pull-left" style="margin-left: 25px;position: relative">
@@ -61,22 +67,45 @@
         </div>
 
         <div class="pull-left" style="margin-left: 242px">
-            <span>小区</span>
-            <input class="z_address_input" type="text">
-            <span>栋</span>
-            <input class="z_address_input" type="text">
-            <span>单元</span>
-            <input class="z_address_input" type="text">
-            <span>室</span>
-            <span style="margin-left: 20px">合同号</span>
-            <input class="z_address_input" style="width: 100px" type="text">
+            <span class="pull-left">小区</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 45px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <span class="pull-left" style="margin-left: 7px">栋</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 45px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <span class="pull-left" style="margin-left: 7px">单元</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 45px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <span class="pull-left" style="margin-left: 7px">室</span>
+            <span class="pull-left" style="margin-left: 20px">合同号</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 100px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="z_wb_searchBox"></div>
         <div class="z_wb_refreshBox"></div>
 
     </form>
-
 
     <!--内容-->
     <div class="z_wb_content">
@@ -263,20 +292,17 @@
                     <!--<img   class="z_two_fang_imgGuanLian_e" src="img/duihao.png" />-->
                 <!--</div>-->
                 <!--加急-->
-                <div style="margin-left: 93px;margin-top:42px; position: relative;" class="marginT15 clearfix z_ungent ">
-                    <span onclick="jinJi()" class="z_two_fang_span"></span>
-                    <div style="margin-top:-3px;" class="z_leftDiv pull-left">加急处理</div>
-                    <img  class="z_two_fang_imgjinji_e" src="img/duihao.png" />
-                </div>
-
-                <!--回复-->
-                <div style="margin-top:3px;" class="marginT15 clearfix z_reply">
-                    <div style="position: relative; margin-left: 93px;" class="z_two_fang">
-                        <span onclick="userNotice()" class="z_two_fang_span"></span>
-                        <span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span>
-                        <img  class="z_two_fang_img_e" src="img/duihao.png" />
-                    </div>
-                </div>
+	                <div style="margin-left: 100px; margin-top: 30px; " class="marginT15 clearfix z_ungent ">
+					  	 <input style="float: left;" type="checkbox" name="like1[write]" title="加急处理" lay-skin="primary" >
+	                </div>
+	
+	                <!--回复-->
+	                <div style="margin-top:6px;" class="marginT15 clearfix z_reply">
+	                    <div style="margin-left: 100px;" class="z_two_fang">
+					  	    <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary" >
+						  	<span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span> 
+	                    </div>
+	                </div>
 
                 <!--按钮-->
                 <div class="marginT15 z_submitBtn">
@@ -654,37 +680,30 @@
         };
         //用户回复设置
         userNotice = function(){
-            $('.z_two_fang_img_e').hide();
+
             $('#userNotice').modal('show');
         };
         //用户确定回复信息
         btnOK = function(){
-            $('.z_two_fang_img_e').show();
+
 
             //隐藏弹出框
             $('#userNotice').modal('hide');
         };
         //用户取消回复信息
         btnNO = function(){
-            $('.z_two_fang_img_e').hide();
+
 
             //隐藏弹出框
             $('#userNotice').modal('hide');
         };
 
-        //是否加急处理
-        jinJi = function(){
-            if($('.z_two_fang_imgjinji_e').css('display')=='none'){
-                $('.z_two_fang_imgjinji_e').show();
-            }else{
-                $('.z_two_fang_imgjinji_e').hide();
-            }
-        };
+       
 
 
         //设置供参考的关联单据
         setGuanLian = function(){
-            $('.z_two_fang_imgGuanLian_e').hide();
+
             $('#setGuanLian').modal('show');
         };
 
@@ -705,9 +724,15 @@
 
     layui.use(['form', 'layedit', 'laydate'], function(){
         var form = layui.form()
-                ,layer = layui.layer
-                ,layedit = layui.layedit
-                ,laydate = layui.laydate;
+	        ,layer = layui.layer
+	        ,layedit = layui.layedit
+	        ,laydate = layui.laydate;
+	        
+            
+            
+            $('.layui-form-checkbox').eq(1).click(function(){
+            	userNotice();
+            });
 
     });
 

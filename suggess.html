@@ -5,7 +5,7 @@
     <title>意见</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/layui.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="css/q_common.css" />
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
 
@@ -15,9 +15,9 @@
 </head>
 <body style="position: relative; background-color: #EAEBED;">
 
-<div class="z_main">
+<div class="z_main layui-form">
 
-    <form class="z_wb_search layui-form">
+    <form class="z_wb_search">
 
         <div class="pull-left">
             <span>电话</span>
@@ -126,7 +126,7 @@
                 <!--分类-->
                 <div class="marginT15 z_classify">
                     <div class="z_leftDiv pull-left">分类:</div>
-                    <div class="pull-left layui-form">
+                    <div class="pull-left">
                         <div class="layui-form-item"> 
                             <div class="layui-input-inline input-inline1"> 
                                 <select name="quiz1"> 
@@ -160,7 +160,7 @@
                             <div class="pull-left">呼叫中心</div>
                         </div>
                         <div class="z_object_list">
-                            <div class="pull-left layui-form">
+                            <div class="pull-left">
                                 <div class="layui-form-item"> 
                                     <div class="layui-input-inline input-inline1"> 
                                     	<!--<input style="display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请选择城市" class="layui-input">-->
@@ -193,26 +193,23 @@
                     <textarea class="pull-left" name="MSG" cols=40 rows=3 placeholder="请输入反馈内容!"></textarea>
                 </div>
 				<!--有无参考的关联单据-->
-				<div style="position: relative;  margin-left: 93px;" class="z_two_fang">
-				  	<span onclick="setGuanLian()" class="z_two_fang_span"></span>
-				  	<span class="z_two_fang_span2">有供参考的关联单据（ 上门服务订单 <span style="color: #59caf4;">DD6876786878778</span>）</span>
-                	<img   class="z_two_fang_imgGuanLian_e" src="img/duihao.png" /> 
-                </div>
-                <!--加急-->
-                <div style="margin-left: 93px;margin-top:12px; position: relative;" class="marginT15 clearfix z_ungent ">
-                	<!--<span onclick="jinJi()" class="z_two_fang_span"></span>-->
-                    <!--<div style="margin-top:-3px;" class="z_leftDiv pull-left">加急处理</div>-->
-                    <!--<img  class="z_two_fang_imgjinji_e" src="img/duihao.png" />-->
-                </div>
-
-                <!--回复-->
-                <div style="margin-top:3px;" class="marginT15 clearfix z_reply">
-                    <div style="position: relative; margin-left: 93px;" class="z_two_fang">
-					  	<span onclick="userNotice()" class="z_two_fang_span"></span>
-					  	<span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span>
-                    	<img  class="z_two_fang_img_e" src="img/duihao.png" /> 
-                    </div>
-                </div>
+					<div style=" margin-left: 100px;" class="z_two_fang">
+					  	<!--<span onclick="setGuanLian()" class="z_two_fang_span"></span>-->
+					  	 <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary">
+					  	 <span class="z_two_fang_span2">有供参考的关联单据（ 上门服务订单 <span style="color: #59caf4;">DD6876786878778</span>）</span>
+	                </div>
+	                <!--加急-->
+	                <!--<div style="margin-left: 100px; display: none; " class="marginT15 clearfix z_ungent ">
+					  	 <input style="float: left;" type="checkbox" name="like1[write]" title="加急处理" lay-skin="primary" >
+	                </div>-->
+	
+	                <!--回复-->
+	                <div style="margin-top:16px;" class="marginT15 clearfix z_reply">
+	                    <div style="margin-left: 100px;" class="z_two_fang">
+					  	    <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary" >
+						  	<span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span> 
+	                    </div>
+	                </div>
 
                 <!--按钮-->
                 <div class="marginT15 z_submitBtn">
@@ -583,37 +580,30 @@
         };
         //用户回复设置
        userNotice = function(){
-       		$('.z_two_fang_img_e').hide();
+
        		$('#userNotice').modal('show');
        };
 	   //用户确定回复信息
 	   btnOK = function(){
-	   		$('.z_two_fang_img_e').show();
+
 	   		
 	   		//隐藏弹出框
 	   		$('#userNotice').modal('hide');
 	   };
 	   //用户取消回复信息
 	   btnNO = function(){
-	   		$('.z_two_fang_img_e').hide();
+
 	   		
 	   		//隐藏弹出框
 	   		$('#userNotice').modal('hide');
 	   };
 	   
-	   //是否加急处理
-	   jinJi = function(){
-	   		if($('.z_two_fang_imgjinji_e').css('display')=='none'){
-	   			$('.z_two_fang_imgjinji_e').show();
-	   		}else{
-	   			$('.z_two_fang_imgjinji_e').hide();
-	   		}
-	   };
+	   
        
        
        //设置供参考的关联单据
        setGuanLian = function(){
-       	  $('.z_two_fang_imgGuanLian_e').hide();
+
        	  $('#setGuanLian').modal('show');
        };
        
@@ -634,10 +624,17 @@
 
     layui.use(['form', 'layedit', 'laydate'], function(){
         var form = layui.form()
-                ,layer = layui.layer
-                ,layedit = layui.layedit
-                ,laydate = layui.laydate;
-
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+			$('.layui-form-checkbox').eq(0).click(function(){
+            	setGuanLian();
+            });
+            
+            
+            $('.layui-form-checkbox').eq(1).click(function(){
+            	userNotice();
+            });
     });
 		
 		

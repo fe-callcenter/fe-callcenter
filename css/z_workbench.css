@@ -543,12 +543,12 @@
     height: 41px!important;
 }
 
-.z_order .z_order_content {
+.z_order_content {
     width: 100%;
     /*min-height: 310px;*/
 }
 
-.z_order .z_order_content .z_order_content_box {
+.z_order_content .z_order_content_box {
 
     min-height: 128px;
     width: 100%;
@@ -557,7 +557,7 @@
     position: relative;
 }
 
-.z_order .z_order_content .z_order_content_box img {
+.z_order_content .z_order_content_box img {
 
     width: 15px;
     height: 28px;
@@ -567,7 +567,7 @@
 }
 
 
-.z_order .z_order_content .z_order_content_box .z_content_box_leftPicXUN {
+.z_order_content .z_order_content_box .z_content_box_leftPicXUN {
 
     width: 20px;
     height: 20px;
@@ -583,7 +583,7 @@
 
 }
 
-.z_order .z_order_content .z_order_content_box .z_content_box_leftPicBIAO {
+.z_order_content .z_order_content_box .z_content_box_leftPicBIAO {
 
     width: 20px;
     height: 20px;
@@ -599,7 +599,7 @@
 
 }
 
-.z_order .z_order_content .z_order_content_box .z_content_box_question {
+.z_order_content .z_order_content_box .z_content_box_question {
     min-height: 38px;
     border: 1px solid #EAEBED;
     padding-left: 30px;
@@ -607,7 +607,7 @@
     margin-top: 17px;
 }
 
-.z_order .z_order_content .z_order_content_box .z_content_box_question div {
+.z_order_content .z_order_content_box .z_content_box_question div {
     margin-top: 10px;
 }
 .z_line_e_p_hide{
