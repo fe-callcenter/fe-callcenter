@@ -5,7 +5,7 @@
     <title>流转</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/layui.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
     <link rel="stylesheet" href="css/q_common.css" />
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
 
@@ -16,9 +16,9 @@
 </head>
 <body style="position: relative; background-color: #EAEBED;">
 
-     <div class="z_main">
+     <div class="z_main layui-form">
 
-         <form class="z_wb_search layui-form">
+         <form class="z_wb_search">
 
              <div class="pull-left">
                  <span>电话</span>
@@ -118,89 +118,15 @@
 
                  </div>
 
-                 <!--开始--------------流转自己的-->
-                 <!--<div class="z_flow_gldj">-->
-
-                     <!--关联单据类型-->
-                     <!--<div class="z_gldj_list layui-form">-->
-                         <!--<span style="font-size: 16px">关联单据:</span>-->
-                         <!--<div class="layui-form-item"> -->
-                             <!--<div class="layui-input-inline"> -->
-                                 <!--<select name="quiz1"> -->
-                                     <!--<option value="1">E成E家订单</option> -->
-                                     <!--<option value="2">SAP单据</option> -->
-                                     <!--<option value="3">商城订单</option> -->
-                                     <!--<option value="4" selected>话务类单据</option> -->
-                                 <!--</select> -->
-                             <!--</div> -->
-                         <!--</div>-->
-
-                         <!--<input type="text" class="z_flow_input">-->
-
-                     <!--</div>-->
-
-
-                     <!--关联单据详情-->
-                     <!--<div class="z_gldj_detail">-->
-
-                         <!--<div>-->
-                             <!--<span>建议单编号:</span>-->
-                             <!--<span class="gayColor">&nbsp;&nbsp;2892791879871297</span>-->
-                             <!--<span style="margin-left: 30px">分类:</span>-->
-                             <!--<span class="gayColor">&nbsp;&nbsp;燃气-灶具</span>-->
-                             <!--<span style="margin-left: 30px">状态:</span>-->
-                             <!--<span class="gayColor">&nbsp;&nbsp;完成</span>-->
-                             <!--<span style="margin-left: 30px">催单次数:</span>-->
-                             <!--<span class="gayColor">&nbsp;&nbsp;1</span>-->
-                         <!--</div>-->
-
-                         <!--<div style="margin-top: 15px">-->
-                             <!--<span>创建人:</span>-->
-                             <!--<span class="gayColor">&nbsp;&nbsp;廊坊呼叫中心-徐郑辉</span>-->
-                             <!--<span style="margin-left: 30px">创建时间:</span>-->
-                             <!--<span class="gayColor">&nbsp;&nbsp;2017-2-22 12:22</span>-->
-                         <!--</div>-->
-                         <!--<div style="margin-top: 15px">-->
-                             <!--<span style="margin-right: 15px">孙悟空</span>-->
-                             <!--<span style="margin-right: 15px">男士</span>-->
-                             <!--<span style="margin-right: 15px">1555555555555</span>-->
-                             <!--<span style="margin-right: 15px">河北省廊坊市甘井子原件元</span>-->
-                             <!--<span style="margin-right: 15px">喜悦小区12栋2单元201</span>-->
-                         <!--</div>-->
-
-                         <!--<div style="margin-top: 15px">-->
-                             <!--<span>问题描素:</span>-->
-                             <!--<span class="gayColor" style="line-height: 18px">&nbsp;&nbsp;建议不要半夜工作,都睡觉了</span>-->
-                         <!--</div>-->
-                     <!--</div>-->
-
-                 <!--</div>-->
-
                  <!--流转什么,后边都一样的-->
                  <div id="z_ljbft_bottom">
 
-                     <!--<div class="z_gldj_list layui-form hidden">-->
-                         <!--<span style="font-size: 16px">关联单据:</span>-->
-                         <!--<div class="layui-form-item"> -->
-                             <!--<div class="layui-input-inline"> -->
-                                 <!--<select name="quiz1"> -->
-                                     <!--<option value="1">E成E家订单</option> -->
-                                     <!--<option value="2">SAP单据</option> -->
-                                     <!--<option value="3">商城订单</option> -->
-                                     <!--<option value="4" selected>话务类单据</option> -->
-                                 <!--</select> -->
-                             <!--</div> -->
-                         <!--</div>-->
-
-                         <!--<input type="text" class="z_flow_input">-->
-
-                     <!--</div>-->
                      <p>流转单</p>
 
                      <!--分类-->
                      <div class="marginT15 z_classify">
                          <div class="z_leftDiv pull-left">分类:</div>
-                         <div class="pull-left layui-form">
+                         <div class="pull-left">
                              <div class="layui-form-item"> 
                                  <div class="layui-input-inline input-inline1"> 
                                      <select name="quiz1"> 
@@ -225,16 +151,21 @@
                      <div class="marginT15 z_object clearfix">
                          <div class="z_leftDiv pull-left">流转对象:</div>
                          <div class="z_rightDiv pull-left">
-                             <div class="z_object_radio">
-                                 <div class="z_radio z_radio_check pull-left"><div></div></div>
-                                 <div class="pull-left">ECEJ</div>
-                                 <div class="z_radio pull-left marginL30"><div></div></div>
-                                 <div class="pull-left">新奥燃气</div>
-                                 <div class="z_radio pull-left marginL30"><div></div></div>
-                                 <div class="pull-left">呼叫中心</div>
+
+
+                             <div>
+                                 <div class="layui-form-item">
+                                     <div class="layui-input-block" style="margin-left: 0;margin-top: -10px">
+                                         <input type="radio" name="sex" value="ECEJ" title="ECEJ" checked="">
+                                         <input type="radio" name="sex" value="新奥燃气" title="新奥燃气">
+                                         <input type="radio" name="sex" value="呼叫中心" title="呼叫中心">
+                                     </div>
+                                 </div>
                              </div>
-                             <div class="z_object_list">
-                                 <div class="pull-left layui-form">
+
+
+                             <div class="z_object_list" style="margin-top: 15px">
+                                 <div class="pull-left">
                                      <div class="layui-form-item"> 
                                          <div class="layui-input-inline input-inline1"> 
                                              <!--<input style="display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请选择城市" class="layui-input">-->
@@ -262,30 +193,35 @@
                      </div>
 
                      <!--多行输入框-->
-                     <div class="z_write_textE clearfix">
+                     <div class="z_write_textE clearfix" style="height: 140px">
                          <div class="pull-left z_leftDiv">反馈内容:</div>
-                         <textarea class="pull-left" name="MSG" cols=40 rows=3 placeholder="请输入反馈内容!"></textarea>
+                         <!--<textarea class="pull-left" name="MSG" cols=40 rows=3 placeholder="请输入反馈内容!"></textarea>-->
+
+                         <div >
+                             <div class="layui-form-item layui-form-text">
+                                 <div class="layui-input-block" style="margin-left: 80px">
+                                     <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                                 </div>
+                             </div>
+                         </div>
                      </div>
 
                      <!--有无参考的关联单据-->
-					<div style="position: relative;  margin-left: 93px;" class="z_two_fang">
-					  	<span onclick="setGuanLian()" class="z_two_fang_span"></span>
-					  	<span class="z_two_fang_span2">有供参考的关联单据（ 上门服务订单 <span style="color: #59caf4;">DD6876786878778</span>）</span>
-	                	<img   class="z_two_fang_imgGuanLian_e" src="img/duihao.png" /> 
+					<div style=" margin-left: 100px;" class="z_two_fang">
+					  	<!--<span onclick="setGuanLian()" class="z_two_fang_span"></span>-->
+					  	 <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary">
+					  	 <span class="z_two_fang_span2">有供参考的关联单据（ 上门服务订单 <span style="color: #59caf4;">DD6876786878778</span>）</span>
 	                </div>
 	                <!--加急-->
-	                <div style="margin-left: 93px;margin-top:32px; position: relative;" class="marginT15 clearfix z_ungent ">
-	                	<span onclick="jinJi()" class="z_two_fang_span"></span>
-	                    <div style="margin-top:-3px;" class="z_leftDiv pull-left">加急处理</div>
-	                    <img  class="z_two_fang_imgjinji_e" src="img/duihao.png" />
+	                <div style="margin-left: 100px; " class="marginT15 clearfix z_ungent ">
+					  	 <input style="float: left;" type="checkbox" name="like1[write]" title="加急处理" lay-skin="primary" >
 	                </div>
 	
 	                <!--回复-->
-	                <div style="margin-top:3px;" class="marginT15 clearfix z_reply">
-	                    <div style="position: relative; margin-left: 93px;" class="z_two_fang">
-						  	<span onclick="userNotice()" class="z_two_fang_span"></span>
-						  	<span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span>
-	                    	<img  class="z_two_fang_img_e" src="img/duihao.png" /> 
+	                <div style="margin-top:6px;" class="marginT15 clearfix z_reply">
+	                    <div style="margin-left: 100px;" class="z_two_fang">
+					  	    <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary" >
+						  	<span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span> 
 	                    </div>
 	                </div>
 
@@ -606,10 +542,11 @@
 		</div>
 
 </body>
-<script src="layui/layui.js" type="text/javascript"></script>
+
      <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
-     <script src="js/bootstrap.min.js" type="text/javascript"></script>
      <script src="js/jquery.pagination.min.js" type="text/javascript"></script>
+     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+     <script src="layui/layui.js" type="text/javascript"></script>
      <script>
          $(function(){
 
@@ -649,44 +586,36 @@
                  }
 
              });
-             
+
              //选择城市（单选）
         choiceCityRadio = function(){
         	$('#cityChoiceRadio').modal('show');
         };
         //用户回复设置
        userNotice = function(){
-       		$('.z_two_fang_img_e').hide();
+       		
        		$('#userNotice').modal('show');
        };
 	   //用户确定回复信息
 	   btnOK = function(){
-	   		$('.z_two_fang_img_e').show();
+	   		
 	   		
 	   		//隐藏弹出框
 	   		$('#userNotice').modal('hide');
 	   };
 	   //用户取消回复信息
 	   btnNO = function(){
-	   		$('.z_two_fang_img_e').hide();
+	   		
 	   		
 	   		//隐藏弹出框
 	   		$('#userNotice').modal('hide');
 	   };
 	   
-	   //是否加急处理
-	   jinJi = function(){
-	   		if($('.z_two_fang_imgjinji_e').css('display')=='none'){
-	   			$('.z_two_fang_imgjinji_e').show();
-	   		}else{
-	   			$('.z_two_fang_imgjinji_e').hide();
-	   		}
-	   };
+
        
        
        //设置供参考的关联单据
        setGuanLian = function(){
-       	  $('.z_two_fang_imgGuanLian_e').hide();
        	  $('#setGuanLian').modal('show');
        };
 
@@ -702,10 +631,20 @@
 
          layui.use(['form', 'layedit', 'laydate'], function(){
              var form = layui.form()
-                     ,layer = layui.layer
-                     ,layedit = layui.layedit
-                     ,laydate = layui.laydate;
+             ,layer = layui.layer
+             ,layedit = layui.layedit
+             ,laydate = layui.laydate;
 
+            $('.layui-form-checkbox').eq(0).click(function(){
+            	setGuanLian();
+            });
+            
+            
+            $('.layui-form-checkbox').eq(2).click(function(){
+            	userNotice();
+            });
+            
+			
          });
 
      </script>

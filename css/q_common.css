@@ -130,3 +130,21 @@ html,body{
        
     }
 }
+.vit_content_right_btn{
+	width: 95%;
+	margin-left: 12px;
+}
+.vit_content_right_btn button{
+	display: inline-block;
+	border:none;
+	background-color: #ffffff;
+	width: 102px;
+	height: 24px;
+	line-height: 24px;
+	color: #6876DA;
+	border: solid 1px #6876DA;
+	border-radius: 3px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	margin-left: 12px;
+}

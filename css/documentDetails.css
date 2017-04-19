@@ -1,0 +1,34 @@
+/*用于单据详情的样式文件*/
+.doc_main{
+	width: 100%;
+	margin-top: 20px;
+}
+.doc_main_left{
+	float: left;
+	width: 80%;
+	border-right: solid 1px #cccccc;
+}
+.doc_main_right{
+	float: left;
+	width: 19%;
+}
+.doc_main_left_table{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 12px;
+}
+.chaolian_zuo{
+	display: inline-block;
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); 	/* IE 9 */
+	-moz-transform:rotate(-90deg); 	/* Firefox */
+	-webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-90deg); 	/* Opera */
+}
+.look_ding_zhi{
+	display: inline-block;
+	width:30%;
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+}

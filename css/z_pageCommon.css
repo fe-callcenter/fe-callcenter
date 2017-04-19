@@ -339,7 +339,7 @@ html,body{
 *  内容 -----左侧---人员简介
 */
 .z_wb_content_left .z_profile {
-    min-height: 136px;
+    min-height: 16px;
     background-color: white;
     width: 100%;
     padding: 20px 20px 10px 20px;
@@ -660,9 +660,8 @@ html,body{
 
 .z_two_fang_span2{
 	display: inline-block;
-	float:left ;
 	margin-top: -2px;
-	margin-left: 25px;
+	margin-left: 6px;
 }
 .z_modl_dial{
 	display: inline-block;
@@ -722,4 +721,31 @@ html,body{
 	color:#ffffff;
 	-moz-border-radius-topright: 3px;
 	-webkit-border-top-right-radius: 3px;
+}
+
+.z_SAP {
+    width: 80px;
+    height: 24px;
+    border: 1px solid rgb(105,121,215);
+    background-color: transparent;
+    color: rgb(105,121,215);
+    line-height: 24px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.z_layui_input .layui-form-item {
+    margin-bottom: 0;
+}
+.z_layui_input .layui-form-label {
+    padding: 0;
+    padding-top: 6px;
+}
+.z_layui_input .layui-input-block {
+    margin-left: 95px;
+}
+
+.z_layui_input .layui-input {
+    height: 30px;
+    width: 200px;
 }

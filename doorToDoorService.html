@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>抢险</title>
+    <title>上门服务</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/layui.css" media="all"/>
@@ -11,24 +11,17 @@
 
 
     <link rel="stylesheet" type="text/css" href="css/z_pageCommon.css" />
-    <link rel="stylesheet" type="text/css" href="css/z_flow.css" />
 
 </head>
 <body style="position: relative; background-color: #EAEBED;">
 
-<div class="z_main layui-form">
+<div class="z_main">
 
-    <form class="z_wb_search">
+    <form class="z_wb_search layui-form">
 
         <div class="pull-left">
-            <span class="pull-left">电话</span>
-            <div class="clearfix z_layui_input pull-left">
-                <div class="layui-form-item">
-                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
-                        <input style="width: 130px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" placeholder="电话" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-            </div>
+            <span>电话</span>
+            <input class="z_input" style="width: 130px;margin-left: 5px" type="text">
         </div>
 
         <div class="pull-left" style="margin-left: 25px">
@@ -96,43 +89,141 @@
                     <span class="gayColor">&nbsp;&nbsp;181818181818</span>
                     <span style="margin-left: 25px">ID号:</span>
                     <span class="gayColor">&nbsp;&nbsp;181818181818</span>
-                    <img class="z_suotouPic pull-left" src="img/z_suotou.png" alt="">
-                    <div class="z_leibiePic">新奥燃气</div>
-                    <div class="z_leibiePic">户主</div>
-                    <span class="pull-right" style="color: rgb(134,215,245);margin-left: 3px;cursor: default;">添加地址</span>
-                    <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 5px;margin-right: 1px"></span>
-                    <span class="pull-right" style="color: rgb(134,215,245);margin-left: 3px;cursor: default;margin-right: 8px">添加联系人</span>
-                    <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 5px;margin-right: 1px"></span>
-                </div>
-
-                <div class="z_line" style="margin-top: 15px">
-                    <span>地址:</span>
-                    <span class="gayColor">&nbsp;&nbsp;湖北省小武士大悟县杭后东路12号东路小区16栋6单元109</span>
-                    <span style="margin-left: 25px">房产合同号:</span>
-                    <span class="gayColor">&nbsp;&nbsp;17979789217982179</span>
-                </div>
-
-                <div class="z_lable">
-                    <button>营业厅</button>
-                    <button>卡证</button>
-                    <button>表记</button>
-                    <button>缴费</button>
-                    <button>隐患</button>
-                    <button>设备</button>
-                    <button>保险</button>
+                    <div class="pull-left z_SAP marginL30" style="margin-top: -5px">SAP用户</div>
                 </div>
 
             </div>
+            
+            <!--<div class="z_profile">-->
+
+                <!--<div class="clearfix">-->
+                    <!--<div class="clearfix z_layui_input pull-left">-->
+                        <!--<div class="layui-form-item">-->
+                            <!--<label class="layui-form-label">联系人:</label>-->
+                            <!--<div class="layui-input-block">-->
+                                <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="clearfix z_layui_input pull-left marginL30">-->
+                        <!--<div class="layui-form-item">-->
+                            <!--<label class="layui-form-label">联系电话:</label>-->
+                            <!--<div class="layui-input-block">-->
+                                <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash;分类&ndash;&gt;-->
+                <!--<div class="marginT15 z_classify clearfix">-->
+                    <!--<div class="pull-left" style="text-align: right;width: 80px;">上门地址:</div>-->
+                    <!--<div class="pull-left layui-form">-->
+                        <!--<div class="layui-form-item"> -->
+                            <!--<div class="layui-input-inline input-inline1"> -->
+                                <!--<select name="quiz1"> -->
+                                    <!--<option value="1">E成E家订单</option> -->
+                                    <!--<option value="2">SAP单据</option> -->
+                                    <!--<option value="3">商城订单</option> -->
+                                    <!--<option value="4" selected>话务类单据</option> -->
+                                <!--</select> -->
+                            <!--</div> -->
+                            <!--<div class="layui-input-inline input-inline2"> -->
+                                <!--<select name="quiz1"> -->
+                                    <!--<option value="1">E成E家订单</option> -->
+                                    <!--<option value="2">SAP单据</option> -->
+                                    <!--<option value="3">商城订单</option> -->
+                                    <!--<option value="4" selected>话务类单据</option> -->
+                                <!--</select> -->
+                            <!--</div> -->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
 
             <!--流转什么,后边都一样的-->
             <div id="z_ljbft_bottom">
 
-                <p>建议单</p>
+
+                <!--联系人-->
+                <div class="clearfix">
+                    <div class="clearfix z_layui_input pull-left">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系人:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix z_layui_input pull-left marginL30">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系电话:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--地址-->
+                <div class="marginT20 z_classify clearfix">
+                    <div class="pull-left z_leftDiv">上门地址:</div>
+                    <div class="pull-left layui-form" style="width: 317px">
+                        <div class="layui-form-item"> 
+                            <div class="layui-input-inline input-inline1" style="width: 120px"> 
+                                <select name="quiz1"> 
+                                    <option value="1">E成E家订单</option> 
+                                    <option value="2">SAP单据</option> 
+                                    <option value="3">商城订单</option> 
+                                    <option value="4" selected>话务类单据</option> 
+                                </select> 
+                            </div> 
+                            <div class="layui-input-inline input-inline2" style="left: 226px"> 
+                                <select name="quiz1"> 
+                                    <option value="1">E成E家订单</option> 
+                                    <option value="2">SAP单据</option> 
+                                    <option value="3">商城订单</option> 
+                                    <option value="4" selected>话务类单据</option> 
+                                </select> 
+                            </div> 
+                        </div>
+                    </div>
+                    <span class="pull-left">小区</span>
+                    <div class="clearfix z_layui_input pull-left">
+                        <div class="layui-form-item">
+                            <div class="layui-input-block" style="margin-top: -8px;margin-left: 15px">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请输入详细地址" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="pull-left marginL15">房产ID</span>
+                    <div class="clearfix z_layui_input pull-left">
+                        <div class="layui-form-item">
+                            <div class="layui-input-block" style="margin-top: -8px;margin-left: 15px">
+                                <input style="width:140px;" type="text" name="title" required  lay-verify="required" placeholder="请输入详细地址" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--经纬度-->
+                <div class="marginT15" style="padding-left: 95px">
+                    <span>经纬度:</span><span class="marginL5 gayColor">213.276374</span><span class="marginL5 gayColor">,</span><span class="marginL5 gayColor">213.276374</span>
+                </div>
+
+                <!--人工确认-->
+                <div class="marginT15" style="padding-left: 95px">
+                    <span class="redColor">此小区暂未收录，需手动选择经纬度。</span><span class="marginL5 zColor z_pointer">人工确认经纬度></span>
+                </div>
+
+                <p class="marginT15">上门服务订单</p>
+
 
                 <!--分类-->
-                <div class="marginT15 z_classify">
-                    <div class="z_leftDiv pull-left">分类:</div>
-                    <div class="pull-left">
+                <div class="marginT20 z_classify">
+                    <div class="z_leftDiv pull-left">服务分类:</div>
+                    <div class="pull-left layui-form">
                         <div class="layui-form-item"> 
                             <div class="layui-input-inline input-inline1"> 
                                 <select name="quiz1"> 
@@ -150,59 +241,24 @@
                                     <option value="4" selected>话务类单据</option> 
                                 </select> 
                             </div> 
-                        </div>
-                    </div>
-                    <button style="margin-right: 8%;margin-top: -5px" class="z_zBtnColor pull-right" data-toggle="modal" data-target="#BYDHBtnClick">备用电话</button>
-                    <button style="margin-right: 30px;margin-top: -5px" class="z_zBtnColor pull-right" data-toggle="modal" data-target="#LSTDBtnClick">绿色通道</button>
-                </div>
-                <!--对象-->
-                <div class="marginT15 z_object clearfix">
-                    <div class="z_leftDiv pull-left">出险地址:</div>
-                    <div class="z_rightDiv pull-left" style="width: 90%">
-                        <div class="z_object_list">
-                            <div class="pull-left">
-                                <div class="layui-form-item" style="margin-top: -4px"> 
-                                    <div class="layui-input-inline input-inline1"> 
-                                        <!--<input style="display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请选择城市" class="layui-input">-->
-
-                                        <div style="width:200px;" class="layui-form-item">
-
-                                            <input style="width: 120px; float: left; display: inline-block;" readonly="readonly" type="text" name="username" lay-verify="required" placeholder="请选择城市" autocomplete="off" class="layui-input" />
-                                            <button onclick="choiceCityRadio()" class="z_dia_e_span_btn2">选择</button>
-
-                                        </div>
-
-                                    </div> 
-                                    <!--<input type="text" class="z_qx_input" style="margin-left: 172px" placeholder="小区">-->
-                                    <!--<input type="text" class="z_qx_input marginL15" style="width:350px;" placeholder="详细地址">-->
-
-                                        <div class="clearfix z_layui_input pull-left">
-                                            <div class="layui-form-item">
-                                                <div class="layui-input-block" style="margin-left: 180px;margin-top: -3px">
-                                                    <input style="width: 160px;" type="text" name="title" required  lay-verify="required" placeholder="小区" autocomplete="off" class="layui-input">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix z_layui_input pull-left">
-                                            <div class="layui-form-item">
-                                                <div class="layui-input-block" style="margin-left: 15px;margin-top: -3px">
-                                                    <input style="width: 355px" type="text" name="title" required  lay-verify="required" placeholder="请输电话" autocomplete="off" class="layui-input">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
-                                </div>
-                            </div>
+                            <div class="layui-input-inline input-inline2" style="left: 457px"> 
+                                <select name="quiz1"> 
+                                    <option value="1">E成E家订单</option> 
+                                    <option value="2">SAP单据</option> 
+                                    <option value="3">商城订单</option> 
+                                    <option value="4" selected>话务类单据</option> 
+                                </select> 
+                            </div> 
                         </div>
                     </div>
                 </div>
-                <!--处理方-->
-                <div class="marginT10 z_classify">
-                    <div class="z_leftDiv pull-left">处理方:</div>
-                    <div class="pull-left">
+
+                <p class="redColor" style="margin-left: 95px;font-size: 14px;margin-top: 8px">此地址无法提供所选品类的服务</p>
+
+                <!--订单渠道-->
+                <div class="marginT20 z_classify">
+                    <div class="z_leftDiv pull-left">订单渠道:</div>
+                    <div class="pull-left layui-form">
                         <div class="layui-form-item"> 
                             <div class="layui-input-inline input-inline1"> 
                                 <select name="quiz1"> 
@@ -212,58 +268,61 @@
                                     <option value="4" selected>话务类单据</option> 
                                 </select> 
                             </div> 
-                            <div class="layui-input-inline input-inline2" style="width: 530px;;"> 
-                                <select name="quiz1"> 
-                                    <option value="1">E成E家订单</option> 
-                                    <option value="2">SAP单据</option> 
-                                    <option value="3">商城订单</option> 
-                                    <option value="4" selected>话务类单据</option> 
-                                </select> 
-                            </div> 
                         </div>
                     </div>
                 </div>
-
-                <!--联系人-->
-                <div class="clearfix marginT10">
-                    <div class="clearfix z_layui_input pull-left">
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">联系人:</label>
-                            <div class="layui-input-block">
-                                <input style="width: 160px;" type="text" name="title" required  lay-verify="required" placeholder="请输入联系人" autocomplete="off" class="layui-input">
-                            </div>
+                <!--对象-->
+                <div class="marginT15 z_object clearfix">
+                    <div class="z_leftDiv pull-left">表扬对象:</div>
+                    <div class="z_rightDiv pull-left">
+                        <div class="z_object_radio">
+                            <div class="z_radio z_radio_check pull-left"><div></div></div>
+                            <div class="pull-left">ECEJ</div>
+                            <div class="z_radio pull-left marginL30"><div></div></div>
+                            <div class="pull-left">新奥燃气</div>
+                            <div class="z_radio pull-left marginL30"><div></div></div>
+                            <div class="pull-left">呼叫中心</div>
                         </div>
-                    </div>
-                    <div class="clearfix z_layui_input pull-left">
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">联系电话:</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="title" required  lay-verify="required" placeholder="请输电话" autocomplete="off" class="layui-input">
+                        <div class="z_object_list">
+                            <div class="pull-left layui-form">
+                                <div class="layui-form-item"> 
+                                    <div class="layui-input-inline input-inline1"> 
+                                        <div style="width:200px;" class="layui-form-item">
+
+                                            <input style="width: 120px; float: left; display: inline-block;" readonly="readonly" type="text" name="username" lay-verify="required" placeholder="请选择城市" autocomplete="off" class="layui-input" />
+                                            <button onclick="choiceCityRadio()" class="z_dia_e_span_btn2">选择</button>
+
+                                        </div>
+                                    </div>
+
+                                    <div style="width: 60%; margin-left: 40px; float: left;" class="layui-input-inline input-inline2"> 
+                                        <select name="quiz1"> 
+                                            <option value="1">E成E家订单</option> 
+                                            <option value="2">SAP单据</option> 
+                                            <option value="3">商城订单</option> 
+                                            <option value="4" selected>话务类单据</option> 
+                                        </select> 
+                                    </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!--多行输入框-->
-                <div style="margin-bottom: 10px;height: 100px" class="z_write_textE clearfix marginT10">
-                    <div class="pull-left z_leftDiv">情况说明:</div>
-                    <!--<textarea style="width: 710px;;" class="pull-left" name="MSG" cols=40 rows=3 placeholder="请输入反馈内容!"></textarea>-->
-                    <div >
-                        <div class="layui-form-item layui-form-text">
-                            <div class="layui-input-block" style="margin-left: 80px">
-                                <textarea style="width: 705px;" placeholder="请输入内容" class="layui-textarea"></textarea>
-                            </div>
-                        </div>
-                    </div>
+                <div class="z_write_textE clearfix">
+                    <div class="pull-left z_leftDiv">表扬详情:</div>
+                    <textarea class="pull-left" name="MSG" cols=40 rows=3 placeholder="请输入反馈内容!"></textarea>
                 </div>
+
                 <!--有无参考的关联单据-->
-                <!--<div style="position: relative;  margin-left: 93px;" class="z_two_fang">-->
-                    <!--<span onclick="setGuanLian()" class="z_two_fang_span"></span>-->
-                    <!--<span class="z_two_fang_span2">有供参考的关联单据（ 上门服务订单 <span style="color: #59caf4;">DD6876786878778</span>）</span>-->
-                    <!--<img   class="z_two_fang_imgGuanLian_e" src="img/duihao.png" />-->
-                <!--</div>-->
+                <div style="position: relative;  margin-left: 93px;" class="z_two_fang">
+                    <span onclick="setGuanLian()" class="z_two_fang_span"></span>
+                    <span class="z_two_fang_span2">有供参考的关联单据（ 上门服务订单 <span style="color: #59caf4;">DD6876786878778</span>）</span>
+                    <img   class="z_two_fang_imgGuanLian_e" src="img/duihao.png" />
+                </div>
                 <!--加急-->
-                <div style="margin-left: 93px;margin-top:42px; position: relative;" class="marginT15 clearfix z_ungent ">
+                <div style="margin-left: 93px;margin-top:32px; position: relative;" class="marginT15 clearfix z_ungent ">
                     <span onclick="jinJi()" class="z_two_fang_span"></span>
                     <div style="margin-top:-3px;" class="z_leftDiv pull-left">加急处理</div>
                     <img  class="z_two_fang_imgjinji_e" src="img/duihao.png" />
@@ -401,7 +460,7 @@
          aria-hidden="true">
         <div class="modal-dialog alert-container">
             <div class="modal-content">
-                <p>建议单确认</p>
+                <p>表扬单确认</p>
                 <div class="modal_cd">
                     <div class="marginT20" style="position: relative">
                         <span>于正辉</span>
@@ -416,59 +475,17 @@
 
                 <div class="modal_btns">
                     <button class="btn_upadate_z" type="button" data-dismiss="modal">返回修改</button>
-                    <button   type="button" class="btn_upadate_z sure_btn">确认</button>
+                    <button type="button" class="btn_upadate_z sure_btn">确认</button>
                 </div>
                 <!--<input type="hidden" id="hiddenval" />-->
 
             </div>
         </div>
     </div>
+
+
+
 </div>
-
-<!--绿色通道-->
-<div class="modal" id="LSTDBtnClick" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog alert-container">
-        <div class="modal-content">
-            <p>绿色通道</p>
-            <div class="modal_cd">
-                <div class="marginT20 clearfix">
-                    <span class="pull-left">户内抢险:</span> <span class="marginL5 pull-left">于师傅</span><span class="marginL15 pull-left">18811067896</span>
-                    <button class="z_zBtnColor marginL30" style="width: 120px;margin-top: -6px">发起三方会议</button>
-                </div>
-                <div class="marginT20 clearfix">
-                    <span class="pull-left">户内抢险:</span> <span class="marginL5 pull-left">于师傅</span><span class="marginL15 pull-left">18811067896</span>
-                    <button class="z_zBtnColor marginL30" style="width: 120px;margin-top: -6px">发起三方会议</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<!--备用电话-->
-<div class="modal" id="BYDHBtnClick" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog alert-container">
-        <div class="modal-content">
-            <p>备用电话</p>
-            <div class="modal_cd">
-                <div class="marginT20 clearfix">
-                    <span class="marginL5 pull-left">于师傅</span><span class="marginL15 pull-left">18811067896</span>
-                    <button class="z_zBtnColor marginL30" style="margin-top: -6px">拨打</button>
-                </div>
-                <div class="marginT20 clearfix">
-                    <span class="marginL5 pull-left">于师傅</span><span class="marginL15 pull-left">18811067896</span>
-                    <button class="z_zBtnColor marginL30" style="margin-top: -6px">拨打</button>
-                </div>
-            </div>
-            <!--<input type="hidden" id="hiddenval" />-->
-
-        </div>
-    </div>
-</div>
-
-
 
 <!--用于回复通知-->
 <div class="modal fade" id="userNotice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -503,6 +520,42 @@
             <div class="modal-footer">
                 <button onclick="btnNO()" type="button" class="btn btn-default">取消</button>
                 <button onclick="btnOK()" type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--用于关联单据-->
+<div class="modal fade" id="setGuanLian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelG">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabelG">设置供参考的关联单据</h4>
+            </div>
+            <div  class="modal-body">
+                <div style="width: 100%;">
+                    <p style="display: inline-block; margin-right: 10px;">单据类型</p>
+                    <span class="z_dia_e_span_btn">上门订单</span>
+                    <span class="z_dia_e_span_btn">商城订单</span>
+                    <span class="z_dia_e_span_btn">缴费订单</span>
+                    <span class="z_dia_e_span_btn">抢险单</span>
+                    <span class="z_dia_e_span_btn">投诉单</span>
+                    <span class="z_dia_e_span_btn">表扬单</span>
+                    <span class="z_dia_e_span_btn">建议单</span>
+                    <span class="z_dia_e_span_btn">反馈订单</span>
+                    <span class="z_dia_e_span_btn">流转订单</span>
+                </div>
+                <div style="width: 100%; margin-top: 8px;">
+                    <p style="display: inline-block; margin-right: 10px;">单据编号</p>
+                    <input style="width: 415px; height: 25px; line-height: 25px; display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button  type="button" class="btn btn-default">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
             </div>
         </div>
     </div>
@@ -603,12 +656,13 @@
     </div>
 </div>
 
+
 </body>
 
+<script src="layui/layui.js" type="text/javascript"></script>
 <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/jquery.pagination.min.js" type="text/javascript"></script>
-<script src="layui/layui.js" type="text/javascript"></script>
 <script>
     $(function(){
 
@@ -627,6 +681,7 @@
 
         //展开收回优惠活动
         $('.z_openyhhd').on('click', function () {
+
             if($('.z_yhhd').css('height')=='40px'){
                 $('.z_yhhd').css('height','416px');
                 $('.z_openyhhd').html('收回');
@@ -648,6 +703,14 @@
             }
 
         });
+
+        $('.z_radio').click(function () {
+
+            //单选框的点击
+            $(this).addClass('z_radio_check').siblings().removeClass('z_radio_check');
+
+        });
+
         //选择城市（单选）
         choiceCityRadio = function(){
             $('#cityChoiceRadio').modal('show');
@@ -686,19 +749,9 @@
         setGuanLian = function(){
             $('.z_two_fang_imgGuanLian_e').hide();
             $('#setGuanLian').modal('show');
+
+
         };
-
-        //点击单据类型变色
-        $('.z_dia_e_span_btn').click(function(){
-            var $index = $(this).index()-1;
-            $('.z_dia_e_span_btn').removeClass('z_zBtnColor_click').eq($index).addClass('z_zBtnColor_click');
-        });
-        $('.z_radio').click(function () {
-
-            //单选框的点击
-            $(this).addClass('z_radio_check').siblings().removeClass('z_radio_check');
-
-        });
 
     });
 
@@ -710,8 +763,6 @@
                 ,laydate = layui.laydate;
 
     });
-
-
 
 </script>
 </html>
