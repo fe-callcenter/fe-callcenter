@@ -5,7 +5,7 @@
     <title>上门服务</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/layui.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="css/q_common.css" />
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
 
@@ -15,18 +15,30 @@
 </head>
 <body style="position: relative; background-color: #EAEBED;">
 
-<div class="z_main">
+<div class="z_main layui-form">
 
-    <form class="z_wb_search layui-form">
+    <form class="z_wb_search">
 
         <div class="pull-left">
-            <span>电话</span>
-            <input class="z_input" style="width: 130px;margin-left: 5px" type="text">
+            <span class="pull-left">电话</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 130px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" placeholder="电话" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="pull-left" style="margin-left: 25px">
-            <span>姓名</span>
-            <input class="z_input" style="width: 97px;margin-left: 5px" type="text">
+            <span class="pull-left">姓名</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 100px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="pull-left" style="margin-left: 25px;position: relative">
@@ -54,22 +66,45 @@
         </div>
 
         <div class="pull-left" style="margin-left: 242px">
-            <span>小区</span>
-            <input class="z_address_input" type="text">
-            <span>栋</span>
-            <input class="z_address_input" type="text">
-            <span>单元</span>
-            <input class="z_address_input" type="text">
-            <span>室</span>
-            <span style="margin-left: 20px">合同号</span>
-            <input class="z_address_input" style="width: 100px" type="text">
+            <span class="pull-left">小区</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 45px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <span class="pull-left" style="margin-left: 7px">栋</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 45px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <span class="pull-left" style="margin-left: 7px">单元</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 45px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <span class="pull-left" style="margin-left: 7px">室</span>
+            <span class="pull-left" style="margin-left: 20px">合同号</span>
+            <div class="clearfix z_layui_input pull-left">
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="margin-left: 10px;margin-top: 6px">
+                        <input style="width: 100px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="z_wb_searchBox"></div>
         <div class="z_wb_refreshBox"></div>
 
     </form>
-
 
     <!--内容-->
     <div class="z_wb_content">
@@ -169,7 +204,7 @@
                 <!--地址-->
                 <div class="marginT20 z_classify clearfix">
                     <div class="pull-left z_leftDiv">上门地址:</div>
-                    <div class="pull-left layui-form" style="width: 317px">
+                    <div class="pull-left" style="width: 317px">
                         <div class="layui-form-item"> 
                             <div class="layui-input-inline input-inline1" style="width: 120px"> 
                                 <select name="quiz1"> 
@@ -223,7 +258,7 @@
                 <!--分类-->
                 <div class="marginT20 z_classify">
                     <div class="z_leftDiv pull-left">服务分类:</div>
-                    <div class="pull-left layui-form">
+                    <div class="pull-left">
                         <div class="layui-form-item"> 
                             <div class="layui-input-inline input-inline1"> 
                                 <select name="quiz1"> 
@@ -258,7 +293,7 @@
                 <!--订单渠道-->
                 <div class="marginT20 z_classify">
                     <div class="z_leftDiv pull-left">订单渠道:</div>
-                    <div class="pull-left layui-form">
+                    <div class="pull-left">
                         <div class="layui-form-item"> 
                             <div class="layui-input-inline input-inline1"> 
                                 <select name="quiz1"> 
@@ -284,7 +319,7 @@
                             <div class="pull-left">呼叫中心</div>
                         </div>
                         <div class="z_object_list">
-                            <div class="pull-left layui-form">
+                            <div class="pull-left">
                                 <div class="layui-form-item"> 
                                     <div class="layui-input-inline input-inline1"> 
                                         <div style="width:200px;" class="layui-form-item">
