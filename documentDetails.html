@@ -156,85 +156,59 @@
 			</div>
 		</div>
 		
-		<!--弹出的模态框-->
-         <div class="modal fade" id="lookDing" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"aria-hidden="true">
-
-             <div class="modal-dialog alert-container">
-                 <div  class="modal-content">
-		     		<button style="display: inline-block; margin-top: 3px; margin-right: 5px;" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <ul style="width: 100%; height: 300px; overflow: auto; margin-top: 12px; margin-bottom: 20px; ">
-                    	<li>
-                    		<span style="color: #000000; font-weight: 800;" class="look_ding_zhi">操作时间</span>
-                    		<span style="color: #000000; font-weight: 800;" class="look_ding_zhi">操作类型</span>
-                    		<span style="color: #000000; font-weight: 800;" class="look_ding_zhi">操作人</span>
-                    	</li>
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    	
-                    	<li>
-                    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
-                    		<span class="look_ding_zhi">不领取任务</span>
-                    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
-                    	</li>
-                    </ul>
-                 </div>
-             </div>
-         </div>
-     </div>
      
-     
-<!--用于修改备注-->
-<div class="modal fade" id="upadateBei" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelG">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabelG">修改问题描述</h4>
-      </div>
-      <div  class="modal-body">
-       		<textarea style="display: inline-block; resize: none;" placeholder="请输入问题描述" class="layui-textarea"></textarea>
-       		<span style="color: #666666;">不超过300字</span>
-      </div>
-      <div class="modal-footer">
-      	<button  type="button" class="btn btn-default">返回</button>
-        <button type="button" class="btn btn-primary">更新</button>
-      </div>
-    </div>
+    <ul id="lookDing" style="width: 100%; display: none;  margin-top: 12px; margin-bottom: 12px; ">
+    	<li>
+    		<span style="color: #000000; font-weight: 800;" class="look_ding_zhi">操作时间</span>
+    		<span style="color: #000000; font-weight: 800;" class="look_ding_zhi">操作类型</span>
+    		<span style="color: #000000; font-weight: 800;" class="look_ding_zhi">操作人</span>
+    	</li>
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    	
+    	<li>
+    		<span class="look_ding_zhi">2017-12-01 23:34:23</span>
+    		<span class="look_ding_zhi">不领取任务</span>
+    		<span class="look_ding_zhi">廊坊呼叫中心-孙悟空</span>
+    	</li>
+    </ul> 
+  <div id="updateBei" style="display: none; width: 80%;margin-left: 9%; margin-top: 20px;">
+   		<textarea style="display: inline-block; resize: none;" placeholder="请输入问题描述" class="layui-textarea"></textarea>
+   		<span style="color: #666666;">不超过300字</span>
   </div>
-</div>
 
 <!--用于改约-->
 <div class="modal fade" id="gaiyue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelG">
@@ -244,11 +218,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabelG">改约</h4>
       </div>
-      <div style="min-height: 200px;" class="modal-body">
+      <div style="min-height: 165px;" class="modal-body layui-form">
 		<p>
 			<span>上班时间：</span>
-			<input type="checkbox"  />
-			<span>夜间模式 </span>
+			<input type="checkbox" name="like1[write]" lay-skin="primary" title="夜间模式" >
+			<span> &nbsp;&nbsp;&nbsp;</span>
 			<span>
 				<span> 7月12日 </span>
 				<span> 12:10</span>
@@ -257,9 +231,9 @@
 				 （<span>人工选择</span>
 				 ）
 			</span>
-			<span style="color:#01AAED; cursor: pointer;">系统推荐</span>
+			<span class="e_rengongxuanze" style="color:#01AAED; cursor: pointer;">人工选择</span>
 		</p>
-		<div style="width: 100%; display: none;">
+		<div class="rengongxuanze_time" style="width: 100%; display: none;">
 			<ul style="margin-top: 16px;">
 				<li class="gaiYueBdColor">
 					<span>周五</span><br />
@@ -272,6 +246,19 @@
 			</ul>
 		</div>
 		
+
+
+	
+
+		
+		<div style="float: left; margin-top: 7px; width: 80%;">
+			<span style="display: block; margin-top: 10px; float: left; line-height: 30px;">改约原因：</span>
+			
+			<input  type="radio" name="yuanyin" value="原时间不在家" title="原时间不在家" checked=""><br />
+			<input  type="radio" name="yuanyin" value="改约原因2" title="改约原因2"><br />
+			<input  type="radio" name="yuanyin" value="其他" title="其他">
+			<input style="display:inline-block;width: 60%; height: 30px;" type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入改约原因" class="layui-input">
+		</div>
       </div>
       <div class="modal-footer">
       	<button  type="button" class="btn btn-default">取消</button>
@@ -282,24 +269,49 @@
 </div>
 	</body>
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+	<script src="layer-v3.0.3/layer/layer.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="js/jquery.pagination.min.js" ></script>
 	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript" src="js/layer-extend.js"></script>
+
 	<script>
 		$(document).ready(function(){
 			//查看订单操作日志
 			lookDing = function(){
-				$('#lookDing').modal('show');
+				$.layer.openContent($("#lookDing"),"订单操作日志",{"area":['700px','350px']});
 			};
 			//修改备注
 			updateBei = function(){
-				$('#upadateBei').modal('show');
+				$.layer.openContent($("#updateBei"),"修改问题描述",{"area":['500px','270px'],btn:["确定","取消"],
+					yes:function(index, layero){
+						alert("我是确认按钮");
+					}
+		   		});
 			};
 			//改约
 			gaiYue = function(){
 				$('#gaiyue').modal('show');
 			};
 			
+			//是否选择人工选择
+			$('.e_rengongxuanze').click(function(){
+				if($('.e_rengongxuanze').text() == '人工选择'){
+					$('.e_rengongxuanze').text('系统推荐');
+					$('.rengongxuanze_time').show();
+				}else{
+					$('.e_rengongxuanze').text('人工选择');
+					$('.rengongxuanze_time').hide();
+				}
+			});
+			
 		});
+		
+		layui.use(['form', 'layedit', 'laydate'], function(){
+             var form = layui.form()
+             ,layer = layui.layer
+             ,layedit = layui.layedit
+             ,laydate = layui.laydate;
+         });
 	</script>
 </html>

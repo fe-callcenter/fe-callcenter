@@ -128,54 +128,6 @@
                 </div>
 
             </div>
-            
-            <!--<div class="z_profile">-->
-
-                <!--<div class="clearfix">-->
-                    <!--<div class="clearfix z_layui_input pull-left">-->
-                        <!--<div class="layui-form-item">-->
-                            <!--<label class="layui-form-label">联系人:</label>-->
-                            <!--<div class="layui-input-block">-->
-                                <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="clearfix z_layui_input pull-left marginL30">-->
-                        <!--<div class="layui-form-item">-->
-                            <!--<label class="layui-form-label">联系电话:</label>-->
-                            <!--<div class="layui-input-block">-->
-                                <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <!--&lt;!&ndash;分类&ndash;&gt;-->
-                <!--<div class="marginT15 z_classify clearfix">-->
-                    <!--<div class="pull-left" style="text-align: right;width: 80px;">上门地址:</div>-->
-                    <!--<div class="pull-left layui-form">-->
-                        <!--<div class="layui-form-item"> -->
-                            <!--<div class="layui-input-inline input-inline1"> -->
-                                <!--<select name="quiz1"> -->
-                                    <!--<option value="1">E成E家订单</option> -->
-                                    <!--<option value="2">SAP单据</option> -->
-                                    <!--<option value="3">商城订单</option> -->
-                                    <!--<option value="4" selected>话务类单据</option> -->
-                                <!--</select> -->
-                            <!--</div> -->
-                            <!--<div class="layui-input-inline input-inline2"> -->
-                                <!--<select name="quiz1"> -->
-                                    <!--<option value="1">E成E家订单</option> -->
-                                    <!--<option value="2">SAP单据</option> -->
-                                    <!--<option value="3">商城订单</option> -->
-                                    <!--<option value="4" selected>话务类单据</option> -->
-                                <!--</select> -->
-                            <!--</div> -->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-            <!--</div>-->
 
             <!--流转什么,后边都一样的-->
             <div id="z_ljbft_bottom">
@@ -306,75 +258,48 @@
                         </div>
                     </div>
                 </div>
-                <!--对象-->
+                <!--上门时间-->
                 <div class="marginT15 z_object clearfix">
-                    <div class="z_leftDiv pull-left">表扬对象:</div>
+                    <div class="z_leftDiv pull-left">上门时间:</div>
                     <div class="z_rightDiv pull-left">
-                        <div class="z_object_radio">
-                            <div class="z_radio z_radio_check pull-left"><div></div></div>
-                            <div class="pull-left">ECEJ</div>
-                            <div class="z_radio pull-left marginL30"><div></div></div>
-                            <div class="pull-left">新奥燃气</div>
-                            <div class="z_radio pull-left marginL30"><div></div></div>
-                            <div class="pull-left">呼叫中心</div>
+                        <div class="z_object_radio" style="height: 35px">
+
+                            <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary">
+                            <span>夜间模式</span>
+                            <span class="marginL30">7月12日 12:00 ~ </span><span>12:30</span><span>（系统推荐）</span>
+                            <span class="zColor z_pointer marginL30">人工选择</span>
+
                         </div>
-                        <div class="z_object_list">
-                            <div class="pull-left">
-                                <div class="layui-form-item"> 
-                                    <div class="layui-input-inline input-inline1"> 
-                                        <div style="width:200px;" class="layui-form-item">
+                        <div class="z_object_list" style="height: 200px;background-color: pink">
 
-                                            <input style="width: 120px; float: left; display: inline-block;" readonly="readonly" type="text" name="username" lay-verify="required" placeholder="请选择城市" autocomplete="off" class="layui-input" />
-                                            <button onclick="choiceCityRadio()" class="z_dia_e_span_btn2">选择</button>
-
-                                        </div>
-                                    </div>
-
-                                    <div style="width: 60%; margin-left: 40px; float: left;" class="layui-input-inline input-inline2"> 
-                                        <select name="quiz1"> 
-                                            <option value="1">E成E家订单</option> 
-                                            <option value="2">SAP单据</option> 
-                                            <option value="3">商城订单</option> 
-                                            <option value="4" selected>话务类单据</option> 
-                                        </select> 
-                                    </div> 
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!--多行输入框-->
-                <div class="z_write_textE clearfix">
-                    <div class="pull-left z_leftDiv">表扬详情:</div>
-                    <textarea class="pull-left" name="MSG" cols=40 rows=3 placeholder="请输入反馈内容!"></textarea>
-                </div>
-
-                <!--有无参考的关联单据-->
-                <div style="position: relative;  margin-left: 93px;" class="z_two_fang">
-                    <span onclick="setGuanLian()" class="z_two_fang_span"></span>
-                    <span class="z_two_fang_span2">有供参考的关联单据（ 上门服务订单 <span style="color: #59caf4;">DD6876786878778</span>）</span>
-                    <img   class="z_two_fang_imgGuanLian_e" src="img/duihao.png" />
-                </div>
-                <!--加急-->
-                <div style="margin-left: 93px;margin-top:32px; position: relative;" class="marginT15 clearfix z_ungent ">
-                    <span onclick="jinJi()" class="z_two_fang_span"></span>
-                    <div style="margin-top:-3px;" class="z_leftDiv pull-left">加急处理</div>
-                    <img  class="z_two_fang_imgjinji_e" src="img/duihao.png" />
-                </div>
-
-                <!--回复-->
-                <div style="margin-top:3px;" class="marginT15 clearfix z_reply">
-                    <div style="position: relative; margin-left: 93px;" class="z_two_fang">
-                        <span onclick="userNotice()" class="z_two_fang_span"></span>
-                        <span class="z_two_fang_span2">需要回复客户（ 2017-4-15 16:30，13698123511 / 金先生，解释说明计费差异原因）</span>
-                        <img  class="z_two_fang_img_e" src="img/duihao.png" />
+                <div class="z_write_textE clearfix marginT15" style="height: 120px">
+                    <div class="pull-left z_leftDiv">备注:</div>
+                    <div >
+                        <div class="layui-form-item layui-form-text">
+                            <div class="layui-input-block" style="margin-left: 80px">
+                                <textarea style="resize: none" placeholder="请输入内容" class="layui-textarea DTDSInput"></textarea>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+
+                <!--按钮-->
+                <div class="marginT15 z_submitBtn clearfix z_titleBtns" style="padding-left: 95px;margin-bottom: 15px">
+                    <input class="pull-left" style="height: 24px;margin-right: 15px;background-color: rgb(81,202,132)" type="button" value="燃气管道泄漏">
+                    <input class="pull-left" style="height: 24px;margin-right: 15px;background-color: rgb(81,202,132)" type="button" value="需要带备用件">
+                    <input class="pull-left" style="height: 24px;margin-right: 15px;background-color: rgb(81,202,132)" type="button" value="标签3">
+                    <input class="pull-left" style="height: 24px;margin-right: 15px;background-color: rgb(81,202,132)" type="button" value="标签4">
                 </div>
 
                 <!--按钮-->
                 <div class="marginT15 z_submitBtn">
-                    <input data-toggle="modal" data-target="#submitAgain" type="button" value="保存并提交">
+                    <input type="button" value="下 单">
                 </div>
 
             </div>
@@ -471,322 +396,45 @@
                 <!--图片-->
                 <div class="z_pic"></div>
 
-                <!--<span style="font-size: 15px;color: rgb(144,144,144)">该城市正在举行免检活动</span>-->
+                <span style="font-size: 15px;color: rgb(144,144,144)">该城市正在举行免检活动</span>
 
-                <!--<span class="z_zyd_content">水路服务满100减20</span>-->
-                <!--<span class="z_zyd_content">水路服务满100减20</span>-->
-                <!--<span class="z_zyd_content">水路服务满100减20</span>-->
+                <span class="z_zyd_content">水路服务满100减20</span>
+                <span class="z_zyd_content">水路服务满100减20</span>
+                <span class="z_zyd_content">水路服务满100减20</span>
 
-                <!--<button>电话成功</button>-->
+                <button>电话成功</button>
 
 
             </div>
 
 
-        </div>
-
-
-
-    </div>
-
-
-    <!--弹出的模态框-->
-    <div class="modal" id="submitAgain" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog alert-container">
-            <div class="modal-content">
-                <p>表扬单确认</p>
-                <div class="modal_cd">
-                    <div class="marginT20" style="position: relative">
-                        <span>于正辉</span>
-                        <span style="margin-left: 15px">151515151515</span>
-                        <div class="z_ungentPic">加急</div>
-                    </div>
-                    <div class="marginT20"><span>湖北省孝感市大悟县皇后东路121号</span> <span style="margin-left: 5px;">银鹭小区3栋5号楼301</span></div>
-                    <div class="marginT20"><span>流转分类:</span> <span style="margin-left: 5px">燃气-置换</span></div>
-                    <div class="marginT20"><span>问题描述:</span> <span style="margin-left: 5px">用户小区不支持置换服务</span></div>
-                    <div class="marginT20"><span>流转对象:</span> <span style="margin-left: 5px">新奥燃气->廊坊燃气公司</span></div>
-                </div>
-
-                <div class="modal_btns">
-                    <button class="btn_upadate_z" type="button" data-dismiss="modal">返回修改</button>
-                    <button type="button" class="btn_upadate_z sure_btn">确认</button>
-                </div>
-                <!--<input type="hidden" id="hiddenval" />-->
-
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
-
-<!--用于回复通知-->
-<div class="modal fade" id="userNotice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">用户回复设置</h4>
-            </div>
-            <div style="height: 300px;" class="modal-body">
-                <div class="z_modl_dial">
-                    <span style="float: left; text-align: right; line-height: 40px;">回复时间</span>
-                    <input style="width: 300px; margin-left: 10px; float: left;" placeholder="请选择时间" class="layui-input" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm'})">
-                </div>
-
-                <div class="z_modl_dial">
-                    <span style="float: left; margin-left: 14px; text-align: right; line-height: 40px;">联系人</span>
-                    <input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
-                </div>
-
-                <div class="z_modl_dial">
-                    <span style="float: left;  text-align: right; line-height: 40px;">联系电话</span>
-                    <input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
-                </div>
-
-                <div class="z_modl_dial">
-                    <span style="float: left;  text-align: right; line-height: 40px;">回复内容</span>
-                    <textarea  style="width: 300px; resize:none; margin-top: 12px; margin-left: 10px; float: left;" class="layui-textarea"></textarea>
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button onclick="btnNO()" type="button" class="btn btn-default">取消</button>
-                <button onclick="btnOK()" type="button" class="btn btn-primary">确定</button>
-            </div>
         </div>
     </div>
 </div>
-
-
-<!--用于关联单据-->
-<div class="modal fade" id="setGuanLian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelG">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabelG">设置供参考的关联单据</h4>
-            </div>
-            <div  class="modal-body">
-                <div style="width: 100%;">
-                    <p style="display: inline-block; margin-right: 10px;">单据类型</p>
-                    <span class="z_dia_e_span_btn">上门订单</span>
-                    <span class="z_dia_e_span_btn">商城订单</span>
-                    <span class="z_dia_e_span_btn">缴费订单</span>
-                    <span class="z_dia_e_span_btn">抢险单</span>
-                    <span class="z_dia_e_span_btn">投诉单</span>
-                    <span class="z_dia_e_span_btn">表扬单</span>
-                    <span class="z_dia_e_span_btn">建议单</span>
-                    <span class="z_dia_e_span_btn">反馈订单</span>
-                    <span class="z_dia_e_span_btn">流转订单</span>
-                </div>
-                <div style="width: 100%; margin-top: 8px;">
-                    <p style="display: inline-block; margin-right: 10px;">单据编号</p>
-                    <input style="width: 415px; height: 25px; line-height: 25px; display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button  type="button" class="btn btn-default">取消</button>
-                <button type="button" class="btn btn-primary">确定</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="cityChoiceRadio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelC">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabelC">选择城市</h4>
-            </div>
-            <div class="modal-body">
-                <div class="e_common_SPAN_div">
-                    <span class="e_common_SPAN_COLOR">H</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">湖州</span>
-		       			</span>
-                </div>
-                <div class="e_common_SPAN_div">
-                    <span class="e_common_SPAN_COLOR">L</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">廊坊</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-                </div>
-
-                <div class="e_common_SPAN_div">
-                    <span class="e_common_SPAN_COLOR">Y</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">廊坊</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-                </div>
-
-                <div class="e_common_SPAN_div">
-                    <span class="e_common_SPAN_COLOR">R</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">廊坊</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">确定</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 </body>
 
 <script src="layui/layui.js" type="text/javascript"></script>
+<script src="layer-v3.0.3/layer/layer.js"></script>
 <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/jquery.pagination.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/layer-extend.js" ></script>
 <script>
     $(function(){
 
-
-        $('#pagination').twbsPagination({
-            totalPages: 10000,/*Math.ceil(_total / 10),*/
-            visiblePages: 5,
-            first: '首页',
-            prev: '上一页',
-            next: '下一页',
-            last:"尾页",
-            /* onPageClick: function (event, page) {
-             $(_this).listgrid(page);
-             }*/
-        });
-
-        //展开收回优惠活动
-        $('.z_openyhhd').on('click', function () {
-
-            if($('.z_yhhd').css('height')=='40px'){
-                $('.z_yhhd').css('height','416px');
-                $('.z_openyhhd').html('收回');
-            }else {
-                $('.z_yhhd').css('height','40px');
-                $('.z_openyhhd').html('展开');
-            }
-        });
-
-        //展开和收回便签
-        $('.z_openBQ').click(function () {
-
-            if($('.z_bianqian').css('height')=='35px'){
-                $('.z_bianqian').css('height','120px');
-                $('.z_openBQT').html('收回');
-            }else {
-                $('.z_bianqian').css('height','35px');
-                $('.z_openBQT').html('展开');
-            }
-
-        });
-
-        $('.z_radio').click(function () {
-
-            //单选框的点击
-            $(this).addClass('z_radio_check').siblings().removeClass('z_radio_check');
-
-        });
-
-        //选择城市（单选）
-        choiceCityRadio = function(){
-            $('#cityChoiceRadio').modal('show');
-        };
-        //用户回复设置
-        userNotice = function(){
-            $('.z_two_fang_img_e').hide();
-            $('#userNotice').modal('show');
-        };
-        //用户确定回复信息
-        btnOK = function(){
-            $('.z_two_fang_img_e').show();
-
-            //隐藏弹出框
-            $('#userNotice').modal('hide');
-        };
-        //用户取消回复信息
-        btnNO = function(){
-            $('.z_two_fang_img_e').hide();
-
-            //隐藏弹出框
-            $('#userNotice').modal('hide');
-        };
-
-        //是否加急处理
-        jinJi = function(){
-            if($('.z_two_fang_imgjinji_e').css('display')=='none'){
-                $('.z_two_fang_imgjinji_e').show();
-            }else{
-                $('.z_two_fang_imgjinji_e').hide();
-            }
-        };
+//        点击底部按钮,文字到输入框内
+        var DTDSInputHtml = '';
+        $('.z_titleBtns > input').on('click', function () {
+            $(this).css('background-color','rgb(144,144,144)')
+            $(this).attr('disabled',true);
+            DTDSInputHtml += $(this).val();
+            DTDSInputHtml += ' ';
+            $('.DTDSInput').html(DTDSInputHtml);
+        })
 
 
-        //设置供参考的关联单据
-        setGuanLian = function(){
-            $('.z_two_fang_imgGuanLian_e').hide();
-            $('#setGuanLian').modal('show');
 
-
-        };
 
     });
 

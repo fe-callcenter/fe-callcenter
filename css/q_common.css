@@ -31,14 +31,15 @@ html,body{
 }
 
 .e_common_SPAN_div{
-	display:inline-block ;
+	display:block ;
 	margin-bottom: 8px;
 	margin-left: 20px;
+	line-height: 40px;
 }
 .e_common_SPAN_COLOR_span{
 	display: inline-block;
 	float: left;
-	margin-left: 5px;
+	margin-left: 12px;
 }
 
 /*用loading的样式文件*/

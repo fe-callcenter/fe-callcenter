@@ -42,3 +42,7 @@
 	border-right-color:transparent ;
 	cursor: pointer;
 }
+.layui-form-radio{
+	margin-right: 2px;
+	margin-top: 13px;
+}

@@ -1,0 +1,28 @@
+.btnTypes {
+    width:100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.inforBox {
+
+    width: 80%;
+    margin-top: 10px;
+    min-height: 500px;
+    padding: 10px 15px;
+    border: 1px solid #EAEBED;
+
+}
+
+.z_tableColDiv {
+    width: 100%;
+    height: 25px;
+}
+
+.z_tableColDiv > span {
+    text-align: center;
+}
+
+.inforBoxf table td , .inforBoxf table th {
+    text-align: center;
+}

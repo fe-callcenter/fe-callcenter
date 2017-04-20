@@ -279,7 +279,7 @@
 
                 <!--按钮-->
                 <div class="marginT15 z_submitBtn">
-                    <input data-toggle="modal" data-target="#submitAgain" type="button" value="保存并提交">
+                    <input onclick="saveSubmit()" type="button" value="保存并提交">
                 </div>
 
             </div>
@@ -393,211 +393,100 @@
 
 
     </div>
-
-
-    <!--弹出的模态框-->
-    <div class="modal" id="submitAgain" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog alert-container">
-            <div class="modal-content">
-                <p>反馈单确认</p>
-                <div class="modal_cd">
-                    <div class="marginT20" style="position: relative">
-                        <span>于正辉</span>
-                        <span style="margin-left: 15px">151515151515</span>
-                        <div class="z_ungentPic">加急</div>
-                    </div>
-                    <div class="marginT20"><span>湖北省孝感市大悟县皇后东路121号</span> <span style="margin-left: 5px;">银鹭小区3栋5号楼301</span></div>
-                    <div class="marginT20"><span>流转分类:</span> <span style="margin-left: 5px">燃气-置换</span></div>
-                    <div class="marginT20"><span>问题描述:</span> <span style="margin-left: 5px">用户小区不支持置换服务</span></div>
-                    <div class="marginT20"><span>流转对象:</span> <span style="margin-left: 5px">新奥燃气->廊坊燃气公司</span></div>
-                </div>
-
-                <div class="modal_btns">
-                    <button class="btn_upadate_z" type="button" data-dismiss="modal">返回修改</button>
-                    <button type="button" class="btn_upadate_z sure_btn">确认</button>
-                </div>
-                <!--<input type="hidden" id="hiddenval" />-->
-
-            </div>
-        </div>
-    </div>
 </div>
-<!--用于回复通知-->
-<div class="modal fade" id="userNotice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelH">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabelH">用户回复设置</h4>
-      </div>
-      <div style="height: 300px;" class="modal-body">
-       		<div class="z_modl_dial">
-       			<span style="float: left; text-align: right; line-height: 40px;">回复时间</span>
-		  		<input style="width: 300px; margin-left: 10px; float: left;" placeholder="请选择时间" class="layui-input" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm'})">
-       		</div>
-       		
-       		<div class="z_modl_dial">
-       			<span style="float: left; margin-left: 14px; text-align: right; line-height: 40px;">联系人</span>
-				<input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
-       		</div>
-       		
-       		<div class="z_modl_dial">
-       			<span style="float: left;  text-align: right; line-height: 40px;">联系电话</span>
-				<input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
-       		</div>
-       		
-       		<div class="z_modl_dial">
-       			<span style="float: left;  text-align: right; line-height: 40px;">回复内容</span>
-       			<textarea  style="width: 300px; resize:none; margin-top: 12px; margin-left: 10px; float: left;" class="layui-textarea"></textarea>
-
-       		</div>
-      </div>
-      <div class="modal-footer">
-      	<button onclick="btnNO()" type="button" class="btn btn-default">取消</button>
-        <button onclick="btnOK()" type="button" class="btn btn-primary">确定</button>
-      </div>
-    </div>
+<div id="submitAgain" style="display: none;">
+	<div style="margin-left: 12px;" class="modal_cd">
+	    <div class="marginT20" style="position: relative">
+	        <span>于正辉</span>
+	        <span style="margin-left: 15px">151515151515</span>
+	        <div class="z_ungentPic">加急</div>
+	    </div>
+	    <div class="marginT20"><span>湖北省孝感市大悟县皇后东路121号</span> <span style="margin-left: 5px;">银鹭小区3栋5号楼301</span></div>
+	    <div class="marginT20"><span>流转分类:</span> <span style="margin-left: 5px">燃气-置换</span></div>
+	    <div class="marginT20"><span>问题描述:</span> <span style="margin-left: 5px">用户小区不支持置换服务</span></div>
+	    <div class="marginT20"><span>流转对象:</span> <span style="margin-left: 5px">新奥燃气->廊坊燃气公司</span></div>
+	</div>
+</div>
+<div style="display: none; "  id="userHuiFu">
+   		<div style="margin-top: 12px;" class="z_modl_dial">
+   			<span style="float: left; text-align: right; line-height: 40px;">回复时间</span>
+	  		<input style="width: 300px; margin-left: 10px; float: left;" placeholder="请选择时间" class="layui-input" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm'})">
+   		</div>
+   		<div class="z_modl_dial">
+   			<span style="float: left; margin-left: 14px; text-align: right; line-height: 40px;">联系人</span>
+			<input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
+   		</div>
+   		
+   		<div class="z_modl_dial">
+   			<span style="float: left;  text-align: right; line-height: 40px;">联系电话</span>
+			<input type="text" style="width: 300px; margin-left: 10px; float: left;" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
+   		</div>
+   		
+   		<div class="z_modl_dial">
+   			<span style="float: left;  text-align: right; line-height: 40px;">回复内容</span>
+   			<textarea  style="width: 300px; resize:none; margin-top: 12px; margin-left: 10px; float: left;" class="layui-textarea"></textarea>
+   		</div>
   </div>
-</div>
 
-
-<!--用于关联单据-->
-<div class="modal fade" id="setGuanLian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelG">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabelG">设置供参考的关联单据</h4>
-      </div>
-      <div  class="modal-body">
-       		<div style="width: 100%;">
-       			<p style="display: inline-block; margin-right: 10px;">单据类型</p>
-   				<span class="z_dia_e_span_btn">上门订单</span>
-   				<span class="z_dia_e_span_btn">商城订单</span>
-   				<span class="z_dia_e_span_btn">缴费订单</span>
-   				<span class="z_dia_e_span_btn">抢险单</span>
-   				<span class="z_dia_e_span_btn">投诉单</span>
-   				<span class="z_dia_e_span_btn">表扬单</span>
-   				<span class="z_dia_e_span_btn">建议单</span>
-   				<span class="z_dia_e_span_btn">反馈订单</span>
-   				<span class="z_dia_e_span_btn">流转订单</span>
-       		</div>
-       		<div style="width: 100%; margin-top: 8px;">
-       			<p style="display: inline-block; margin-right: 10px;">单据编号</p>
-       			<input style="width: 415px; height: 25px; line-height: 25px; display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
-       			
-       		</div>
-      </div>
-      <div class="modal-footer">
-      	<button  type="button" class="btn btn-default">取消</button>
-        <button type="button" class="btn btn-primary">确定</button>
-      </div>
-    </div>
+<div id="setGuanLian" style="display: none;">
+	<div style="width: 80%; margin-left: 5%; margin-top: 12px;">
+		<p style="display: inline-block; margin-right: 10px;">单据类型</p>
+		<span class="z_dia_e_span_btn">上门订单</span>
+		<span class="z_dia_e_span_btn">商城订单</span>
+		<span class="z_dia_e_span_btn">缴费订单</span>
+		<span class="z_dia_e_span_btn">抢险单</span>
+		<span class="z_dia_e_span_btn">投诉单</span>
+		<span class="z_dia_e_span_btn">表扬单</span>
+		<span class="z_dia_e_span_btn">建议单</span>
+		<span class="z_dia_e_span_btn">反馈订单</span>
+		<span class="z_dia_e_span_btn">流转订单</span>
+	</div>
+	<div style="width: 80%; margin-left: 5%; margin-top: 8px; margin-bottom: 12px;">
+		<p style="display: inline-block; margin-right: 10px;">单据编号</p>
+		<input style="width: 415px; height: 25px; line-height: 25px; display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input">
+		
+	</div>
   </div>
-</div>
 
-<div class="modal fade" id="cityChoiceRadio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="exampleModalLabel">选择城市</h4>
-		      </div>
-		      <div class="modal-body">
-		       		<div class="e_common_SPAN_div">
-		       			<span class="e_common_SPAN_COLOR">H</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">湖州</span>
-		       			</span>
-		       		</div>
-		       		<div class="e_common_SPAN_div">
-		       			<span class="e_common_SPAN_COLOR">L</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">廊坊</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       		</div>
-		       		
-		       		<div class="e_common_SPAN_div">
-		       			<span class="e_common_SPAN_COLOR">Y</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">廊坊</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       		</div>
-		       		
-		       		<div class="e_common_SPAN_div">
-		       			<span class="e_common_SPAN_COLOR">R</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">廊坊</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">浏阳</span>
-		       			</span>
-		       			<span class="e_common_SPAN_COLOR_span">
-		       				<input name="e_city" class="e_city_inp" type="radio"/>
-		       				<span class="e_city_span">连云港</span>
-		       			</span>
-		       		</div>
-		       		
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary">确定</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+<div id="cityChoiceRadio" style="display: none;" class="layui-form">
+	<div class="e_common_SPAN_div">
+		<span class="e_common_SPAN_COLOR">H</span>
+		<input type="radio" name="e_city" value="湖州" title="湖州">
+	</div>
+	<div class="e_common_SPAN_div">
+		<span class="e_common_SPAN_COLOR">L</span>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+	</div>
+	<div class="e_common_SPAN_div">
+		<span class="e_common_SPAN_COLOR">Y</span>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+	</div>
+	<div class="e_common_SPAN_div">
+		<span class="e_common_SPAN_COLOR">R</span>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+		<input name="e_city" class="e_city_inp" type="radio"/>
+	</div>
+</div>
 </body>
 
 
 <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="layer-v3.0.3/layer/layer.js" ></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/jquery.pagination.min.js" type="text/javascript"></script>
 <script src="layui/layui.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/layer-extend.js" ></script>
 <script>
     $(function(){
 
@@ -647,37 +536,40 @@
         
         //选择城市（单选）
         choiceCityRadio = function(){
-        	$('#cityChoiceRadio').modal('show');
+			$.layer.openContent($("#cityChoiceRadio"),"选择城市",{"area":['700px','320px'],btn:["确定","取消"],
+				yes:function(index, layero){
+					alert("我是确认按钮");
+				}
+	   		});
         };
         //用户回复设置
        userNotice = function(){
-
-       		$('#userNotice').modal('show');
-       };
-	   //用户确定回复信息
-	   btnOK = function(){
-
-	   		
-	   		//隐藏弹出框
-	   		$('#userNotice').modal('hide');
-	   };
-	   //用户取消回复信息
-	   btnNO = function(){
-
-	   		
-	   		//隐藏弹出框
-	   		$('#userNotice').modal('hide');
-	   };
+			$.layer.openContent($("#userHuiFu"),"用户回复设置",{"area":['500px','410px'],btn:["确定","取消"],
+				yes:function(index, layero){
+					alert("我是确认按钮");
+				}
+	   		});
+       	};
 	   
-	
-       
+	   
+	   
        
        //设置供参考的关联单据
        setGuanLian = function(){
-
-       	  $('#setGuanLian').modal('show');
+			$.layer.openContent($("#setGuanLian"),"设置供参考的关联数据",{"area":['700px','230px'],btn:["确定","取消"],
+				yes:function(index, layero){
+					alert("我是确认按钮");
+				}
+	   		});
        };
-
+		//保存并提交
+		saveSubmit = function(){
+			$.layer.openContent($("#submitAgain"),"反馈单确认",{"area":['500px','320px'],btn:["确认","返回修改"],
+				yes:function(index, layero){
+					alert("我是确认按钮");
+				}
+	   		});
+		};
     });
 
 

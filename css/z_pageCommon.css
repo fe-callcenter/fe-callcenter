@@ -749,3 +749,6 @@ html,body{
     height: 30px;
     width: 200px;
 }
+.layui-form-radio{
+	margin-top: 0px;
+}

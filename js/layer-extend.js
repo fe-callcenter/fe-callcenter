@@ -71,28 +71,59 @@
 			{
 				parent.layer.close(index);
 			},
+			/********************************confirm********************************/
+			confirmContext:function(content,title,btn,callBack,options){
+				console.log(callBack);
+				if(!options){
+					options={};
+				}
+				options.title=title;
+				options.resize=false;
+				options.btn=btn;
+				options.btnAlign='c';
+				parent.layer.confirm(content, options, function(index) {
+					callBack(index);
+				});
+			},
 			/********************************open********************************/
 			open:function(options){
 				return parent.layer.open(options);
 			},
 			//打开一个url
-			openUrl:function(url,options){
+			openUrl:function(url,title,options){
+				if(!title) title="信息";
 				if(!options){
 					options={};
 					options.area=["850px","600px"];
 				}
 				options.type=2;
 				options.content=url;
+				options.title=title;
+				options.btnAlign='c';
 				return $.layer.open(options);
 			},
 			//打开一个div
-			openContent:function(content,options){
+			openContent:function(content,title,options){
+				if(!title) title="信息";
 				if(!options){
 					options={};
 					options.area=["550px","400px"];
 				}
 				options.type=1;
 				options.content=content;
+				options.title=title;
+				options.btnAlign='c';
+				return $.layer.open(options);
+			},
+			//打开一个tab
+			openTab:function(url,options){
+				if(!options){
+					options={};
+					options.area=["850px","600px"];
+				}
+				options.type=2;
+				options.content=url;
+				options.btnAlign='c';
 				return $.layer.open(options);
 			}
 	}
