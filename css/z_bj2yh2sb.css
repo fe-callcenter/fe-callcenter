@@ -26,3 +26,36 @@
 .inforBoxf table td , .inforBoxf table th {
     text-align: center;
 }
+
+.pageBox {
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.z_questionBox {
+    width: 800px;
+    padding: 10px 15px 15px 15px;
+    /*min-height: 200px;*/
+    border: 1px solid #999999;
+    /*overflow: hidden;*/
+}
+
+.z_pxBox {
+    position: absolute;
+    /*background-color: pink;*/
+    top: 0;
+    left: -25px;
+    width: 20px;
+    /*min-height: 100px;*/
+}
+.z_pxBox >img {
+    width: 20px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.z_pxBox > div {
+    width: 100%;
+    text-align: center;
+    cursor: default;
+}

@@ -17,64 +17,123 @@
     <div style="background-color: white;padding: 10px">
 
         <div class="btnTypes margint15 payfeesTypeBtns">
-            <button class="z_zBtnColor z_zBtnColor_click">表记1</button>
-            <button class="z_zBtnColor marginL15">表记2</button>
+            <button class="bj1Btn z_zBtnColor z_zBtnColor_click">表记1</button>
+            <button class="bj2Btn z_zBtnColor marginL15">表记2</button>
         </div>
 
-        <div class="btnTypes changDivBtns" style="margin-top: 8px">
-            <button class="z_zBtnColor z_zBtnColor_click">基本信息</button>
-            <button class="z_zBtnColor marginL15">发卡历史</button>
-            <button class="z_zBtnColor marginL15">防护卡历史</button>
-            <button class="z_zBtnColor marginL15">读表结果</button>
-            <button class="z_zBtnColor marginL15">换表记录</button>
+        <div class="bj1">
+            <div class="btnTypes changDivBtns" style="margin-top: 8px">
+                <button class="z_zBtnColor z_zBtnColor_click">基本信息</button>
+                <button class="z_zBtnColor marginL15">发卡历史</button>
+                <button class="z_zBtnColor marginL15">防护卡历史</button>
+                <button class="z_zBtnColor marginL15">读表结果</button>
+                <button class="z_zBtnColor marginL15">换表记录</button>
+            </div>
+
+            <div class="bottomBox">
+                <!--基本信息-->
+                <div class="inforBox ">
+                    <div class="marginT10"><span>IC卡表-宁海蓝宝石-CG-L-JBD1.6-130-右</span><span class="marginL30 redColor">正常使用</span></div>
+                    <div class="marginT20"><span>表钢号:</span><span class="marginL5 gayColor">M001100012561</span></div>
+                    <div class="marginT20"><span>表计位置:</span><span class="marginL5 gayColor">厨房</span><span class="marginL30">进气方向:</span><span class="marginL5 gayColor">右</span></div>
+                    <div class="marginT20"><span>基表读数设置:</span><span class="marginL5 gayColor">机械读数:0.0;液晶读数:0.0</span></div>
+                    <div class="marginT20"><span>用气类型:</span><span class="marginL5 gayColor">灶具热水器用气</span><span class="marginL30">缴费公司:</span><span class="marginL5 gayColor">廊坊新奥燃气有限公司</span></div>
+                    <div class="marginT20"><span>装表时间:</span><span class="marginL5 gayColor">2015-12-11</span><span class="marginL30">保修开始时间:</span><span class="marginL5 gayColor">2015-12-11</span><span class="marginL30">保修结束时间:</span><span class="marginL5 gayColor">2015-12-11</span></div>
+                </div>
+
+                <!--发卡历史-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-2">卡号</span><span class="col-sm-2">卡类型</span><span class="col-sm-2">蓝牙卡系列号</span><span class="col-sm-2">卡有效性</span><span class="col-sm-2">发卡次数</span><span class="col-sm-2">发卡日期</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
+                </div>
+
+                <!--防护卡卡历史-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-4">卡号</span><span class="col-sm-4">有效性</span><span class="col-sm-4">安装日期</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span><span class="col-sm-4">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span></span><span class="col-sm-4">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span><span class="col-sm-4">2017-12-11</span></div>
+                </div>
+
+                <!--读表结果-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-2">读表日期</span><span class="col-sm-4">读表原因</span><span class="col-sm-2">基表读数</span><span class="col-sm-2">液晶读数</span><span class="col-sm-2">剩余气量</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
+                </div>
+
+                <!--读表记录-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-2">表计编码</span><span class="col-sm-2">表计类型</span><span class="col-sm-2">表钢号</span><span class="col-sm-2">表计位置</span><span class="col-sm-2">开始日期</span><span class="col-sm-2">结束日期</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
+                </div>
+
+
+            </div>
+
         </div>
 
-        <div class="bottomBox">
-            <!--基本信息-->
-            <div class="inforBox ">
-                <div class="marginT10"><span>IC卡表-宁海蓝宝石-CG-L-JBD1.6-130-右</span><span class="marginL30 redColor">正常使用</span></div>
-                <div class="marginT20"><span>表钢号:</span><span class="marginL5 gayColor">M001100012561</span></div>
-                <div class="marginT20"><span>表计位置:</span><span class="marginL5 gayColor">厨房</span><span class="marginL30">进气方向:</span><span class="marginL5 gayColor">右</span></div>
-                <div class="marginT20"><span>基表读数设置:</span><span class="marginL5 gayColor">机械读数:0.0;液晶读数:0.0</span></div>
-                <div class="marginT20"><span>用气类型:</span><span class="marginL5 gayColor">灶具热水器用气</span><span class="marginL30">缴费公司:</span><span class="marginL5 gayColor">廊坊新奥燃气有限公司</span></div>
-                <div class="marginT20"><span>装表时间:</span><span class="marginL5 gayColor">2015-12-11</span><span class="marginL30">保修开始时间:</span><span class="marginL5 gayColor">2015-12-11</span><span class="marginL30">保修结束时间:</span><span class="marginL5 gayColor">2015-12-11</span></div>
+        <div class="bj2 hidden">
+            <div class="btnTypes changDivBtns" style="margin-top: 8px">
+                <button class="z_zBtnColor z_zBtnColor_click">基本信息</button>
+                <button class="z_zBtnColor marginL15">发卡历史</button>
+                <button class="z_zBtnColor marginL15">防护卡历史</button>
+                <button class="z_zBtnColor marginL15">读表结果</button>
+                <button class="z_zBtnColor marginL15">换表记录</button>
             </div>
 
-            <!--发卡历史-->
-            <div class="inforBox hidden">
-                <div class="z_tableColDiv"><span class="col-sm-2">卡号</span><span class="col-sm-2">卡类型</span><span class="col-sm-2">蓝牙卡系列号</span><span class="col-sm-2">卡有效性</span><span class="col-sm-2">发卡次数</span><span class="col-sm-2">发卡日期</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
-            </div>
+            <div class="bottomBox">
+                <!--基本信息-->
+                <div class="inforBox ">
+                    <div class="marginT10"><span>IC卡表-宁海蓝宝石-CG-L-JBD1.6-130-右</span><span class="marginL30 redColor">正常使用</span></div>
+                    <div class="marginT20"><span>表钢号:</span><span class="marginL5 gayColor">M001100012561</span></div>
+                    <div class="marginT20"><span>表计位置:</span><span class="marginL5 gayColor">厨房</span><span class="marginL30">进气方向:</span><span class="marginL5 gayColor">右</span></div>
+                    <div class="marginT20"><span>基表读数设置:</span><span class="marginL5 gayColor">机械读数:0.0;液晶读数:0.0</span></div>
+                    <div class="marginT20"><span>用气类型:</span><span class="marginL5 gayColor">灶具热水器用气</span><span class="marginL30">缴费公司:</span><span class="marginL5 gayColor">廊坊新奥燃气有限公司</span></div>
+                    <div class="marginT20"><span>装表时间:</span><span class="marginL5 gayColor">2015-12-11</span><span class="marginL30">保修开始时间:</span><span class="marginL5 gayColor">2015-12-11</span><span class="marginL30">保修结束时间:</span><span class="marginL5 gayColor">2015-12-11</span></div>
+                </div>
 
-            <!--防护卡卡历史-->
-            <div class="inforBox hidden">
-                <div class="z_tableColDiv"><span class="col-sm-4">卡号</span><span class="col-sm-4">有效性</span><span class="col-sm-4">安装日期</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span><span class="col-sm-4">2017-12-11</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span></span><span class="col-sm-4">2017-12-11</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span><span class="col-sm-4">2017-12-11</span></div>
-            </div>
+                <!--发卡历史-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-2">卡号</span><span class="col-sm-2">卡类型</span><span class="col-sm-2">蓝牙卡系列号</span><span class="col-sm-2">卡有效性</span><span class="col-sm-2">发卡次数</span><span class="col-sm-2">发卡日期</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">32532536</span><span class="col-sm-2">普卡</span><span class="col-sm-2"></span><span class="col-sm-2">有效</span><span class="col-sm-2">4</span><span class="col-sm-2">2017-12-11</span></div>
+                </div>
 
-            <!--读表结果-->
-            <div class="inforBox hidden">
-                <div class="z_tableColDiv"><span class="col-sm-2">读表日期</span><span class="col-sm-4">读表原因</span><span class="col-sm-2">基表读数</span><span class="col-sm-2">液晶读数</span><span class="col-sm-2">剩余气量</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
-            </div>
+                <!--防护卡卡历史-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-4">卡号</span><span class="col-sm-4">有效性</span><span class="col-sm-4">安装日期</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span><span class="col-sm-4">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span></span><span class="col-sm-4">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-4">32532536</span><span class="col-sm-4">有效</span><span class="col-sm-4">2017-12-11</span></div>
+                </div>
 
-            <!--读表记录-->
-            <div class="inforBox hidden">
-                <div class="z_tableColDiv"><span class="col-sm-2">表计编码</span><span class="col-sm-2">表计类型</span><span class="col-sm-2">表钢号</span><span class="col-sm-2">表计位置</span><span class="col-sm-2">开始日期</span><span class="col-sm-2">结束日期</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
-                <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
-            </div>
+                <!--读表结果-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-2">读表日期</span><span class="col-sm-4">读表原因</span><span class="col-sm-2">基表读数</span><span class="col-sm-2">液晶读数</span><span class="col-sm-2">剩余气量</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">2017-12-11</span><span class="col-sm-4">-</span><span class="col-sm-2"></span><span class="col-sm-2"></span><span class="col-sm-2">4</span></div>
+                </div>
 
+                <!--读表记录-->
+                <div class="inforBox hidden">
+                    <div class="z_tableColDiv"><span class="col-sm-2">表计编码</span><span class="col-sm-2">表计类型</span><span class="col-sm-2">表钢号</span><span class="col-sm-2">表计位置</span><span class="col-sm-2">开始日期</span><span class="col-sm-2">结束日期</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
+                    <div class="z_tableColDiv marginT10"><span class="col-sm-2">53453</span><span class="col-sm-2">卡表</span><span class="col-sm-2">M85685</span><span class="col-sm-2">厨房</span><span class="col-sm-2">2017-12-11</span><span class="col-sm-2">2017-12-11</span></div>
+                </div>
+
+
+            </div>
 
         </div>
-
 
     </div>
 
@@ -87,6 +146,16 @@
 <script>
 
     $(function(){
+
+//      点击表记
+        $('.bj1Btn').click(function () {
+            $('.bj1').removeClass('hidden');
+            $('.bj2').addClass('hidden');
+        });
+        $('.bj2Btn').click(function () {
+            $('.bj2').removeClass('hidden');
+            $('.bj1').addClass('hidden');
+        });
 
 //        点击按钮变更状态
         $('.payfeesTypeBtns .z_zBtnColor').on('click', function () {

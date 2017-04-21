@@ -510,6 +510,12 @@
 				}
 	   		});
 		};
+		
+		//选择单据类型
+		$('.z_dia_e_span_btn').on('click',function(){
+			$('.z_dia_e_span_btn').removeClass('z_dia_e_span_btn_Color');
+			$(this).addClass('z_dia_e_span_btn_Color');
+		});
              $('#pagination').twbsPagination({
                  totalPages: 10000,/*Math.ceil(_total / 10),*/
                  visiblePages: 5,

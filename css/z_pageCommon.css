@@ -752,3 +752,7 @@ html,body{
 .layui-form-radio{
 	margin-top: 0px;
 }
+.z_dia_e_span_btn_Color{
+	background-color: rgb(105,121,215);
+	color:#ffffff;
+}
