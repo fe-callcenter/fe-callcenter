@@ -472,9 +472,7 @@
      <script type="text/javascript" src="js/layer-extend.js" ></script>
      <script>
          $(function(){
-
-			 
-			 //选择城市（单选）
+		//选择城市（单选）
         choiceCityRadio = function(){
 			$.layer.openContent($("#cityChoiceRadio"),"选择城市",{"area":['700px','320px'],btn:["确定","取消"],
 				yes:function(index, layero){
@@ -483,10 +481,15 @@
 	   		});
         };
         //用户回复设置
-       userNotice = function(){
+       userNotice = function($this){
 			$.layer.openContent($("#userHuiFu"),"用户回复设置",{"area":['500px','410px'],btn:["确定","取消"],
 				yes:function(index, layero){
+					checkedState($this);
 					alert("我是确认按钮");
+				},btn2: function(index, layero){
+				    checkedInit($this);
+				},cancel: function(){ 
+				    checkedInit($this);
 				}
 	   		});
        	};
@@ -495,10 +498,15 @@
 	   
        
        //设置供参考的关联单据
-       setGuanLian = function(){
+       setGuanLian = function($this){
 			$.layer.openContent($("#setGuanLian"),"设置供参考的关联数据",{"area":['700px','230px'],btn:["确定","取消"],
 				yes:function(index, layero){
+					checkedState($this);
 					alert("我是确认按钮");
+				},btn2: function(index, layero){
+				    checkedInit($this);
+				},cancel: function(){ 
+				    checkedInit($this);
 				}
 	   		});
        };
@@ -510,6 +518,7 @@
 				}
 	   		});
 		};
+		
 		
 		//选择单据类型
 		$('.z_dia_e_span_btn').on('click',function(){
@@ -571,16 +580,33 @@
              ,laydate = layui.laydate;
 
             $('.layui-form-checkbox').eq(0).click(function(){
-            	setGuanLian();
+            	var $this = $(this);
+            	checkedInit($this);
+            	setGuanLian($this);
             });
             
             
             $('.layui-form-checkbox').eq(2).click(function(){
-            	userNotice();
+            	var $this = $(this);
+            	checkedInit($this);
+            	userNotice($this);
             });
             
 			
          });
-
+         
+         
+		//用于弹出框，点击取消或关闭时复选框初始化状态
+		function checkedInit($this){
+			if($this.hasClass('layui-form-checked')){
+				$this.removeClass('layui-form-checked');
+			}
+		};
+		//用于弹出框，点击确定时复选框选中状态
+		function checkedState($this){
+			if(!$this.hasClass('layui-form-checked')){
+				$this.addClass('layui-form-checked');
+			}
+		}
      </script>
 </html>
