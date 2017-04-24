@@ -104,9 +104,13 @@
 			var element = layui.element()
 			$ = layui.jquery,
 			layer = layui.layer,
+			
 			tab = layui.tab({
 				elem: '.admin-nav-card' //设置选项卡容器
 			});
+			
+            //element.tabDelete(filter, layid);
+			
 			$(window).on('resize', function() {
 				var $content = $('.admin-nav-card .layui-tab-content');
 				$content.height($(this).height() - 147);
@@ -114,11 +118,13 @@
 					$(this).height($content.height());
 				});
 			}).resize();
+			
+			
 
 		});
 		
 		/**********************************************************************************************************/
-
+		
 		//用于动态生成tab标签
 		function addTab(text,url,id){
 		  	tab.tabAdd({"title":text,"href":url,"id":id});

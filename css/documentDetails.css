@@ -89,5 +89,6 @@
 	left:-8px;
 	-webkit-transform:scale(0.5);
     -moz-transform:scale(0.5);
+    -transform:scale(0.5);
     transform:scale(0.5);
 }

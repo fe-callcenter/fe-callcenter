@@ -10,6 +10,8 @@ layui.define(['element'], function (exports) {
 		        closed: true //是否包含删除按钮
 		    };
 		};
+		
+		
     var ELEM = {};
     /**
 	 * 参数设置
@@ -98,6 +100,7 @@ layui.define(['element'], function (exports) {
             });
             if (that.config.closed) {
                 //监听关闭事件
+               
                 ELEM.titleBox.find('li').children('i.layui-tab-close[data-id=' + globalTabIdIndex + ']').on('click', function () {
                     element.tabDelete(ELEM.tabFilter, that.getTabId($(this).parent('li').index())).init();
                 });
@@ -109,6 +112,7 @@ layui.define(['element'], function (exports) {
         }
     };
     
+
     Tab.prototype.getTabId=function(i){
     	var that = ELEM.titleBox === undefined ? this.init() : this,
 			tabId = -1;

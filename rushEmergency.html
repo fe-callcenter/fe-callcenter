@@ -156,7 +156,7 @@
             <!--流转什么,后边都一样的-->
             <div id="z_ljbft_bottom">
 
-                <p>建议单</p>
+                <p>抢险单</p>
 
                 <!--分类-->
                 <div class="marginT15 z_classify">
@@ -184,7 +184,7 @@
                     <button style="margin-right: 8%;margin-top: -5px" class="z_zBtnColor pull-right" onclick="beiyongdianhua()">备用电话</button>
                     <button style="margin-right: 30px;margin-top: -5px" class="z_zBtnColor pull-right" onclick="lvsetongdao()">绿色通道</button>
                 </div>
-                <!--对象-->
+                <!--出险地址-->
                 <div class="marginT15 z_object clearfix">
                     <div class="z_leftDiv pull-left">出险地址:</div>
                     <div class="z_rightDiv pull-left" style="width: 90%">
@@ -192,7 +192,6 @@
                             <div class="pull-left">
                                 <div class="layui-form-item" style="margin-top: -4px"> 
                                     <div class="layui-input-inline input-inline1"> 
-                                        <!--<input style="display: inline-block;" type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请选择城市" class="layui-input">-->
 
                                         <div style="width:200px;" class="layui-form-item">
 
@@ -202,27 +201,13 @@
                                         </div>
 
                                     </div> 
-                                    <!--<input type="text" class="z_qx_input" style="margin-left: 172px" placeholder="小区">-->
-                                    <!--<input type="text" class="z_qx_input marginL15" style="width:350px;" placeholder="详细地址">-->
-
-                                        <div class="clearfix z_layui_input pull-left">
-                                            <div class="layui-form-item">
-                                                <div class="layui-input-block" style="margin-left: 180px;margin-top: -3px">
-                                                    <input style="width: 160px;" type="text" name="title" required  lay-verify="required" placeholder="小区" autocomplete="off" class="layui-input">
-                                                </div>
+                                    <div class="clearfix z_layui_input pull-left">
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block" style="margin-left: 178px;margin-top: -3px">
+                                                <input style="width: 530px" type="text" name="title" required  lay-verify="required" placeholder="请输电话" autocomplete="off" class="layui-input">
                                             </div>
                                         </div>
-                                        <div class="clearfix z_layui_input pull-left">
-                                            <div class="layui-form-item">
-                                                <div class="layui-input-block" style="margin-left: 15px;margin-top: -3px">
-                                                    <input style="width: 355px" type="text" name="title" required  lay-verify="required" placeholder="请输电话" autocomplete="off" class="layui-input">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -234,12 +219,14 @@
                     <div class="pull-left">
                         <div class="layui-form-item"> 
                             <div class="layui-input-inline input-inline1"> 
-                                <select name="quiz1"> 
-                                    <option value="1">E成E家订单</option> 
-                                    <option value="2">SAP单据</option> 
-                                    <option value="3">商城订单</option> 
-                                    <option value="4" selected>话务类单据</option> 
-                                </select> 
+
+                                <div style="width:200px;" class="layui-form-item">
+
+                                    <input style="width: 120px; float: left; display: inline-block;" readonly="readonly" type="text" name="username" lay-verify="required" placeholder="请选择单据" autocomplete="off" class="layui-input" />
+                                    <button onclick="choiceCityRadio()" class="z_dia_e_span_btn2">选择</button>
+
+                                </div>
+
                             </div> 
                             <div class="layui-input-inline input-inline2" style="width: 530px;;"> 
                                 <select name="quiz1"> 
