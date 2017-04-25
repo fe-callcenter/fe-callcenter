@@ -28,61 +28,6 @@
                  <span style="margin-left: 15px">列队:</span><span>&nbsp;&nbsp;新_新奥</span>
              </div>
 
-
-             <!--搜索部分-->
-             <!--<form class="z_wb_search z_mt10 layui-form">-->
-
-                 <!--<div class="pull-left">-->
-                     <!--<span>电话</span>-->
-                     <!--<input class="z_input" style="width: 130px;margin-left: 5px" type="text">-->
-                 <!--</div>-->
-
-                 <!--<div class="pull-left" style="margin-left: 25px">-->
-                     <!--<span>姓名</span>-->
-                     <!--<input class="z_input" style="width: 97px;margin-left: 5px" type="text">-->
-                 <!--</div>-->
-
-                 <!--<div class="pull-left" style="margin-left: 25px;position: relative">-->
-                     <!--<span>地址</span>-->
-                     <!--<div class="layui-form-item"> -->
-                         <!--<div class="layui-input-inline"> -->
-                             <!--<select name="quiz1"> -->
-                                 <!--<option value="1">请选择省</option> -->
-                                 <!--<option value="2" selected="">浙江省</option> -->
-                                 <!--<option value="3">江西省</option> -->
-                                 <!--<option value="4">福建省</option> -->
-                             <!--</select> -->
-                         <!--</div> -->
-                         <!--<div class="layui-input-inline" style="left: 155px"> -->
-                             <!--<select name="quiz2"> -->
-                                 <!--<option value="1">请选小区</option> -->
-                                 <!--<option value="2">银鹭小区</option> -->
-                                 <!--<option value="3" disabled="">银鹭夏鸥q</option> -->
-                                 <!--<option value="4">搜索</option> -->
-                                 <!--<option value="5">台州</option> -->
-                                 <!--<option value="6">绍兴</option> -->
-                             <!--</select> -->
-                         <!--</div> -->
-                     <!--</div>-->
-                 <!--</div>-->
-
-                 <!--<div class="pull-left" style="margin-left: 242px">-->
-                     <!--<span>小区</span>-->
-                     <!--<input class="z_address_input" type="text">-->
-                     <!--<span>栋</span>-->
-                     <!--<input class="z_address_input" type="text">-->
-                     <!--<span>单元</span>-->
-                     <!--<input class="z_address_input" type="text">-->
-                     <!--<span>室</span>-->
-                     <!--<span style="margin-left: 20px">合同号</span>-->
-                     <!--<input class="z_address_input" style="width: 100px" type="text">-->
-                 <!--</div>-->
-
-                 <!--<div class="z_wb_searchBox"></div>-->
-                 <!--<div class="z_wb_refreshBox"></div>-->
-
-             <!--</form>-->
-
              <form class="z_wb_search z_mt10">
 
                  <div class="pull-left">
@@ -108,8 +53,8 @@
                  </div>
 
                  <div class="pull-left" style="margin-left: 25px;position: relative">
-                     <span>地址</span>
-                     <div class="layui-form-item"> 
+                     <span class="pull-left">地址</span>
+                     <div class="layui-form-item pull-left"> 
                          <div class="layui-input-inline"> 
                              <select name="quiz1"> 
                                  <option value="1">请选择省</option> 
@@ -118,17 +63,12 @@
                                  <option value="4">福建省</option> 
                              </select> 
                          </div> 
-                         <div class="layui-input-inline" style="left: 155px"> 
-                             <select name="quiz2"> 
-                                 <option value="1">请选小区</option> 
-                                 <option value="2">银鹭小区</option> 
-                                 <option value="3" disabled="">银鹭夏鸥q</option> 
-                                 <option value="4">搜索</option> 
-                                 <option value="5">台州</option> 
-                                 <option value="6">绍兴</option> 
-                             </select> 
-                         </div> 
+
+                         <div class="layui-input-block" style="position: absolute;top: 6px;left: 45px;">
+                             <input style="width: 106px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" placeholder="小区" autocomplete="off" class="layui-input">
+                         </div>
                      </div>
+
                  </div>
 
                  <div class="pull-left" style="margin-left: 242px">
@@ -299,16 +239,6 @@
                                      </div>
                                  </div>
                                  <div style="margin-top: 20px">
-                                 	<!--第一版本-->
-                                     <!--<div class="pull-left" style="width: 70px;">是否回复:</div>
-                                     <div class=" pull-left z_radio z_radio_check">
-                                         <div></div>
-                                     </div>
-                                     <div class="pull-left">否</div>
-                                     <div class=" pull-left z_radio">
-                                         <div></div>
-                                     </div>
-                                     <div class="pull-left">是</div>-->
                                      <!--第二版本-->
                                      <div style="margin-top:6px;" class="marginT15 clearfix z_reply">
 					                    <div  class="z_two_fang">
@@ -366,8 +296,6 @@
                                  <span class="pull-left gayColor">&nbsp;&nbsp;20802898028080802</span>
                                  <span class="pull-left" style="margin-left: 10px">创建时间:</span>
                                  <span class="pull-left gayColor">&nbsp;&nbsp;2018-2-22 12:22</span>
-
-
                                  <button class="pull-left" style="background-image: url('img/z_hwls1.png')">表扬99</button>
                                  <button class="pull-left" style="background-image: url('img/z_huls2.png')">订单9</button>
                                  <button class="pull-left" style="background-image: url('img/z_hwls3.png')">咨询1</button>
@@ -466,87 +394,130 @@
                                  </div>
                              </div>
                          </div>
-
-
-
-
-
                          <!--按客户ID-->
                          <div class="khidDiv hidden">
 
-                             <p style="padding-left: 15px;background-color: #EAEBED;margin-top: 15px">上门服务订单(0)</p>
+                             <p style="padding-left: 15px;background-color: #EAEBED;margin-top: 15px;height: 30px;line-height: 30px">上门服务订单(0)</p>
 
-                             <p style="font-size: 16px;padding-left: 15px;margin-top: 15px">咨询问题(2)</p>
+                             <!--上门服务订单的盒子-->
+                             <div style="border:1px solid #EAEBED;margin-top: 10px">
+                                 <p style="font-size: 16px;padding-left: 15px;margin-top: 15px">咨询问题(2)</p>
 
-                             <div class="z_order_content">
+                                 <div class="z_order_content">
 
-                                 <div class="z_order_content_box">
+                                     <div class="z_order_content_box">
 
-                                     <div class="z_content_box_leftPicXUN">询</div>
+                                         <div class="z_content_box_leftPicXUN">询</div>
 
-                                     <div >
-                                         <span>咨询单ID:</span>
-                                         <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
-                                         <span style="margin-left: 25px">分类:</span>
-                                         <span class="gayColor">&nbsp;&nbsp;维护-灶具</span>
-                                         <span style="margin-left: 25px">创建时间:</span>
-                                         <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
+                                         <div >
+                                             <span>咨询单ID:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
+                                             <span style="margin-left: 25px">分类:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;维护-灶具</span>
+                                             <span style="margin-left: 25px">创建时间:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
+                                         </div>
+
+                                         <div class="z_content_box_question">
+
+                                             <div class="gayColor">
+                                                 <span>咨询详情:</span>
+                                                 <span style="margin-left: 17px">灶具坏了,不通气了,怎么修?</span>
+                                             </div>
+                                             <div class="gayColor">
+                                                 <span>处理方法:</span>
+                                                 <span style="margin-left: 17px">以告知维修方法,以维修!</span>
+                                             </div>
+                                         </div>
+
+                                         <img src="img/z_zjt.png" alt="">
+
                                      </div>
 
-                                     <div class="z_content_box_question">
+                                     <div class="z_order_content_box">
 
-                                         <div class="gayColor">
-                                             <span>咨询详情:</span>
-                                             <span style="margin-left: 17px">灶具坏了,不通气了,怎么修?</span>
+                                         <div class="z_content_box_leftPicXUN">询</div>
+
+                                         <div >
+                                             <span>咨询单ID:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
+                                             <span style="margin-left: 25px">分类:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;维护-灶具</span>
+                                             <span style="margin-left: 25px">创建时间:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
                                          </div>
-                                         <div class="gayColor">
-                                             <span>处理方法:</span>
-                                             <span style="margin-left: 17px">以告知维修方法,以维修!</span>
+
+                                         <div class="z_content_box_question">
+
+                                             <div class="gayColor">
+                                                 <span>咨询详情:</span>
+                                                 <span style="margin-left: 17px">灶具坏了,不通气了,怎么修?</span>
+                                             </div>
+                                             <div class="gayColor">
+                                                 <span>处理方法:</span>
+                                                 <span style="margin-left: 17px">以告知维修方法,以维修!</span>
+                                             </div>
                                          </div>
+
+                                         <img src="img/z_zjt.png" alt="">
+
                                      </div>
-
-                                     <img src="img/z_zjt.png" alt="">
 
                                  </div>
-
-                                 <div class="z_order_content_box">
-
-                                     <div class="z_content_box_leftPicXUN">询</div>
-
-                                     <div >
-                                         <span>咨询单ID:</span>
-                                         <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
-                                         <span style="margin-left: 25px">分类:</span>
-                                         <span class="gayColor">&nbsp;&nbsp;维护-灶具</span>
-                                         <span style="margin-left: 25px">创建时间:</span>
-                                         <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
-                                     </div>
-
-                                     <div class="z_content_box_question">
-
-                                         <div class="gayColor">
-                                             <span>咨询详情:</span>
-                                             <span style="margin-left: 17px">灶具坏了,不通气了,怎么修?</span>
-                                         </div>
-                                         <div class="gayColor">
-                                             <span>处理方法:</span>
-                                             <span style="margin-left: 17px">以告知维修方法,以维修!</span>
-                                         </div>
-                                     </div>
-
-                                     <img src="img/z_zjt.png" alt="">
-
-                                 </div>
-
                              </div>
 
-                             <p style="padding-left: 15px;background-color: #EAEBED;margin-top: 15px">抢险(0)</p>
+                             <!--商城订单-->
+                             <div style="border:1px solid #EAEBED;margin-top: 10px">
+                                 <p style="font-size: 16px;padding-left: 15px;margin-top: 15px">商城订单(2)</p>
 
-                             <p style="padding-left: 15px;background-color: #EAEBED;margin-top: 15px">流转(0)</p>
+                                 <div class="z_order_content">
+
+                                     <div class="z_order_content_box">
+
+                                         <div class="z_content_box_leftPicXUN">询</div>
+
+                                         <div >
+                                             <span>订单编号:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
+                                             <span style="margin-left: 25px">订单金额:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;💰380.00</span>
+                                             <span style="margin-left: 25px">状态:</span>
+                                             <span class="redColor">&nbsp;&nbsp;待收货</span>
+                                             <span style="margin-left: 25px">创建时间:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
+                                         </div>
+                                         <div style="margin-top: 15px">
+                                             <span>姓名:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;张珊珊</span>
+                                             <span class="gayColor">&nbsp;&nbsp;(女士)</span>
+                                             <span style="margin-left: 25px">地址:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;湖北省孝感市大悟县杭后东路12号银鹭小区2栋</span>
+                                         </div>
+
+                                         <div class="z_content_box_question">
+
+                                             <p class="gayColor" style="margin-top: 10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">我是商品名称我是商品名称我是商品名称我是商品名称我是商品名称我是商品名称我是商品名称我是商品名称我是商品名称</p>
+                                             <div class="gayColor">
+                                                 <span>红色</span>
+                                                 <span style="margin-left: 5px">57码</span>
+                                                 <span style="margin-left: 25px">222.00元</span>
+                                                 <span style="margin-left: 5px">包含撞飞 20 元</span>
+                                             </div>
+                                         </div>
+
+                                         <img src="img/z_zjt.png" alt="">
+
+                                     </div>
+
+
+                                 </div>
+                             </div>
+
+
+                             <p style="padding-left: 15px;background-color: #EAEBED;margin-top: 15px;height: 30px;line-height: 30px">抢险(0)</p>
+
+                             <p style="padding-left: 15px;background-color: #EAEBED;margin-top: 15px;height: 30px;line-height: 30px">流转(0)</p>
                          </div>
-
-
-
 
                      </div>
 
@@ -558,7 +529,8 @@
 
                      <!--便签-->
                      <div class="z_bianqian">
-                         <span style="font-size: 16px">便签</span>
+                         <span class="pull-left" style="background-image: url('img/z_bianqian.png');width: 21px;height: 20px;margin-top: 7px"></span>
+                         <span class="pull-left" style="font-size: 16px;margin-left: 5px">便签</span>
                          <span class="pull-right z_openBQ z_openBQT" style="color: rgb(134,215,245);margin-left: 3px;cursor: default">展开</span>
                          <span class="pull-right z_openBQ" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 12px;font-size: 15px"></span>
 
@@ -643,6 +615,29 @@
                              </nav>
                          </div>
 
+                     </div>
+
+                     <!--商城商城-->
+                     <div style="height: 95px;background-color: white;margin-top: 10px;padding: 10px">
+
+                         <div class="clearfix">
+                             <span class="pull-left" style="background-image: url('img/z_stor.png');width: 21px;height: 20px;"></span>
+                             <span class="pull-left" style="font-size: 16px;margin-left: 5px">商城商城</span>
+                         </div>
+
+                         <div style="width:100%;margin-top: 15px" class="clearfix">
+                             <div class="clearfix z_layui_input pull-left">
+                                 <div class="layui-form-item">
+                                     <div class="layui-input-block" style="margin-left: 0">
+                                         <input style="width: 240px;height: 28px;text-align: left;font-size: 12px" type="text" name="title" required=""  lay-verify="required" placeholder="可输入商品名称,为空则查全部商品" autocomplete="off" class="layui-input">
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 9px;"></span>
+                             <span class="pull-right" style="color: rgb(134,215,245);margin-right: 3px;cursor: default;margin-top: 5px;">查询商品</span>
+
+                         </div>
                      </div>
 
 

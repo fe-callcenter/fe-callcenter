@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all" />
+		<!--自定义样式文件-->
+		<link rel="stylesheet" href="css/q_common.css" />
+		<link rel="stylesheet" href="css/q_commodityDetails.css" />
+	</head>
+
+	<body style="background-color: #ffffff;" class="e_main">
+		<div class="e_d_main">
+			<div class="e_d_h_left">
+				<div class="e_d_h_l_content">
+					<ul class="e_d_h_l_content_ul">
+						<li class="etalage_thumb_image" style="display: inline-block;">
+							<img style="width:350px; height: 350px;" src="img/bg_logo.png" />
+						</li>
+						<li class="etalage_thumb_image">
+							<img style="width:350px; height: 350px;" src="img/duihao.png" />
+						</li>
+						<li class="etalage_thumb_image">
+							<img style="width:350px; height: 350px;" src="img/e_index_chuli.png" />
+						</li>
+						<li class="etalage_thumb_image">
+							<img style="width:350px; height: 350px;" src="img/bg_logo.png" />
+						</li>
+						<li class="etalage_thumb_image">
+							<img style="width:350px; height: 350px;" src="img/e_index_huifu.png" />
+						</li>
+
+					</ul>
+					<img onclick="moveLeft()" style="margin-right: 12px;" class="e_d_h_l_nav_ul_img" src="img/x_left.png" />
+					<div style="position: relative; width: 300px; height: 58px; overflow: hidden; float: left;">
+						<ul class="e_d_h_l_nav_ul">
+							<span class="e_d_h_l_nav_ul_span e_d_h_l_nav_ul_span_border">
+								<img src="img/bg_logo.png" />
+							</span>
+							<span class="e_d_h_l_nav_ul_span">
+								<img src="img/duihao.png" />
+							</span>
+							<span class="e_d_h_l_nav_ul_span">
+								<img src="img/e_index_chuli.png" />
+							</span>
+							<span class="e_d_h_l_nav_ul_span">
+								<img src="img/bg_logo.png" />
+							</span>
+							<span class="e_d_h_l_nav_ul_span">
+								<img src="img/e_index_huifu.png" />
+							</span>
+
+						</ul>
+					</div>
+
+					<img onclick="moveRight()" style="margin-left: 8px; float: right;" class="e_d_h_l_nav_ul_img" src="img/x_right.png" />
+
+				</div>
+			</div>
+			<div class="e_d_h_right">
+				<span class="e_d_h_title">时间差多少长时间地产将度搜你成绩单上</span>
+				<p class="e_d_h_title_fu">地降低偶尔为降低接我基地将额外ID今晚IE的加我</p>
+				<div class="e_d_h_right_div">
+					<span style="line-height: 25px;">销售公司：</span>
+					<span style="display: inline-block; line-height: 25px;margin-left: 12px;">服务公司名称服务公司名称服务公司名称</span><br />
+					<span style="line-height: 25px; float: left;">服务承诺：</span>
+					<div style="float: left;">
+						<img style="display: inline-block; float:left; margin: 8px 6px 0 18px;" src="img/x_duigou.png" />
+						<span style="display: inline-block; color: #666666; float:left; margin-top: 4px;">假一赔十</span><br />
+						<img style="display: inline-block; float:left;  margin: 8px 6px 0 18px;" src="img/x_duigou.png" />
+						<span style="display: inline-block; float:left; color: #666666; margin-top: 4px;">假一赔十</span><br />
+						<img style="display: inline-block; float:left; margin: 8px 6px 0 18px;" src="img/x_duigou.png" />
+						<span style="display: inline-block; float:left; color: #666666; margin-top: 4px;">假一赔十</span>
+					</div>
+					<div style="margin-top: 75px;">
+						<span style="line-height: 25px; clear: both;">促销活动：</span>
+						<span style="display: inline-block; color: #666666; line-height: 25px;margin-left: 12px;">直降</span>
+					</div>
+				</div>
+				<span style="line-height: 25px; margin-left: 8px;">商品售价：</span>
+				<span style="display: inline-block; color: #FF847A; line-height: 25px;margin-left: 12px;">￥<span>5000</span>-￥<span>6000</span></span><br />
+				<span style="line-height: 25px; margin-left: 8px;">已售数量：</span>
+				<span style="display: inline-block; color: #666666; line-height: 25px;margin-left: 12px;">5000</span><br />
+				<span style="line-height: 25px; margin-left: 8px;">商品状态：</span>
+				<span style="display: inline-block; color: #666666; line-height: 25px;margin-left: 12px;">已下架</span>
+			</div>
+			<div class="bot_content">
+				<span class="bot_content_t">商品规格属性</span>
+				<div style="width: 98%; margin-left: 1%;">
+					<div class="layui-form">
+						<table style="margin: 0; text-align: center;" class="layui-table">
+							<thead>
+								<tr>
+									<th style="text-align: center;">销售规格</th>
+									<th style="text-align: center;">状态</th>
+									<th style="text-align: center;">库存</th>
+									<th style="text-align: center;">售价</th>
+									<th style="text-align: center;">售价组成</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>白色3灶眼</td>
+									<td>正常</td>
+									<td>100</td>
+									<td>￥<span>1000.00</span></td>
+									<td>
+										商品价￥<span>1000.00</span>（原价：<s>￥</s><s>1000.00</s>）+安装费￥<span>1000.00</span>（原价：<s>￥</s><s>1000.00</s>）
+									</td>
+								</tr>
+								<tr>
+									<td>白色3灶眼</td>
+									<td>正常</td>
+									<td>100</td>
+									<td>￥<span>1000.00</span></td>
+									<td>
+										商品价￥<span>1000.00</span>（原价：<s>￥</s><s>1000.00</s>）+安装费￥<span>1000.00</span>（原价：<s>￥</s><s>1000.00</s>）
+									</td>
+								</tr>
+								<tr>
+									<td>白色3灶眼</td>
+									<td>正常</td>
+									<td>100</td>
+									<td>￥<span>1000.00</span></td>
+									<td>
+										商品价￥<span>1000.00</span>（原价：<s>￥</s><s>1000.00</s>）+安装费￥<span>1000.00</span>（原价：<s>￥</s><s>1000.00</s>）
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="bot_content">
+				<span class="bot_content_t">商品安装信息</span>
+				<div style="width: 98%; margin-left: 1%;">
+					<div class="layui-form">
+						<table style="margin: 0; text-align: center;" class="layui-table">
+
+							<tbody>
+								<tr>
+									<td style="width: 20%;  background-color: #F7F7F7;">安装对应服务项目</td>
+									<td>正常</td>
+
+								</tr>
+								<tr>
+									<td style="width: 20%;  background-color: #F7F7F7;">服务公司</td>
+									<td>正常</td>
+
+								</tr>
+								<tr>
+									<td style="width: 20%; background-color: #F7F7F7;">安装条件要求</td>
+									<td>正常</td>
+
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="bot_content">
+				<span class="bot_content_t">商品基本属性</span>
+				<div style="width: 98%; margin-left: 1%;">
+					<div class="layui-form">
+						<table style="margin: 0; text-align: center;" class="layui-table">
+
+							<tbody>
+								<tr>
+									<td style="width: 15%;  background-color: #F7F7F7;">商品编码</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;">商品分类</td>
+									<td>正常</td>
+								</tr>
+								<tr>
+									<td style="width: 15%;  background-color: #F7F7F7;">保质期</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;">单位</td>
+									<td>正常</td>
+								</tr>
+								<tr>
+									<td style="width: 15%; background-color: #F7F7F7;">品牌</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;">产地</td>
+									<td>正常</td>
+								</tr>
+								<tr>
+									<td style="width: 15%; background-color: #F7F7F7;">材质</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;">型号</td>
+									<td>正常</td>
+								</tr>
+								<tr>
+									<td style="width: 15%; background-color: #F7F7F7;">重量</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;">尺寸</td>
+									<td>正常</td>
+								</tr>
+								<tr>
+									<td style="width: 15%; background-color: #F7F7F7;">包装尺寸</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;">进风方式</td>
+									<td>正常</td>
+								</tr>
+								<tr>
+									<td style="width: 15%; background-color: #F7F7F7;">点火方式</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;">自定义属性</td>
+									<td>正常</td>
+								</tr>
+								<tr>
+									<td style="width: 15%; background-color: #F7F7F7;">自定义属性名</td>
+									<td>正常</td>
+									<td style="width: 15%;  background-color: #F7F7F7;"></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="bot_content">
+				<span class="bot_content_t">商品图文信息</span>
+				<div class="img_content_x">
+					<img src="img/bg_logo.png" />
+				</div>
+			</div>	
+		</div>
+	</body>
+
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.e_d_h_l_nav_ul_span').on('click', function() {
+				var $index = $(this).index();
+				var $this = $(this);
+				tabImg($index, tabImg);
+			});
+
+			function tabImg($index, tabImg) {
+				$('.e_d_h_l_nav_ul_span').removeClass('e_d_h_l_nav_ul_span_border').eq($index).addClass('e_d_h_l_nav_ul_span_border');
+				$('.etalage_thumb_image').hide().eq($index).fadeIn('50');
+			};
+
+			moveRight = function() {
+				var $index = $('.e_d_h_l_nav_ul_span').length;
+				if($index > 5) {
+					$('.e_d_h_l_nav_ul').animate({
+						left: "-350px"
+					}, 100)
+				}
+			};
+			moveLeft = function() {
+				var $index = $('.e_d_h_l_nav_ul_span').length;
+				if($index > 5) {
+					$('.e_d_h_l_nav_ul').animate({
+						left: "0px"
+					}, 100);
+				}
+			};
+		});
+	</script>
+
+</html>
