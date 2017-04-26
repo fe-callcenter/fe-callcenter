@@ -295,6 +295,13 @@
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="layui/layui.js" type="text/javascript"></script>
 	<script>
+
+		//点击table里边的内容,当前行北京变色
+		$('body').on('click','tr', function () {
+			$(this).addClass('clickBackGColor');
+			$(this).siblings('tr').removeClass('clickBackGColor');
+		})
+
 		setGuanLian =function(){
 			$("#setGuanLian").modal('show');
 		};

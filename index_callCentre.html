@@ -551,8 +551,32 @@
                          <div class="z_line">
 
                              <span class="pull-left" style="background-image: url('img/z_laba.png');width: 21px;height: 20px;"></span>
-                             <span class="pull-left" style="font-size: 16px;margin-left: 5px">重要通知</span>
-                             <span class="pull-right" style="font-size: 15px">廊坊</span>
+                             <span class="pull-left" style="font-size: 16px;margin-left: 5px">通知</span>
+                             <!--修改通知上便的样式-->
+                             <div style="overflow: hidden;height: 20px">
+                                 <div class="pull-left z_scroZYTop">
+                                     <span class="pull-left" style="font-size: 12px;margin-left: 5px">分类:</span>
+                                     <span class="pull-left" style="font-size: 12px;margin-left: 5px">停气通知</span>
+                                     <div class="pull-left" style="width: 30px;height: 20px;background-color: rgb(81,202,132);font-size: 12px;line-height: 20px;text-align: center;margin-left: 5px;color: white">置顶</div>
+                                     <div class="pull-left" style="width: 30px;height: 20px;background-color: rgb(105,121,215);font-size: 12px;line-height: 20px;text-align: center;margin-left: 5px;color: white">无效</div>
+                                     <span class="pull-right" style="font-size: 12px;">2016-11-11 11:22:22</span>
+                                 </div>
+                                 <div class="pull-left z_scroZYTop">
+                                     <span class="pull-left" style="font-size: 12px;margin-left: 5px">分类:</span>
+                                     <span class="pull-left" style="font-size: 12px;margin-left: 5px">停气通知</span>
+                                     <div class="pull-left" style="width: 30px;height: 20px;background-color: rgb(81,202,132);font-size: 12px;line-height: 20px;text-align: center;margin-left: 5px;color: white">置顶</div>
+                                     <div class="pull-left" style="width: 30px;height: 20px;background-color: rgb(105,121,215);font-size: 12px;line-height: 20px;text-align: center;margin-left: 5px;color: white">无效</div>
+                                     <span class="pull-right" style="font-size: 12px;">2016-11-11 11:22:22</span>
+                                 </div>
+                                 <div class="pull-left z_scroZYTop">
+                                     <span class="pull-left" style="font-size: 12px;margin-left: 5px">分类:</span>
+                                     <span class="pull-left" style="font-size: 12px;margin-left: 5px">停气通知</span>
+                                     <div class="pull-left" style="width: 30px;height: 20px;background-color: rgb(81,202,132);font-size: 12px;line-height: 20px;text-align: center;margin-left: 5px;color: white">置顶</div>
+                                     <div class="pull-left" style="width: 30px;height: 20px;background-color: rgb(105,121,215);font-size: 12px;line-height: 20px;text-align: center;margin-left: 5px;color: white">无效</div>
+                                     <span class="pull-right" style="font-size: 12px;">2016-11-11 11:22:22</span>
+                                 </div>
+
+                             </div>
                          </div>
                          <div style="height: 100px; overflow: hidden;"  class="z_line">
                          	<p style="display: block;"  class="z_line_e_p_hide">
@@ -713,6 +737,18 @@
 					numP = 0;
 				}
 			},3000);
+
+//             z_scroZYTop
+             var z_scroZYTop = $('.z_scroZYTop').length;
+             var numz = 1;
+             setInterval(function(){
+                 $('.z_scroZYTop').hide();
+                 $('.z_scroZYTop').eq(numz).fadeIn('100');
+                 numz++;
+                 if(numz>=z_scroZYTop){
+                     numz = 0;
+                 }
+             },3000);
 
 
 

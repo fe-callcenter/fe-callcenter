@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建回访任务</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    	<link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/createReturnVister.css" />
+    	
+	</head>
+	<body>
+		<div class="cre_main layui-form">
+			<h4>基本信息</h4>
+			<form>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px; margin-top: 8px;" class="fl">*任务名称</span>
+					<input type="text" style=" width:300px; display: inline-block; float: left;"  lay-verify="title" autocomplete="off" placeholder="最多30字" class="layui-input">
+					<div style="float:left; margin-left: 600px; margin-top: -40px;" class="layui-form-item">
+					    <label style="width: 100px;" class="layui-form-label">*任务分类</label>
+					    <div class="layui-input-block">
+					      <select name="interest" lay-filter="aihao">
+					        <option value=""></option>
+					        <option value="0" selected="">A-营销类</option>
+					        <option value="1" >B-投诉类</option>
+					        <option value="2">C-日常维修类</option>
+					      </select>
+					    </div>
+					  </div>
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px; margin-top: 8px;" class="fl">*任务简介</span>
+					<textarea style="resize: none; display: inline-block; float: left; width: 72%" placeholder="最多500字" class="layui-textarea"></textarea>
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px; margin-top: 8px;" class="fl">*任务类型</span>
+					<span class="btn_x_moren get_x_color_font">日常回访</span>
+					<span class="btn_x_moren ">专项回访</span>
+					<span class="btn_x_moren get_x_color_font_2">实时回访</span>
+					<span class="btn_x_moren">营销回访</span>
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px; text-align: right; width: 60px; margin-top: 8px;" class="fl">*问卷ID</span>
+					<input type="text" style=" width:60px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+					<span style="display: inline-block; color:#cccccc; margin:10px 0 0 8px;float: left;">45-日常回访问卷（全国版）<span style="color: red;">/X未找到可用问卷</span></span>
+					<div style="float:left; margin-left: 600px; margin-top: -40px;" class="layui-form-item">
+					    <label style="width: 100px;" class="layui-form-label">*执行人</label>
+					    <div class="layui-input-block">
+					      <select name="interest" lay-filter="aihao">
+					        <option value=""></option>
+					        <option value="0" selected="">廊坊呼叫中心</option>
+					        <option value="1" >青岛呼叫中心</option>
+					        <option value="2">......</option>
+					        <option value="3">回访组</option>
+					        
+					      </select>
+					    </div>
+					</div>
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px;  margin-top: 10px;" class="fl">*完成时限</span>
+					<span style="display: inline-block;  margin:10px 0 0 8px;float: left;">任务发布</span>
+					<input type="text" style=" width:60px;margin: 0 8px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+					<span style="display: inline-block;  margin:10px 0 0 8px;float: left;">小时内</span>
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px;  margin-top: 10px;" class="fl">*样本数量</span>
+					<input type="text" style=" width:300px;margin: 0 8px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 28px;  margin-top: 10px;" class="fl">*完成要求</span>
+					<input type="radio" name="call" value="按拨打量" title="按拨打量" checked="">
+      				<input type="radio" name="call" value="按成功完成访问量" title="按成功完成访问量">
+					<div style="float:left; margin-left: 600px; margin-top: -35px;" class="layui-form-item">
+					    <label style="width: 100px;" class="layui-form-label">*完成数量</label>
+						<input type="text" style=" width:220px;margin: 0 8px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+					</div>
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px;  margin-top: 10px;" class="fl">*重播次数</span>
+					<input type="text" style=" width:100px;margin: 0 8px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px;  margin-top: 10px;" class="fl">抽数规则</span>
+					<div style="float:left; margin-left: -15px; width: 400px;  margin-top: -30px;" class="layui-form-item">
+					    <div class="layui-input-block">
+					      <select name="interest" lay-filter="aihao">
+					        <option value=""></option>
+					        <option value="0" selected="">廊坊、保定、石家庄差评抽取</option>
+					      </select>
+					    </div>
+					</div>
+				</label>
+				<label style="width: 100%;" class="reSetLable">
+					<span style="margin-right: 25px;  margin-top: 10px;" class="fl">执行时间表</span>
+					<div style="float: left;">
+						<input type="radio" name="day" value="按天设置" title="按天设置">
+						<!--二期todo-->
+					</div>
+				</label>
+				<label style="width: 100%;"  class="reSetLable">
+					<div style=" min-height: 30px; margin-left: 97px; ">
+						<div style="float:left; margin-left: -20px;    ">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">执行时间点</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+							        <option value="0" selected="">9:30</option>
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<div style="float:left;">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">抽取时间段</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+							        <option value="0" selected="">8:30</option>
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<div style="float:left; margin-left: -65px;">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">到</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+							        <option value="0" selected="">9:30</option>
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 18px;" type="button" class="layui-btn">+</button>
+						<button style="display: inline-block;  font-size: 18px;" type="button" class="layui-btn layui-btn-primary">-</button>
+					</div>
+				</label>
+			</form>
+		</div>
+
+		
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script src="layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use(['form', 'layedit', 'laydate'], function(){
+             var form = layui.form()
+             ,layer = layui.layer
+             ,layedit = layui.layedit
+             ,laydate = layui.laydate;
+         });
+	</script>
+</html>

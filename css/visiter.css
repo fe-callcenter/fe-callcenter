@@ -4,6 +4,15 @@
 	margin-left: 1%;
 	
 }
+
+th,td {
+	cursor: default;
+}
+
+.clickBackGColor {
+	background-color: #EAEBED;
+}
+
 .vit_main_header_span{
 	display: inline-block;
 	width: 98%;

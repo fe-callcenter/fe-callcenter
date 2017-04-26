@@ -1,0 +1,40 @@
+.cre_main{
+	width: 86%;
+	margin-left: 7%;
+	margin-top: 12px;
+	color: #000000;
+	
+}
+.fl{
+	display: inline-block;
+	float: left;
+}
+.reSetLable{
+	color: #666666;
+	font-weight: 100;
+	margin-top: 12px;
+	margin-left: 30px;
+}
+.btn_x_moren{
+	display: inline-block;
+	width: 80px;
+	height: 25px;
+	line-height:25px ;
+	border:solid 1px #cccccc;
+	margin-top: 5px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 12px;
+}
+.get_x_color_font{
+	color:#ffffff;
+	background-color: #1E9FFF;
+	border-color: #1E9FFF;
+}
+.get_x_color_font_2{
+	color: #000000;
+	background-color: #C0C0C0;
+	border-color: #C0C0C0;
+}
+
