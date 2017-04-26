@@ -72,7 +72,7 @@
 					<span style="margin-right: 28px;  margin-top: 10px;" class="fl">*完成要求</span>
 					<input type="radio" name="call" value="按拨打量" title="按拨打量" checked="">
       				<input type="radio" name="call" value="按成功完成访问量" title="按成功完成访问量">
-					<div style="float:left; margin-left: 600px; margin-top: -35px;" class="layui-form-item">
+					<div style="float:left; margin-left: 600px; margin-top: -30px;" class="layui-form-item">
 					    <label style="width: 100px;" class="layui-form-label">*完成数量</label>
 						<input type="text" style=" width:220px;margin: 0 8px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
 					</div>
@@ -84,11 +84,9 @@
 				<label style="width: 100%;" class="reSetLable">
 					<span style="margin-right: 25px;  margin-top: 10px;" class="fl">抽数规则</span>
 					<div style="float:left; margin-left: -15px; width: 400px;  margin-top: -30px;" class="layui-form-item">
-					    <div class="layui-input-block">
-					      <select name="interest" lay-filter="aihao">
-					        <option value=""></option>
-					        <option value="0" selected="">廊坊、保定、石家庄差评抽取</option>
-					      </select>
+					    <div style="width: 600px;" class="layui-input-block">
+					   		<input type="text" readonly="readonly" style=" width:400px; margin-right: -1px; display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+							<button onclick="choice()" type="button" style="display: inline-block; float: left;" class="layui-btn layui-btn-primary">选择</button>
 					    </div>
 					</div>
 				</label>
@@ -134,25 +132,166 @@
 							    </div>
 							</div>
 						</div>
-						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 18px;" type="button" class="layui-btn">+</button>
-						<button style="display: inline-block;  font-size: 18px;" type="button" class="layui-btn layui-btn-primary">-</button>
+						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn">+</button>
+						<button style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary">-</button>
 					</div>
 				</label>
+				<label style="width: 100%; margin-top: 5px;"  class="reSetLable">
+					<div style=" min-height: 30px; margin-left: 97px; ">
+						<div style="float:left; margin-left: -20px;    ">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">执行时间点</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+							        <option value="0" selected="">9:30</option>
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<div style="float:left;">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">抽取时间段</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+							        <option value="0" selected="">8:30</option>
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<div style="float:left; margin-left: -65px;">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">到</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+							        <option value="0" selected="">9:30</option>
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn">+</button>
+						<button style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary">-</button>
+					</div>
+				</label>
+				<label style="width: 100%; margin-top: 5px;"  class="reSetLable">
+					<div style=" min-height: 30px; margin-left: 97px; ">
+						<div style="float:left; margin-left: -20px;    ">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">执行时间点</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<div style="float:left;">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">抽取时间段</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<div style="float:left; margin-left: -65px;">
+							<div  class="layui-form-item">
+							    <label style="width: 110px;" class="layui-form-label">到</label>
+							    <div class="layui-input-block">
+							      <select name="interest" lay-filter="aihao">
+							        <option value=""></option>
+
+							      </select>
+							    </div>
+							</div>
+						</div>
+						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn">+</button>
+						<button style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary">-</button>
+					</div>
+				</label>
+				<label style="width: 100%; margin-top: 5px;"  class="reSetLable">
+					<span style="margin-right: 25px;  margin-top: 10px;" class="fl">查重设置</span>
+					<span style="display: inline-block; color:#000;float: left; margin:9px 0 0 20px;">m天内，做过A、B类回访的用户，不进入样本（直接放弃的不算做过回访）</span><br />
+				</label>
+				<label style="width: 100%; margin-top: 5px;"  class="reSetLable">
+					<span style="display: inline-block; float: left; color: #000;  margin:15px 0 0 100px;">排重周期</span>
+					<input type="text" style=" width:60px;margin: 5px 8px 0 8px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+					<span style="display: inline-block; float: left;  margin:15px 0 0 0px;">天内</span>	
+				</label>
+				<div style="width: 100%; margin-top: 5px;"  class="reSetLable">
+					<span style="display: inline-block; float: left; color: #000;  margin:10px 0 0 100px;">排重范围</span>
+					<div style=" float: left; margin:10px 0 0 10px ;">
+						<input  type="checkbox" name="fanwei" lay-skin="primary" title="做过A类回访"/>
+						<input  type="checkbox" name="fanwei" lay-skin="primary" title="做过B类回访"/>
+						<input  type="checkbox" name="fanwei" lay-skin="primary" title="做过C类回访"/>
+						<input  type="checkbox" name="fanwei" lay-skin="primary" title="做过D类回访"/>
+					</div>
+				</div>
+				<div style=" clear: both; margin:70px 0 30px 400px;">
+    				<button type="button" class="layui-btn">预览</button>
+					<button type="button" class="layui-btn layui-btn-primary">发布</button>
+				</div>
 			</form>
+			
+			<div id="questionUpdate" style="display: none;">
+				<p style="display: inline-block;margin: 12px 0 0 30px;">
+					<span style="display: inline-block;float: left; margin-top: 5px;">规则名称</span>
+					<input type="text" style=" width:280px; margin-left:16px; height: 30px;  display: inline-block; float: left;"  lay-verify="title" autocomplete="off"  class="layui-input">
+					<img style="display: inline-block;float: left; margin:3px 0 0 12px; cursor: pointer;"  src="img/z_wb_search.png" />
+				</p>
+				<div style="margin-left: 30px; margin-top: 12px;">
+					<input type="radio" name="questionName" value="青岛、烟台、菏泽差评抽取" title="青岛、烟台、菏泽差评抽取"/>
+					<p style="width: 85%; color: #666666; margin-left: 30px; height: 25px; line-height: 20px;">
+						针对青岛、烟台、菏泽地区，所有成员企业，所有上门服务类订单，被评为3星及3星以下的订单进行抽取。
+					</p>
+				</div>
+				<div style="margin-left: 30px; margin-top: 12px;">
+					<input type="radio" name="questionName" value="青岛、烟台、菏泽差评抽取" title="青岛、烟台、菏泽差评抽取"/>
+					<p style="width: 85%; color: #666666; margin-left: 30px; height: 25px; line-height: 20px;">
+						针对青岛、烟台、菏泽地区，所有成员企业，所有上门服务类订单，被评为3星及3星以下的订单进行抽取。
+					</p>
+				</div>
+				<div style="margin-left: 30px; margin-top: 12px;">
+					<input type="radio" name="questionName" value="青岛、烟台、菏泽差评抽取" title="青岛、烟台、菏泽差评抽取"/>
+					<p style="width: 85%; color: #666666; margin-left: 30px; height: 25px; line-height: 20px;">
+						针对青岛、烟台、菏泽地区，所有成员企业，所有上门服务类订单，被评为3星及3星以下的订单进行抽取。
+					</p>
+				</div>
+				<span style="display: inline-block; color: #333333; margin-left: 38px; margin-top: 30px;">（有<span>30</span>个符合条件的队列未显示）</span>
+			</div>
+			
 		</div>
 
 		
 	</body>
 	
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+    <script type="text/javascript" src="layer-v3.0.3/layer/layer.js" ></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 	<script src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/layer-extend.js" ></script>
 	<script type="text/javascript">
+		$(document).ready(function(){
+			choice = function(){
+				$.layer.openContent($("#questionUpdate"),"修改问题描述",{"area":['550px','400px'],btn:["确定"],
+					yes:function(index, layero){
+
+						alert("我是确认按钮");
+					}
+		   		});
+			};
+		});
 		layui.use(['form', 'layedit', 'laydate'], function(){
              var form = layui.form()
              ,layer = layui.layer
              ,layedit = layui.layedit
              ,laydate = layui.laydate;
+             
+             
          });
 	</script>
 </html>
