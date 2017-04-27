@@ -8,12 +8,18 @@
     	<link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
 		
 		<link rel="stylesheet" type="text/css" href="css/createReturnVister.css" />
-    	
+    	<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+	    <script type="text/javascript" src="layer-v3.0.3/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	    <script type="text/javascript" src="js/layer-extend.js" ></script>
+		<script src="layui/layui.js"></script>
+	    
+		
 	</head>
 	<body>
 		<div class="cre_main layui-form">
 			<h4>基本信息</h4>
-			<form>
+			<form class="cre_main_form">
 				<label style="width: 100%;" class="reSetLable">
 					<span style="margin-right: 25px; margin-top: 8px;" class="fl">*任务名称</span>
 					<input type="text" style=" width:300px; display: inline-block; float: left;"  lay-verify="title" autocomplete="off" placeholder="最多30字" class="layui-input">
@@ -105,7 +111,9 @@
 							    <div class="layui-input-block">
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
-							        <option value="0" selected="">9:30</option>
+							        <option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
@@ -117,6 +125,8 @@
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
 							        <option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
@@ -127,13 +137,15 @@
 							    <div class="layui-input-block">
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
-							        <option value="0" selected="">9:30</option>
+							        <option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
 						</div>
-						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn">+</button>
-						<button style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary">-</button>
+						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn addTime">+</button>
+						<button  style="display: inline-block; font-size: 22px;" type="button" class="layui-btn layui-btn-primary deleteTime">-</button>
 					</div>
 				</label>
 				<label style="width: 100%; margin-top: 5px;"  class="reSetLable">
@@ -145,6 +157,8 @@
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
 							        <option value="0" selected="">9:30</option>
+							        <option value="1">10:00</option>
+							        <option value="2">10:30</option>
 							      </select>
 							    </div>
 							</div>
@@ -156,6 +170,8 @@
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
 							        <option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
@@ -166,13 +182,15 @@
 							    <div class="layui-input-block">
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
-							        <option value="0" selected="">9:30</option>
+							        <option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
 						</div>
-						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn">+</button>
-						<button style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary">-</button>
+						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn addTime">+</button>
+						<button   style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary deleteTime">-</button>
 					</div>
 				</label>
 				<label style="width: 100%; margin-top: 5px;"  class="reSetLable">
@@ -183,6 +201,9 @@
 							    <div class="layui-input-block">
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
+							        <option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
@@ -193,7 +214,9 @@
 							    <div class="layui-input-block">
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
-
+									<option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
@@ -204,13 +227,15 @@
 							    <div class="layui-input-block">
 							      <select name="interest" lay-filter="aihao">
 							        <option value=""></option>
-
+									<option value="0" selected="">8:30</option>
+							        <option value="1">9:30</option>
+							        <option value="2">10:00</option>
 							      </select>
 							    </div>
 							</div>
 						</div>
-						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn">+</button>
-						<button style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary">-</button>
+						<button style="display: inline-block; margin-left: 16px; background-color: #1E9FFF; font-size: 22px;" type="button" class="layui-btn addTime">+</button>
+						<button   style="display: inline-block;  font-size: 22px;" type="button" class="layui-btn layui-btn-primary deleteTime">-</button>
 					</div>
 				</label>
 				<label style="width: 100%; margin-top: 5px;"  class="reSetLable">
@@ -263,33 +288,42 @@
 				</div>
 				<span style="display: inline-block; color: #333333; margin-left: 38px; margin-top: 30px;">（有<span>30</span>个符合条件的队列未显示）</span>
 			</div>
-			
 		</div>
-
-		
-	</body>
 	
-	<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
-    <script type="text/javascript" src="layer-v3.0.3/layer/layer.js" ></script>
-	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
-	<script src="layui/layui.js"></script>
-    <script type="text/javascript" src="js/layer-extend.js" ></script>
+	
+	</body>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			choice = function(){
-				$.layer.openContent($("#questionUpdate"),"修改问题描述",{"area":['550px','400px'],btn:["确定"],
-					yes:function(index, layero){
-
-						alert("我是确认按钮");
-					}
-		   		});
-			};
+				
+			
 		});
 		layui.use(['form', 'layedit', 'laydate'], function(){
              var form = layui.form()
              ,layer = layui.layer
              ,layedit = layui.layedit
              ,laydate = layui.laydate;
+
+             choice = function(){
+				$.layer.openContent($("#questionUpdate"),"修改问题描述",{"area":['550px','400px'],btn:["确定"],
+					yes:function(index, layero){
+						alert("我是确认按钮");
+					}
+		   		});
+			};
+		
+			$('.cre_main_form').on('click','.deleteTime',function(){
+				var $that = $(this);
+				$that.parent().parent().fadeOut('100',function(){
+					$that.parent().parent().remove();
+				});
+			});
+			
+			$('.cre_main_form').on('click','.addTime',function(){
+				var $that = $(this);
+				var table = $that.parent().parent().clone();
+				$that.parent().parent().after(table);
+				form.render();//插入之后，重新渲染form表单
+			});
              
              
          });
