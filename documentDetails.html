@@ -9,7 +9,7 @@
     	<link rel="stylesheet" href="css/q_common.css" />
     	<link rel="stylesheet" type="text/css" href="css/documentDetails.css" />
 	</head>
-	<body style="background-color: #EAEBED;" >
+	<body style="background-color: #EAEBED;" class="e_main" >
 		<div class="doc_main">
 			<div class="doc_main_left">
 				<p style="display: inline-block; margin-left: 5%; font-size: 16px;">
@@ -64,65 +64,27 @@
 					</div>
 				</div>
 				<div class="doc_main_left_table">
-					<div style="width: 60%; margin-top: 20px; float: left;">
+					<div style="width: 48%; margin-top: 20px; float: left;">
 						<div style="width: 100%; margin-left: 0;" class="vit_content_right_btn">
 							<button style="width: 80px; margin-left: 0;">+上门服务</button>
-							<button style="width: 80px;">+抢修</button>
-							<button style="width: 80px;">+表扬</button>
-							<button style="width: 80px;">+投诉</button>
-							<button style="width: 80px;">+反馈</button>
-							<button style="width: 80px;">+投诉</button>
+							<button style="width: 55px;">+抢修</button>
+							<button style="width: 55px;">+表扬</button>
+							<button style="width: 55px;">+投诉</button>
+							<button style="width: 55px;">+反馈</button>
 						</div>
 					</div>
-					<div style="float: right; width: 38%; margin-top: 20px; margin-right: 1%;">
+					<div style="float: right; width: 50%; margin-top: 20px; margin-right: 1%;">
 						<div style="width: 100%;" class="vit_content_right_btn">
-							<button style="width: 80px; float: right;">取消</button>
-							<button onclick="updateBei()" style="width: 80px; float: right;">修改备注</button>
-							<button onclick="gaiYue()" style="width: 80px; float: right;">改约</button>
-							<button style="width: 80px; float: right; ">催单</button>
+							<button style="width: 40px; float: right;">取消</button>
+							<button onclick="updateBei()" style="width: 65px; float: right;">修改备注</button>
+							<button onclick="gaiYue()" style="width: 40px; float: right;">改约</button>
+							<button style="width: 40px; float: right; ">催单</button>
+							<button onclick="lookDetailCharges()" style="width:100px; float: right; ">查看费用明细</button>
+							<button onclick="lookuserInfo()" style="width: 100px; float: right; ">查看评价信息</button>
 						</div>
 					</div>
 				</div>
-				<div class="doc_main_left_table">
-					<div  style="margin-top: 90px;" class="layui-form">
-					  <table style="margin: 0; text-align: center;" class="layui-table">
-					    <tbody>
-					      <tr>
-					        <td style="color:#000000; ">费用明细</td>
-					        <td style="color:#000000; ">数量</td>
-					        <td style="color:#000000; ">原价</td>
-					        <td style="color:#000000; ">现价</td>
-					      </tr>
-					      <tr>
-					        <td>普通马桶水箱装修</td>
-					        <td>1</td>
-					        <td>￥21.00</td>
-					        <td>￥20.00</td>
-					      </tr>
-					      <tr>
-					        <td>普通马桶水箱装修</td>
-					        <td>1</td>
-					        <td>￥21.00</td>
-					        <td>￥20.00</td>
-					      </tr>
-					      <tr>
-					        <td>普通马桶水箱装修</td>
-					        <td>1</td>
-					        <td>￥21.00</td>
-					        <td>￥20.00</td>
-					      </tr>
-					      <tr>
-					        <td style="text-align: right; font-weight: 900; " colspan="4">
-					        	<span>订单金额 </span> <span> ￥<span>69.00</span></span><br />
-					        	<span>使用余额 </span> <span> ￥<span>69.00</span></span><br />
-					        	<span>优惠券抵扣 </span> <span> ￥<span>69.00</span></span><br />
-					        	<span>实收 </span> <span> ￥<span>69.00</span></span>
-					        </td>
-					      </tr>
-					    </tbody>
-					  </table>
-					</div>
-				</div>
+				
 			</div>
 			<div class="doc_main_right">
 				<div style="width: 80%; margin-left: 10%; margin-top: 12px;">
@@ -289,7 +251,123 @@
 		</div>
 	</div>
   </div>
+	<div id="lookuserInfo" style="display: none;">
+		<p style="display: inline-block; height: 20px; line-height: 20px; width: 80%; margin-top: 12px; margin-left: 9%;">
+			<span style="display: inline-block; color: #000000;" >评价星级：</span>
+			<span >5</span>
+		</p>
+		<p style="display: inline-block; height: 20px; line-height: 20px; width: 80%; margin-top: 12px; margin-left: 9%;">
+			<span style="display: inline-block; color: #000000;" >评价时间：</span>
+			<span >2017-5-1 17:51:55</span>
+		</p>
+		<p style="display: inline-block; height: 20px; line-height: 20px; width: 80%; margin-top: 12px; margin-left: 9%;">
+			<span style="display: inline-block; color: #000000;" >评价标签：</span>
+			<span >上门及时</span>
+			<span >技能水平高</span>
+		</p>
+		<p style="display: inline-block; height: 20px; line-height: 20px; width: 80%; margin-top: 12px; margin-left: 9%;">
+			<span style="display: inline-block; color: #000000;" >评价备注：</span>
+			<span >优惠服务到位</span>
+		</p>
+		
+	</div>
+	
+	<div id="lookDetailCharges" style="display: none;" class="doc_main_left_table">
+		<div class="layui-form">
+		  <table style="margin: 0; text-align: center;" class="layui-table">
+		    <tbody>
+		      <tr>
+		        <td style="color:#000000; ">项目/物料</td>
+		        <td style="color:#000000; ">物料号</td>
+		        <td style="color:#000000; ">渠道标示</td>
+		        <td style="color:#000000; ">保内标记</td>
+		        <td style="color:#000000; ">数量</td>
+		        <td style="color:#000000; ">原应收</td>
+		        <td style="color:#000000; ">活动减免</td>
+		        <td style="color:#000000; ">员工减免</td>
+		        <td style="color:#000000; ">合作方承担</td>
+		        <td style="color:#000000; ">实收</td>
+		        <td style="color:#000000; ">关联设备</td>
 
+		      </tr>
+		      <tr>
+		        <td>内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀</td>
+		        <td>20000106</td>
+		        <td></td>
+		        <td>保外</td>
+		        <td>1.00</td>
+		        <td>1.00</td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td>21.00</td>
+		        <td>0</td>
+		      </tr>
+		      <tr>
+		        <td>内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀</td>
+		        <td>20000106</td>
+		        <td></td>
+		        <td>保外</td>
+		        <td>1.00</td>
+		        <td>1.00</td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td>21.00</td>
+		        <td>0</td>
+		      </tr>
+		      <tr>
+		        <td>内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀</td>
+		        <td>20000106</td>
+		        <td></td>
+		        <td>保外</td>
+		        <td>1.00</td>
+		        <td>1.00</td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td>21.00</td>
+		        <td>0</td>
+		      </tr>
+		      <tr>
+		        <td>内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀</td>
+		        <td>20000106</td>
+		        <td></td>
+		        <td>保外</td>
+		        <td>1.00</td>
+		        <td>1.00</td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td>21.00</td>
+		        <td>0</td>
+		      </tr>
+		      <tr>
+		        <td>内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀内球阀</td>
+		        <td>20000106</td>
+		        <td></td>
+		        <td>保外</td>
+		        <td>1.00</td>
+		        <td>1.00</td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td>21.00</td>
+		        <td>0</td>
+		      </tr>
+		      <tr>
+		        <td style="text-align: left;  " colspan="4">
+		        	<span style="font-weight: 600;">应收总计 ：</span> <span><span>69.00</span>，</span>
+		        	<span style="font-weight: 600;">实收总计 ：</span> <span>69.00</span><br />
+		        	<span style="font-weight: 600;">优惠券支付： </span> <span><span>69.00</span>，</span>
+		        	<span style="font-weight: 600;">余额支付 ：</span> <span><span>69.00</span>，</span>
+		        	<span style="font-weight: 600;">主支付方式支付： </span> <span>69.00</span>
+		        </td>
+		      </tr>
+		    </tbody>
+		  </table>
+		</div>
+	</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
 	<script src="layer-v3.0.3/layer/layer.js"></script>
@@ -319,6 +397,15 @@
 						alert("我是确认按钮");
 					}
 		   		});
+			};
+			
+			//查看评价信息
+			lookuserInfo = function(){
+				$.layer.openContent($("#lookuserInfo"),"评价信息",{"area":['350px','200px']});
+			};
+			//查看费用明细
+			lookDetailCharges = function(){
+				$.layer.openContent($("#lookDetailCharges"),"费用详情",{"area":['1100px','550px']});
 			};
 			
 			//是否选择人工选择
