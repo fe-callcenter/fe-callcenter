@@ -15,7 +15,7 @@
 						</div>
 						<div class="e_content">
 							<!--模拟的点击事件，用来调试动态生成tab-->
-							<div  onclick="tab()"style="position: relative;">
+							<div onclick="hujiaogongzuotai()" style="position: relative;">
 								<div>
 									<span style="color: #6876DA;" class="e_content_div2_span"><span>业务处理</span></span>
 								</div>
@@ -46,7 +46,7 @@
 								</p>
 								<img class="e_content_div_img" src="img/e_index_close.png" />
 							</div>
-							<div style="position: relative;">
+							<div  style="position: relative;">
 								<div style="border-bottom-color: #F9D348;">
 									<span style="color: #F9D348;" class="e_content_div2_span"><span>待回复单据</span><span>(3)</span></span>
 								</div>
@@ -58,7 +58,7 @@
 							</div>
 						
 						
-							<div style="position: relative;">
+							<div onclick="daihuifudanju()" style="position: relative;">
 								<div style="border-bottom-color: #B883DC;">
 									<span style="color: #B883DC;" class="e_content_div2_span"><span>回复任务</span><span>(3)</span></span>
 								</div>
@@ -70,7 +70,7 @@
 							</div>
 						
 						
-							<div style="position: relative;">
+							<div  onclick="tab()" style="position: relative;">
 								<div style="border-bottom-color: #91B5E7;">
 									<span style="color: #91B5E7;" class="e_content_div2_span"><span>我建的单据</span><span>(3)</span></span>
 								</div>
@@ -113,7 +113,15 @@
 		$(document).ready(function(){
 			centerStyle(); //用于图标对齐的函数
 			tab = function(){
-				parent.addTab('重要通知','imporNotice.html','123');
+				parent.addTab('我建的单据','myBuildBill.html','wojiandedaju');
+			};
+			hujiaogongzuotai = function(){
+				parent.addTab('呼叫工作台','index_callCenter.html','callworking');
+				
+			};
+			daihuifudanju = function(){
+				parent.addTab('待回复单据','waitReply.html','daihuifudanju');
+				
 			};
 		});
 		//当浏览器窗体大小改变

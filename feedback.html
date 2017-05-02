@@ -143,10 +143,10 @@
                 <div class="z_lable">
                     <button>营业厅</button>
                     <button>卡证</button>
-                    <button>表记</button>
-                    <button>缴费</button>
-                    <button>隐患</button>
-                    <button>设备</button>
+                    <button onclick="biaoji()">表记</button>
+                    <button onclick="jiaofei()">缴费</button>
+                    <button onclick="yinhuan()">隐患</button>
+                    <button onclick="shebei()">设备</button>
                     <button>保险</button>
                 </div>
 
@@ -587,6 +587,26 @@
             $('.layui-form-checkbox').eq(1).click(function(){
             	userNotice();
             });
+            
+             //跳转到隐患
+             yinhuan = function(){
+             	parent.addTab('隐患','hiddenTrouble.html','yinhuan');
+             };
+             
+             //跳转到表记
+             biaoji = function(){
+             	parent.addTab('表记','souvenir.html','biaoji');
+             	
+             };
+             //跳转到缴费
+             jiaofei = function(){
+             	parent.addTab('缴费','XAPayfees.html','jiaofei');
+             	
+             };
+             //跳转到设备
+             shebei = function(){
+             	parent.addTab('设备','facility.html','shebei');
+             };
 
     });
 

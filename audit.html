@@ -25,7 +25,7 @@
 
             <div class="marginT15"><span>问题描述:</span><span class="gayColor marginL5">廊坊西城区最近的服务网点在哪里?</span></div>
 
-            <div class="marginT15"><span>关联单据:</span><span class="gayColor marginL5">126872168162</span><span class="gayColor marginL30">上门服务订单</span><span class="gayColor marginL30">水路-水龙头-维修</span><span class="marginL30" style="color: rgb(105,121,215);cursor: pointer">查看详情</span></div>
+            <div class="marginT15"><span>关联单据:</span><span class="gayColor marginL5">126872168162</span><span class="gayColor marginL30">上门服务订单</span><span class="gayColor marginL30">水路-水龙头-维修</span><span class="marginL30" style="color: rgb(105,121,215);cursor: pointer" onclick="chakanxiangqing()">查看详情</span></div>
 
             <div class="marginT15" style="background-color: #EAEBED;width: 100%;height: 1px"></div>
 
@@ -158,4 +158,25 @@
 </div>
 
 </body>
+<script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="layer-v3.0.3/layer/layer.js"></script>
+ <script src="layui/layui.js" type="text/javascript"></script>
+ <script type="text/javascript" src="js/layer-extend.js"></script>
+ <script>
+ 	layui.use(['form', 'layedit', 'laydate'], function(){
+             var form = layui.form()
+             ,layer = layui.layer
+             ,layedit = layui.layedit
+             ,laydate = layui.laydate;
+             $('.layui-form-checkbox').eq(0).click(function(){
+            	userNotice();
+             });
+             //跳转到单据详情
+             chakanxiangqing = function(){
+				parent.addTab('单据详情','documentDetails.html','danjuxiangqing');
+             };
+             
+
+         });
+ </script>
 </html>

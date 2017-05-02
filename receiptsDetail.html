@@ -30,11 +30,11 @@
                 <div class="marginT15"><span>处理方法:</span><span class="gayColor marginL5">已告知并给用户发送短信</span></div>
 
                 <div class="marginT15 z_rd_boxBtns">
-                    <button>流转</button>
-                    <button>建议</button>
-                    <button>表扬</button>
-                    <button>反馈</button>
-                    <button>投诉</button>
+                    <button onclick="liuzhuan()">流转</button>
+                    <button onclick="jianyi()">建议</button>
+                    <button onclick="biaoyang()">表扬</button>
+                    <button onclick="fankui()">反馈</button>
+                    <button onclick="tousu()">投诉</button>
                     <button class="pull-right">催单</button>
                     <button class="pull-right">取消</button>
                     <button class="pull-right">修改描述</button>
@@ -118,4 +118,44 @@
     </div>
 
 </body>
+
+
+<script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="layer-v3.0.3/layer/layer.js" ></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.pagination.min.js" type="text/javascript"></script>
+<script src="layui/layui.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/layer-extend.js" ></script>
+
+<script>
+	
+	layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form()
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+            //跳转到投诉页
+             tousu = function(){
+				parent.addTab('投诉','complaint.html','tousu');
+             };
+             //跳转到反馈
+             fankui = function(){
+             	parent.addTab('反馈','feedback.html','fankui');
+             };
+             //跳转到表扬
+             biaoyang = function(){
+             	parent.addTab('表扬','praise.html','biaoyang');
+             };
+             
+             //跳转到流转
+             liuzhuan = function(){
+             	parent.addTab('流转','flow.html','liuzhuan');
+             };
+             //跳转到建议
+             jianyi = function(){
+             	parent.addTab('建议','suggess.html','jianyi');
+             };
+
+    });
+</script>
 </html>

@@ -89,7 +89,7 @@
                         <td>燃气-灶具</td>
                         <td>已处理</td>
                         <td>2017-12-22 12:22:22</td>
-                        <td style="color: rgb(105,121,215);cursor: pointer"><span>审核</span><span class="marginL5" data-toggle="modal" data-target="#updateDesc">修改描述</span><span class="marginL5" data-toggle="modal" data-target="#deleteBill">取消</span></td>
+                        <td style="color: rgb(105,121,215);cursor: pointer"><span style="cursor: pointer;" onclick="shenhe()">审核</span><span class="marginL5" data-toggle="modal" data-target="#updateDesc">修改描述</span><span class="marginL5" data-toggle="modal" data-target="#deleteBill">取消</span></td>
                     </tr>
                     <tr>
                         <td style="position: relative"><span>1789279127</span><div class="z_tabUngentPic">急</div></td>
@@ -215,6 +215,10 @@
             });
             form.render('checkbox');
         });
+        
+        shenhe = function(){
+            parent.addTab('审核','audit.html','shenhe');
+        };
 
     });
 </script>

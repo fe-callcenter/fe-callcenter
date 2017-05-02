@@ -36,13 +36,13 @@
 }
 .e_header_right_img_1{
 	margin-left: 7%;
-	margin-top: 35px;
+	margin-top: 11px;
 	
 }
 .e_header_right span{
 	display: inline-block;
-	height: 72px;
-	line-height: 72px;
+	height: 26px;
+	line-height: 26px;
 	font-size: 14px;
 	font-family: "微软雅黑";
 	color: #ffffff;
@@ -51,7 +51,7 @@
 }
 .e_header_right_img_2{
 	margin-left: 5%;
-	margin-top: 26px;
+	margin-top: 3px;
 }
 .e_header_middle ul{
 	height: 72px;
@@ -81,4 +81,66 @@
 	display: inline-block;
 	margin-top: 12px;
 	
+}
+
+@-moz-keyframes rotate{
+    0%{
+      -moz-transform:rotate(0deg);
+     }
+     100%{
+       -moz-transform:rotate(180deg);
+     }
+  }
+  @-webkit-keyframes rotate{
+    0%{
+      -webkit-transform:rotate(0deg);
+     }
+     100%{
+       -webkit-transform:rotate(180deg);
+     }
+  }
+  @keyframes rotate{
+    0%{
+      transform:rotate(0deg);
+     }
+     100%{
+       transform:rotate(180deg);
+     }
+  }
+  
+  @-moz-keyframes rotate2{
+    0%{
+      -moz-transform:rotate(180deg);
+     }
+     100%{
+       -moz-transform:rotate(0deg);
+     }
+  }
+  @-webkit-keyframes rotate2{
+    0%{
+      -webkit-transform:rotate(180deg);
+     }
+     100%{
+       -webkit-transform:rotate(0deg);
+     }
+  }
+  @keyframes rotate2{
+    0%{
+      transform:rotate(180deg);
+     }
+     100%{
+       transform:rotate(0deg);
+     }
+  }
+.q_header_img_xuan
+{
+  -moz-animation:rotate 1s forwards ;
+  -webkit-animation:rotate 1s forwards ;
+  animation:rotate 1s forwards ;
+}
+
+.q_header_img_xuan_2{
+	 -moz-animation:rotate2 1s forwards ;
+  -webkit-animation:rotate2 1s forwards ;
+  animation:rotate2 1s forwards ;
 }

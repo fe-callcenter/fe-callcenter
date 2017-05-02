@@ -9,7 +9,7 @@
     	<link rel="stylesheet" href="css/q_common.css" />
     	<link rel="stylesheet" type="text/css" href="css/documentDetails.css" />
 	</head>
-	<body style="background-color: #EAEBED;" class="e_main" >
+	<body style="background-color: #EAEBED;" class="e_main layui-form" >
 		<div class="doc_main">
 			<div class="doc_main_left">
 				<p style="display: inline-block; margin-left: 5%; font-size: 16px;">
@@ -19,7 +19,7 @@
 					<span style="display: inline-block; color: #666666;">3</span>
 				</p>
 				<div class="doc_main_left_table">
-					<div class="layui-form">
+					<div >
 					  <table style="margin: 0;" class="layui-table">
 					    <tbody>
 					      <tr>
@@ -66,16 +66,16 @@
 				<div class="doc_main_left_table">
 					<div style="width: 48%; margin-top: 20px; float: left;">
 						<div style="width: 100%; margin-left: 0;" class="vit_content_right_btn">
-							<button style="width: 80px; margin-left: 0;">+上门服务</button>
-							<button style="width: 55px;">+抢修</button>
-							<button style="width: 55px;">+表扬</button>
-							<button style="width: 55px;">+投诉</button>
-							<button style="width: 55px;">+反馈</button>
+							<button onclick="shangmenfuwu()" style="width: 80px; margin-left: 0;">+上门服务</button>
+							<button onclick="qiangxiu()" style="width: 55px;">+抢修</button>
+							<button onclick="biaoyang()" style="width: 55px;">+表扬</button>
+							<button onclick="tousu()" style="width: 55px;">+投诉</button>
+							<button onclick="fankui()" style="width: 55px;">+反馈</button>
 						</div>
 					</div>
 					<div style="float: right; width: 50%; margin-top: 20px; margin-right: 1%;">
 						<div style="width: 100%;" class="vit_content_right_btn">
-							<button style="width: 40px; float: right;">取消</button>
+							<button onclick="cannelDetail()" style="width: 40px; float: right;">取消</button>
 							<button onclick="updateBei()" style="width: 65px; float: right;">修改备注</button>
 							<button onclick="gaiYue()" style="width: 40px; float: right;">改约</button>
 							<button style="width: 40px; float: right; ">催单</button>
@@ -174,7 +174,7 @@
 
 <!--用于改约-->
 
-<div id="gaiYue" style="display: none;" class="layui-form">
+<div id="gaiYue" style="display: none;">
 	<p style="margin-left: 12px; margin-top: 18px;">
 		<span>上班时间：</span>
 		<input type="checkbox" name="like1[write]" lay-skin="primary" title="夜间模式" >
@@ -271,9 +271,36 @@
 		</p>
 		
 	</div>
+
+		<!--取消-->
+	<div id="cannelDetail" style="display: none;padding: 20px">
+		<p style="color: black;font-size: 16px;margin-bottom: 15px">请输入取消原因 : </p>
+		<div class="layui-form-item">
+			<div class="layui-input-block" style="margin-left: 0;margin-top: -10px">
+				<input type="radio" name="1" value="" title="客户临时有事">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block" style="margin-left: 0;margin-top: -10px">
+				<input type="radio" name="1" value="" title="问题已经解决">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block" style="margin-left: 0;margin-top: -10px">
+				<input type="radio" name="1" value="" title="决意取消, 没有原因">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block" style="margin-left: 0;margin-top: -10px">
+				<input type="radio" name="1" value="" title="其他">
+			</div>
+		</div>
+
+		<textarea style="display: inline-block; resize: none;" placeholder="请输入取消原因" class="layui-textarea"></textarea>
+	</div>
 	
 	<div id="lookDetailCharges" style="display: none;" class="doc_main_left_table">
-		<div class="layui-form">
+		<div>
 		  <table style="margin: 0; text-align: center;" class="layui-table">
 		    <tbody>
 		      <tr>
@@ -390,6 +417,14 @@
 					}
 		   		});
 			};
+			//取消
+			cannelDetail = function () {
+				$.layer.openContent($("#cannelDetail"),"修改问题描述",{"area":['500px','400px'],btn:["确定","取消"],
+					yes:function(index, layero){
+						alert("我是确认按钮");
+					}
+				});
+			}
 			//改约
 			gaiYue = function(){
 				$.layer.openContent($("#gaiYue"),"改约",{"area":['700px','320px'],btn:["确定","取消"],
@@ -464,6 +499,28 @@
              ,layer = layui.layer
              ,layedit = layui.layedit
              ,laydate = layui.laydate;
+             
+             //跳转到上门服务
+             shangmenfuwu = function(){
+				parent.addTab('上门服务','doorToDoorService.html','shangmenfuwu');
+             	
+             }
+             //跳转到投诉页
+             tousu = function(){
+				parent.addTab('投诉','complaint.html','tousu');
+             };
+             //跳转到反馈
+             fankui = function(){
+             	parent.addTab('反馈','feedback.html','fankui');
+             };
+             //跳转到表扬
+             biaoyang = function(){
+             	parent.addTab('表扬','praise.html','biaoyang');
+             };
+             //跳转到抢修
+             qiangxiu = function(){
+             	parent.addTab('抢险','rushEmergency.html','qiangxiu');
+             };
          });
 	</script>
 </html>

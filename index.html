@@ -75,10 +75,17 @@
 						</li>
 					</ul>
 				</div>
-				<div class="e_header_right e_cb">
-					<img class="e_cb e_header_right_img_1" src="img/e_xiasanjiao.png" />
-					<span class="e_cb">administrator</span>
-					<img class="e_cb e_header_right_img_2" src="img/e_user.png" />
+				<div style="position: relative;" class="e_header_right e_cb">
+					<div  style="height: 30px; cursor: pointer; margin-top: 20px; ">
+						<img class="e_cb e_header_right_img_1" src="img/e_xiasanjiao.png" />
+						<span class="e_cb e_header_right_div3">administrator</span>
+						<img class="e_cb e_header_right_img_2" src="img/e_user.png" />
+					</div>
+					<ul class="e_header_right_div3_ul" style="position: absolute; display: none; left:20px; top:40px; ">
+						<li style=" background-color: #ffffff; border: solid 1px #cccccc; margin-top: 34px; text-align: center; width:110px; box-shadow: 0px 0px 10px #888888;">
+							<span style="height: 30px; display: inline-block; color: #000000; line-height: 30px;">退出</span>
+						</li>
+					</ul>
 				</div>
 			</header>
 
@@ -89,10 +96,10 @@
 				</ul>
 				<div  class="layui-tab-content" >
 				    <div   class="layui-tab-item layui-show ">
-				    	<iframe style="width: 100%; border:none; " id="index_main"    src="index_Main.html"></iframe>
+				    	<iframe style="width: 100%; border:none; " data-id = "10000"    src="index_Main.html"></iframe>
 				    </div>
 				    <div class="layui-tab-item">
-				    	<iframe style="width: 100%; border:none;"  id="index_callCenter"  src="index_callCentre.html"></iframe>
+				    	<iframe style="width: 100%; border:none;" data-id = "100001"     src="index_callCentre.html"></iframe>
 				    </div>
 				</div>
 			</div>
@@ -120,7 +127,26 @@
 			}).resize();
 			
 			
-
+			var $timer = null;
+			$('.e_header_right').mouseover(function(){
+				clearTimeout($timer); 
+				$('.e_header_right_div3_ul').show();
+			});
+			$('.e_header_right').mouseleave(function(){
+				$timer=setTimeout(function(){
+					$(".e_header_right_div3_ul").hide();
+					alert('+++++');
+				},500);
+			});
+			$(".e_header_right_div3_ul").mouseover(function(){
+				clearTimeout($timer);
+				$(".e_header_right_div3_ul").show();
+			});
+			$(".e_header_right_div3_ul").mouseout(function(){
+				$timer=setTimeout(function(){
+					$(".e_header_right_div3_ul").hide();
+				},500);
+			});
 		});
 		
 		/**********************************************************************************************************/
