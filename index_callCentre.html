@@ -275,10 +275,19 @@
                              <span class="gayColor pull-left">16:18</span>
                              <span class="gayColor pull-left" style="margin-left: 25px">咨询问题:</span>
                              <span class="gayColor pull-left">&nbsp;&nbsp;燃气-维修</span>
-
-                             <span class="pull-left" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-left: 100px"></span>
-                             <span class="pull-left" style="color: rgb(134,215,245);margin-left: 5px;cursor: default;margin-right: 8px">查看更多</span>
-
+                             <a style="display: inline-block; color:rgb(105,121,215); cursor: pointer; margin-left: 30px;">查看</a>
+                         </div>
+                         <div class="z_huihua">
+                             <span class="gayColor pull-left">16:18</span>
+                             <span class="gayColor pull-left" style="margin-left: 25px">咨询问题:</span>
+                             <span class="gayColor pull-left">&nbsp;&nbsp;燃气-维修</span>
+                             <a style="display: inline-block; color:rgb(105,121,215); cursor: pointer; margin-left: 30px;">查看</a>
+                         </div>
+                         <div class="z_huihua">
+                             <span class="gayColor pull-left">16:18</span>
+                             <span class="gayColor pull-left" style="margin-left: 25px">咨询问题:</span>
+                             <span class="gayColor pull-left">&nbsp;&nbsp;燃气-维修</span>
+                             <a style="display: inline-block; color:rgb(105,121,215); cursor: pointer; margin-left: 30px;">查看</a>
                          </div>
 
                      </div>
@@ -315,16 +324,14 @@
                              <div class="z_order">
 
                                  <div class="z_order_titleBar">
-                                     <div class="z_order_action pull-left">呼入单据</div>
-                                     <div class="pull-left">上门服务</div>
+                                     <div class="z_order_action active_qu_huo pull-left">呼入单据</div>
+                                     <div class="active_qu_huo pull-left">上门服务</div>
                                  </div>
 
-                                 <div class="z_order_content">
-
-                                     <div class="z_order_content_box">
-
+                                 <div  class="z_order_content">
+									<div class="huru_active_qu">
+										 <div class="z_order_content_box">
                                          <div class="z_content_box_leftPicXUN">询</div>
-
                                          <div >
                                              <span>咨询单编号:</span>
                                              <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
@@ -335,7 +342,6 @@
                                              <span style="margin-left: 25px">创建时间:</span>
                                              <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
                                          </div>
-
                                          <div style="margin-top: 18px">
                                              <span>姓名:</span>
                                              <span class="gayColor">&nbsp;&nbsp;张珊珊</span>
@@ -394,7 +400,45 @@
                                          <img src="img/z_zjt.png" alt="">
 
                                      </div>
+									</div>
+                                    
+									<div style="display: none;" class="shangmen_activd_qu">
+										<div class="z_order_content_box">
+                                         <div style="background-color:#A94442;" class="z_content_box_leftPicXUN">订</div>
+                                         <div >
+                                             <span>订单编号:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2902902809810</span>
+                                             <span style="margin-left: 25px">分类:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;维护-灶具</span>
+                                             <span style="margin-left: 25px">状态:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;已完成</span>
+                                             <span style="margin-left: 25px">创建时间:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;2017-12-22 11:22</span>
+                                         </div>
+                                         <div style="margin-top: 18px">
+                                             <span>姓名:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;张珊珊</span>
+                                             <span class="gayColor">&nbsp;(女士)</span>
+                                             <span style="margin-left: 80px">地址:</span>
+                                             <span class="gayColor">&nbsp;&nbsp;湖北省孝感市大悟县皇后东路12号银鹭小区2栋6单元109</span>
+                                         </div>
 
+                                         <div class="z_content_box_question">
+
+                                             <div class="gayColor">
+                                                 <span>咨询问题:</span>
+                                                 <span style="margin-left: 17px">灶具坏了,不通气了,怎么修?</span>
+                                             </div>
+                                             <div class="gayColor">
+                                                 <span>处理方法:</span>
+                                                 <span style="margin-left: 17px">以告知维修方法,以维修!</span>
+                                             </div>
+                                         </div>
+
+                                         <img src="img/z_zjt.png" alt="">
+
+                                     </div>
+									</div>
                                  </div>
                              </div>
                          </div>
@@ -845,6 +889,23 @@
              $('.layui-form-checkbox').eq(0).click(function(){
             	userNotice();
              });
+             
+             
+             //呼入单据 上门服务相互切换
+             $('.active_qu_huo').on('click',function(){
+             	var $index = $(this).index();
+             	$('.active_qu_huo').removeClass('z_order_action');
+             	$(this).addClass('z_order_action');
+             	if($index == 0){
+             		$('.huru_active_qu').show();
+             		$('.shangmen_activd_qu').hide();
+             	}else{
+             		$('.huru_active_qu').hide();
+             		$('.shangmen_activd_qu').show();
+             	}
+             });
+             
+             
              //跳转到上门服务
              shangmenfuwu = function(){
 				parent.addTab('上门服务','doorToDoorService.html','shangmenfuwu');
