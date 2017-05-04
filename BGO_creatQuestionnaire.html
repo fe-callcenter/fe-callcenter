@@ -66,10 +66,12 @@
                 </div>
             </div>
 
-            <div class="questionBigBox" style="position: relative">
+            <div class="questionBigBox" style="position: relative;background-color: white;">
 
-                <!--&lt;!&ndash;问题1&ndash;&gt;-->
+                <!--问题1-->
                 <!--<div class="z_questionBox marginT15" style="position: absolute">-->
+
+                    <!--<img style="width: 12px;height: 12px;position: absolute;top: 15px;right: 15px;" src="img/deleteQuestion.png">-->
 
                     <!--<div class="z_pxBox">-->
 
@@ -170,6 +172,44 @@
                         <!--<span class="zColor marginL15 z_pointer">删除</span>-->
                     <!--</div>-->
 
+                    <!--&lt;!&ndash;图标&ndash;&gt;-->
+                    <!--<div class="clearfix" style="margin-top: 15px">-->
+                        <!--<div class="pull-left" style="background: url('img/z_suotou.png');width: 24px;height: 24px;margin-left: 15px"></div>-->
+                        <!--<div class="clearfix z_layui_input pull-left">-->
+                            <!--<div class="layui-form-item">-->
+                                <!--<div class="layui-input-block" style="margin-left: 30px;margin-top: -5px">-->
+                                    <!--<input style="width: 350px;height: 28px;text-align: left" type="text" name="title" required placeholder="请在此输入问题"  lay-verify="required" autocomplete="off" class="layui-input">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="clearfix z_layui_input pull-left">-->
+                            <!--<div class="layui-form-item">-->
+                                <!--<div class="layui-input-block" style="margin-left: 10px;margin-top: -5px">-->
+                                    <!--<input style="width: 140px;height: 28px;text-align: left" type="text" name="title" required placeholder="跳转号"  lay-verify="required" autocomplete="off" class="layui-input">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<span class="zColor marginL15 z_pointer">删除</span>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;图标&ndash;&gt;-->
+                    <!--<div class="clearfix" style="margin-top: 15px">-->
+                        <!--<div class="pull-left" style="background: url('img/z_suotou.png');width: 24px;height: 24px;margin-left: 15px"></div>-->
+                        <!--<div class="clearfix z_layui_input pull-left">-->
+                            <!--<div class="layui-form-item">-->
+                                <!--<div class="layui-input-block" style="margin-left: 30px;margin-top: -5px">-->
+                                    <!--<input style="width: 350px;height: 28px;text-align: left" type="text" name="title" required placeholder="请在此输入问题"  lay-verify="required" autocomplete="off" class="layui-input">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="clearfix z_layui_input pull-left">-->
+                            <!--<div class="layui-form-item">-->
+                                <!--<div class="layui-input-block" style="margin-left: 10px;margin-top: -5px">-->
+                                    <!--<input style="width: 140px;height: 28px;text-align: left" type="text" name="title" required placeholder="跳转号"  lay-verify="required" autocomplete="off" class="layui-input">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<span class="zColor marginL15 z_pointer">删除</span>-->
+                    <!--</div>-->
                     <!--<div class="clearfix" style="margin-top: 8px">-->
 
                         <!--<span class="zColor z_pointer" style="margin-left: 70px">增加新的问题选项</span>-->
@@ -236,13 +276,14 @@
                 }
                 var nowIndex = index - 1;
                 $(this).parents('.z_questionBox').attr('data-index',nowIndex);
-
-
+                //移动的问题的高度
+                var zqheight = $(this).parents('.z_questionBox').height();
                 $(this).parents('.z_questionBox').animate({top:TTop},500, function () {
 
                     for (var i=0;i<queDiv.length;i++) {
 
                         if(queDiv.eq(i).attr('data-index') == index){
+                            nowTop = TTop + 40 + zqheight;
                             $('.z_questionBox').eq(i).css('top',nowTop);
                             setImage();
                         }
@@ -269,13 +310,14 @@
 
                 //改变index
                 var queDiv = $('.z_questionBox');
-
+                var zqheight = 0;
                 for (var i=0;i<queDiv.length;i++) {
 
                     var xia = parseInt(index) + 1;
 
                     if(queDiv.eq(i).attr('data-index') == xia){
                         TTop = $('.z_questionBox').eq(i).position().top;
+                        zqheight = $('.z_questionBox').eq(i).height();
                         console.log(TTop,nowTop)
                         queDiv.eq(i).attr('data-index',index)
                     }
@@ -284,7 +326,9 @@
                 var nowIndex = parseInt(index) + 1;
                 $(this).parents('.z_questionBox').attr('data-index',nowIndex);
 
+                //移动的问题的高度
 
+                TTop = nowTop + 40 + zqheight;
                 $(this).parents('.z_questionBox').animate({top:TTop},500, function () {
 
                     for (var i=0;i<queDiv.length;i++) {
@@ -304,15 +348,133 @@
 
         $('.creatQuestion').click(function () {
 
-            $('.questionBigBox').append('<div class="z_questionBox marginT15" style="position: absolute"> <div class="z_pxBox"> <img class="sjt" src="" alt=""><div>调</div> <div>整</div> <div>问</div> <div>题</div> <div>排</div> <div>序</div> <img class="xjt" src="" alt=""> </div> <!--多行输入框--> <div class="z_write_textE clearfix marginT10" style="height: 140px;position: relative"> <div class="pull-left z_leftDiv"> <div class="z_fs16">问题1:</div> <div class="z_two_fang marginT10"> <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary" > <span >必问</span> </div> </div> <!--<div >--> <div class="layui-form-item layui-form-text" style="float: left;margin-top: -40px"> <div class="layui-input-block" style="margin-left: 50px"> <textarea style="resize: none;width: 495px" placeholder="请输入内容" class="layui-textarea"></textarea></div> </div> <!--</div>--> </div> <!--问题提示--> <div class="clearfix"> <span class="pull-left">问题提示</span> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 12px;margin-top: -5px"> <input style="width: 500px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div></div> </div> <!--选项类型--> <div class="marginT15 z_object clearfix"> <div class="z_leftDiv pull-left">选项类型</div> <div class="z_rightDiv pull-left"> <div> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 10px;margin-top: -10px"> <input type="radio" name="sex" value="单选" title="单选" checked=""> <input type="radio" name="sex" value="多选" title="多选"> <input type="radio" name="sex" value="输入" title="输入"> </div> </div> </div> </div> </div> <!--图标--> <div class="clearfix" style="margin-top: 7px"> <div class="pull-left" style="background: url("img/z_suotou.png");width: 24px;height: 24px;margin-left: 15px"></div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 30px;margin-top: -5px"> <input style="width: 350px;height: 28px;text-align: left" type="text" name="title" required placeholder="请在此输入问题"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 10px;margin-top: -5px"> <input style="width: 140px;height: 28px;text-align: left" type="text" name="title" required placeholder="跳转号"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <span class="zColor marginL15 z_pointer">删除</span> </div> <!--图标--> <div class="clearfix" style="margin-top: 15px"> <div class="pull-left" style="background: url("img/z_suotou.png");width: 24px;height: 24px;margin-left: 15px"></div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 30px;margin-top: -5px"> <input style="width: 350px;height: 28px;text-align: left" type="text" name="title" required placeholder="请在此输入问题"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 10px;margin-top: -5px"> <input style="width: 140px;height: 28px;text-align: left" type="text" name="title" required placeholder="跳转号"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <span class="zColor marginL15 z_pointer">删除</span> </div> <div class="clearfix" style="margin-top: 8px"> <span class="zColor z_pointer" style="margin-left: 70px">增加新的问题选项</span> <span class="marginL5">/</span> <span class="zColor z_pointer marginL5">增加混合问题选项 (支持填写)</span> </div> <div class="gayColor" style="margin-top: 13px;margin-left: 70px">提示：选项少于2个时不可删除</div> </div>');
+            $('.questionBigBox').append('<div class="z_questionBox marginT15" style="position: absolute"><img class="deleteQuestionImg" style="width: 12px;height: 12px;position: absolute;top: 15px;right: 15px;" src="img/deleteQuestion.png"><div class="z_pxBox"> <img class="sjt" src="" alt=""><div>调</div> <div>整</div> <div>问</div> <div>题</div> <div>排</div> <div>序</div> <img class="xjt" src="" alt=""> </div> <!--多行输入框--> <div class="z_write_textE clearfix marginT10" style="height: 140px;position: relative"> <div class="pull-left z_leftDiv"> <div class="z_fs16">问题1:</div> <div class="z_two_fang marginT10"> <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary" > <span >必问</span> </div> </div> <!--<div >--> <div class="layui-form-item layui-form-text" style="float: left;margin-top: -40px"> <div class="layui-input-block" style="margin-left: 50px"> <textarea style="resize: none;width: 495px" placeholder="请输入内容" class="layui-textarea"></textarea></div> </div> <!--</div>--> </div> <!--问题提示--> <div class="clearfix"> <span class="pull-left">问题提示</span> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 12px;margin-top: -5px"> <input style="width: 500px;height: 28px;text-align: left" type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div></div> </div> <!--选项类型--> <div class="marginT15 z_object clearfix"> <div class="z_leftDiv pull-left">选项类型</div> <div class="z_rightDiv pull-left"> <div> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 10px;margin-top: -10px"> <input type="radio" name="sex" value="单选" title="单选" checked=""> <input type="radio" name="sex" value="多选" title="多选"> <input type="radio" name="sex" value="输入" title="输入"> </div> </div> </div> </div> </div> <!--图标--> <div class="clearfix" style="margin-top: 7px"> <div class="pull-left" style="background: url("img/z_suotou.png");width: 24px;height: 24px;margin-left: 15px"></div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 30px;margin-top: -5px"> <input style="width: 350px;height: 28px;text-align: left" type="text" name="title" required placeholder="请在此输入问题"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 10px;margin-top: -5px"> <input style="width: 140px;height: 28px;text-align: left" type="text" name="title" required placeholder="跳转号"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <span class="zColor marginL15 z_pointer">删除</span> </div> <!--图标--> <div class="clearfix" style="margin-top: 15px"> <div class="pull-left" style="background: url("img/z_suotou.png");width: 24px;height: 24px;margin-left: 15px"></div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 30px;margin-top: -5px"> <input style="width: 350px;height: 28px;text-align: left" type="text" name="title" required placeholder="请在此输入问题"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 10px;margin-top: -5px"> <input style="width: 140px;height: 28px;text-align: left" type="text" name="title" required placeholder="跳转号"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <span class="zColor marginL15 z_pointer">删除</span> </div> <div class="clearfix" style="margin-top: 8px"> <span class="zColor z_pointer zaddclick" style="margin-left: 70px">增加新的问题选项</span> <span class="marginL5">/</span> <span class="zColor z_pointer marginL5">增加混合问题选项 (支持填写)</span> </div> <div class="gayColor" style="margin-top: 13px;margin-left: 70px">提示：选项少于2个时不可删除</div> </div>');
 
             setHeight();
 
             setImage();
         });
 
+//        点击删除问题按钮
+        $('body').on('click','.deleteQuestionImg', function () {
+
+            var quesBox = $(this).parents('.z_questionBox');
+            var queDiv = $('.z_questionBox');
+            console.log('点击删除问题')
+            //让删除后边的z_questionBox获取新的位置
+            //找到questionBigBox  下的所有z_questionBox
+            for (var i=0;i<queDiv.length;i++){
+                if(queDiv.eq(i).attr('data-index') > quesBox.attr('data-index')){
+
+                    var qheight = quesBox.height();
+                    var Nowtop = queDiv.eq(i).position().top - qheight -40;
+
+//                    if(queDiv.eq(i).attr('data-index'))
+
+                    var dataIndex = queDiv.eq(i).attr('data-index');
+                    var nowDataIndex = dataIndex - 1;
+                    queDiv.eq(i).attr('data-index',nowDataIndex);
+
+                    queDiv.eq(i).css({
+                        'left':'20',
+                        'top':Nowtop
+                    })
+
+
+                }
+            }
+
+            var bigQH = $('.questionBigBox').height() - quesBox.height() - 40;
+            $('.questionBigBox').css('height',bigQH+'px');
+
+            quesBox.remove();
+
+            setImage();
+
+        })
+
+        $('body').on('click','.zaddclick', function(){
+
+            $(this).parent().siblings('.z_object').after('<div class="clearfix" style="margin-top: 15px"> <div class="pull-left" style="background: url("img/z_suotou.png");width: 24px;height: 24px;margin-left: 15px"></div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 30px;margin-top: -5px"> <input style="width: 350px;height: 28px;text-align: left" type="text" name="title" required placeholder="请在此输入问题"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <div class="clearfix z_layui_input pull-left"> <div class="layui-form-item"> <div class="layui-input-block" style="margin-left: 10px;margin-top: -5px"> <input style="width: 140px;height: 28px;text-align: left" type="text" name="title" required placeholder="跳转号"  lay-verify="required" autocomplete="off" class="layui-input"> </div> </div> </div> <span class="zColor marginL15 z_pointer">删除</span> </div>')
+
+            var quesBox = $(this).parents('.z_questionBox');
+            var queDiv = $('.z_questionBox');
+
+            if(quesBox.attr('data-index') == queDiv.length - 1){
+                //点击最后一个
+                //设置大的div的高度
+                var X = quesBox.position().top;
+
+                var bigHeight = X + quesBox.height() + 50;
+
+                $('.questionBigBox').css('height',bigHeight+'px');
+
+                return;
+            }
+            //找到questionBigBox  下的所有z_questionBox
+            for (var i=0;i<queDiv.length;i++){
+
+                if(queDiv.eq(i).attr('data-index') == (parseInt(quesBox.attr('data-index')) + 1)){
+
+                    console.log(i+'hahah');
+
+                    var qheight = quesBox.height();
+                    var qtop = quesBox.position().top;
+
+                    var Nowtop = qheight + qtop + 40;
+
+                    queDiv.eq(i).css({
+                        'left':'20',
+                        'top':Nowtop
+                    })
+
+                    quesBox = queDiv.eq(i);
+                    changeHeight(quesBox);
+
+                    for (var i=0;i<queDiv.length;i++){
+                        if(queDiv.eq(i).attr('data-index') == queDiv.length - 1){
+                            console.log(i);
+                            //设置大的div的高度
+                            var X = queDiv.eq(i).position().top;
+
+                            var bigHeight = X + queDiv.eq(i).height() + 50;
+
+                            $('.questionBigBox').css('height',bigHeight+'px');
+                        }
+                    }
+
+                }
+
+            }
+
+        })
 
     })
+
+    function changeHeight (quesBox) {
+        var queDiv = $('.z_questionBox');
+        for (var i=0;i<queDiv.length;i++) {
+
+            if (queDiv.eq(i).attr('data-index') == (parseInt(quesBox.attr('data-index')) + 1)) {
+
+                console.log(i + 'hahah');
+
+                var qheight = quesBox.height();
+                var qtop = quesBox.position().top;
+
+                var Nowtop = qheight + qtop + 40;
+
+                queDiv.eq(i).css({
+                    'left': '20',
+                    'top': Nowtop
+                })
+
+                quesBox = queDiv.eq(i);
+                changeHeight(quesBox);
+            }
+        }
+    }
+
 
     //设置图片
     function setImage () {
@@ -338,36 +500,36 @@
         //找到questionBigBox  下的所有z_questionBox
         var queDiv = $('.z_questionBox');
 
-        for (var i=0;i<queDiv.length;i++){
+        for (var i = 0; i < queDiv.length; i++) {
 
-            //给div一个表记
-            queDiv.eq(i).attr('data-index',i);
-
-            //获取当前z_questionBox高度
-            var qheight = queDiv.eq(i).height();
-
-            console.log(qheight);
-
-            var qtop = i * qheight;
-
-            if(i > 0){
-                qtop+=i * 40;
+            if (!queDiv.eq(i).attr('data-index')) {
+                //给div一个表记
+                queDiv.eq(i).attr('data-index', i);
             }
-            //给z_questionBox定位
-            queDiv.eq(i).css({
-                'left':'20',
-                'top':qtop
-            })
+
+            var qtop = 0;
+
+            //找到倒数第二个,拿到他
+            if (queDiv.eq(i).attr('data-index') == queDiv.length - 2) {
+                var qheight = queDiv.eq(i).height();
+                var ztop = queDiv.eq(i).position().top;
+                qtop = qheight + 40 + ztop;
+
+                //找到倒数第一个,赋值
+                $('.z_questionBox:last').css({
+                    'left': '20',
+                    'top': qtop
+                })
+            }
+
+            //设置大的div的高度
+            var X = $('.z_questionBox:last').position().top;
+
+            var bigHeight = X + $('.z_questionBox:last').height() + 50;
+
+            $('.questionBigBox').css('height', bigHeight + 'px');
 
         }
-
-        //设置大的div的高度
-        var X = $('.z_questionBox:last').position().top;
-
-        var bigHeight = X + $('.z_questionBox:last').height() + 50;
-
-        $('.questionBigBox').css('height',bigHeight+'px');
-
     }
 
     layui.use(['form', 'layedit', 'laydate'], function(){
