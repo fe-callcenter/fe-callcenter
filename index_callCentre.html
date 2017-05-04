@@ -155,7 +155,7 @@
                          </div>
 
                          <div class="z_lable">
-                             <button>营业厅</button>
+                             <button onclick="yingyeting()">营业厅</button>
                              <button>卡证</button>
                              <button onclick="biaoji()">表记</button>
                              <button onclick="jiaofei()">缴费</button>
@@ -940,6 +940,12 @@
              biaoji = function(){
              	parent.addTab('表记','souvenir.html','biaoji');
              	
+             };
+
+             //跳转到营业厅
+             yingyeting = function(){
+                 parent.addTab('营业厅','businessHall_map.html','yingyeting');
+
              };
              //跳转到缴费
              jiaofei = function(){
