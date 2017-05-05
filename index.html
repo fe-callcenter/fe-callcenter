@@ -1,180 +1,175 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>呼叫中心_首页</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="layui/css/layui.css"  media="all" />
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
-		<!--自定义CSS样式-->
-		<link rel="stylesheet" type="text/css" href="css/q_common.css" />
-		<link rel="stylesheet" type="text/css" href="css/q_Header.css" />
+<head>
+	<meta charset="UTF-8">
+	<title>呼叫中心_首页</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="layui/css/layui.css"  media="all" />
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
+	<!--自定义CSS样式-->
+	<link rel="stylesheet" type="text/css" href="css/q_common.css" />
+	<link rel="stylesheet" type="text/css" href="css/q_Header.css" />
 
-		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-	 	<script src="layer-v3.0.3/layer/layer.js"></script>
-		<script src="layui/layui.js" type="text/javascript"></script>
-	 	<script type="text/javascript" src="js/layer-extend.js"></script>
-		<style>
-			.admin-nav-card .layui-tab-item iframe { width: 100%; border: 0; height: 100%; }
-		</style>
-	</head>
-	<body style=" background-color: #EAEBED;">
-		<div class="e_main">
-			<header class="e_header">
-				<div class="e_header_left e_cb">
-					<img class="e_cb" src="img/e_logo.png" />
-					<span class="e_cb">呼叫中心</span>
-				</div>
-				<div class="e_header_middle e_cb">
-					<ul>
-						<li>
-							<a>
-								<img src="img/icon_jieshou.png" /><br/>
-								<span class="e_fontStyle">接受</span>
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/icon_baochi.png" /><br />
-								<span class="e_fontStyle">保持</span>
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/icon_zhuanjie.png" /><br />
-								<span class="e_fontStyle">转接</span>
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/icon_huiyi.png" /><br />
-								<span class="e_fontStyle">会议</span>
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/icon_guaduan.png" /><br />
-								<span class="e_fontStyle">挂断</span>
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/icon_end.png" /><br />
-								<span class="e_fontStyle">结束</span>
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/icon_bohaoban.png" /><br />
-								<span class="e_fontStyle">拨号版</span>
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/icon_zanli.png" /><br />
-								<span class="e_fontStyle">暂离</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div style="position: relative;" class="e_header_right e_cb">
-					<div class="e_header_right_divs"  style="height: 40px; margin-top: 15px; cursor: pointer;">
-						<img style="margin-top: 19px;" class="e_cb e_header_right_img_1" src="img/e_xiasanjiao.png" />
-						<span style="margin-top: 7px;" class="e_cb e_header_right_div3">administrator</span>
-						<img style="margin-top: 10px;" class="e_cb e_header_right_img_2" src="img/e_user.png" />
-					</div>
-					<ul class="e_header_right_div3_ul"  style="position: absolute;left:20px; top:100px; z-index: 999999; opacity:0;  cursor: pointer;">
-						<li onclick="loginOut()" style=" background-color: #ffffff; border: solid 1px #cccccc; margin-top: 34px; text-align: center; width:110px; box-shadow: 0px 0px 10px #888888;">
-							<span style="height: 30px; display: inline-block; color: #000000; line-height: 30px;">退出</span>
-						</li>
-					</ul>
-				</div>
-			</header>
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script src="layer-v3.0.3/layer/layer.js"></script>
+	<script src="layui/layui.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/layer-extend.js"></script>
+	<style>
+		.admin-nav-card .layui-tab-item iframe { width: 100%; border: 0; height: 100%; }
 
-			<div style="margin: 0;" class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-nav-card" >
-				<ul class="layui-tab-title">
-					<li lay-id="index" class="layui-this" >首页</li>
-				    <li lay-id="callworking">呼叫工作台</li>
-				</ul>
-				<div  class="layui-tab-content" >
-				    <div   class="layui-tab-item layui-show ">
-				    	<iframe style="width: 100%; border:none; " data-id = "10000"    src="index_Main.html"></iframe>
-				    </div>
-				    <div class="layui-tab-item">
-				    	<iframe style="width: 100%; border:none;" data-id = "100001"     src="index_callCentre.html"></iframe>
-				    </div>
+		.e_header .layui-nav-bar {
+			right: 0!important;
+			height: 0px!important;
+		}
+	</style>
+</head>
+<body style=" background-color: #EAEBED;">
+<div class="e_main">
+	<header class="e_header layui-nav" style="padding: 0">
+		<div class="e_header_left e_cb">
+			<img class="e_cb" src="img/e_logo.png" />
+			<span class="e_cb">呼叫中心</span>
+		</div>
+		<div class="e_header_middle e_cb">
+			<ul>
+				<li>
+					<a>
+						<img src="img/icon_jieshou.png" /><br/>
+						<span class="e_fontStyle">接受</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="img/icon_baochi.png" /><br />
+						<span class="e_fontStyle">保持</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="img/icon_zhuanjie.png" /><br />
+						<span class="e_fontStyle">转接</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="img/icon_huiyi.png" /><br />
+						<span class="e_fontStyle">会议</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="img/icon_guaduan.png" /><br />
+						<span class="e_fontStyle">挂断</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="img/icon_end.png" /><br />
+						<span class="e_fontStyle">结束</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="img/icon_bohaoban.png" /><br />
+						<span class="e_fontStyle">拨号版</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="img/icon_zanli.png" /><br />
+						<span class="e_fontStyle">暂离</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div style="" class="e_header_right e_cb">
+			<div class="layui-nav-item" style="width: 100%;height: 72px;position: relative;">
+				<div class="e_header_right_divs"  style="height: 40px; margin-top: 15px; cursor: pointer;">
+					<img style="margin-top: 19px;" class="e_cb e_header_right_img_1" src="img/e_xiasanjiao.png" />
+					<span style="margin-top: 7px;" class="e_cb e_header_right_div3">administrator</span>
+					<img style="margin-top: 10px;" class="e_cb e_header_right_img_2" src="img/e_user.png" />
 				</div>
+				<dl class="layui-nav-child">
+					<dd onclick="loginOut()"><a href="#">退出</a></dd>
+					<dd style="margin-top: 7px"><a href="#">后台模版</a></dd>
+					<dd style="margin-top: 7px"><a href="#">选中项</a></dd>
+					<dd style="margin-top: 7px"><a href="#">电商平台</a></dd>
+				</dl>
 			</div>
 		</div>
-		
-		<div id="loginOut" style="display: none;">
-			<p style="display: inline-block;margin-top:20px; width: 100%; text-align: center;">确定要退出吗？</p>
+	</header>
+
+	<div style="margin: 0;" class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-nav-card" >
+		<ul class="layui-tab-title">
+			<li lay-id="index" class="layui-this" >首页</li>
+			<li lay-id="callworking">呼叫工作台</li>
+		</ul>
+		<div  class="layui-tab-content" >
+			<div   class="layui-tab-item layui-show ">
+				<iframe style="width: 100%; border:none; " data-id = "10000"    src="index_Main.html"></iframe>
+			</div>
+			<div class="layui-tab-item">
+				<iframe style="width: 100%; border:none;" data-id = "100001"     src="index_callCentre.html"></iframe>
+			</div>
 		</div>
-	</body>
+	</div>
+</div>
 
-	<script type="text/javascript">
-		layui.config({base:'layui/modules/'}).use(['element','layer','tab'],function(){
-			var element = layui.element()
-			$ = layui.jquery,
-			layer = layui.layer,
-			
-			tab = layui.tab({
-				elem: '.admin-nav-card' //设置选项卡容器
-			});
-			
-            //element.tabDelete(filter, layid);
-			
-			$(window).on('resize', function() {
-				var $content = $('.admin-nav-card .layui-tab-content');
-				$content.height($(this).height() - 147);
-				$content.find('iframe').each(function() {
-					$(this).height($content.height());
+<div id="loginOut" style="display: none;">
+	<p style="display: inline-block;margin-top:20px; width: 100%; text-align: center;">确定要退出吗？</p>
+</div>
+</body>
+
+<script type="text/javascript">
+	layui.config({base:'layui/modules/'}).use(['element','layer','tab'],function(){
+		var element = layui.element()
+		$ = layui.jquery,
+				layer = layui.layer,
+
+				tab = layui.tab({
+					elem: '.admin-nav-card' //设置选项卡容器
 				});
-			}).resize();
-			
-			var $timer = null;
-			$('.e_header_right_divs').mouseover(function(){
-				clearTimeout($timer); 
-				$(".e_header_right_div3_ul").show();
-				$('.e_header_right_div3_ul').removeClass('ulHideQu').addClass('ulShowQu');
-				$('.e_header_right_img_1').removeClass('q_header_img_xuan_2').addClass('q_header_img_xuan');
-			});
-			$('.e_header_right_divs').mouseleave(function(){
-				$timer=setTimeout(function(){
-					$(".e_header_right_div3_ul").fadeOut();
-					$(".e_header_right_div3_ul").removeClass('ulShowQu').addClass('ulHideQu');
-					$('.e_header_right_img_1').removeClass('q_header_img_xuan').addClass('q_header_img_xuan_2');
-				},500);
-			});
-			$(".e_header_right_div3_ul").mouseover(function(){
-				clearTimeout($timer);
-				$(".e_header_right_div3_ul").show();
-				$(".e_header_right_div3_ul").removeClass('ulHideQu').addClass('ulShowQu');
-				$('.e_header_right_img_1').removeClass('q_header_img_xuan_2').addClass('q_header_img_xuan');
-			});
-			$(".e_header_right_div3_ul").mouseleave(function(){
-				$timer=setTimeout(function(){
-					$(".e_header_right_div3_ul").fadeOut();
-					$(".e_header_right_div3_ul").removeClass('ulShowQu').addClass('ulHideQu');
-					$('.e_header_right_img_1').removeClass('q_header_img_xuan').addClass('q_header_img_xuan_2');
-				},500);
-			});
-		});
-		//退出函数
-		loginOut = function(){
-			$.layer.openContent($("#loginOut"),"退出提示",{"area":['200px','145px'],btn:["确定","取消"],
-				yes:function(index, layero){
-					alert("我是确认按钮");
-				}
-	   		});
-		};
-		/**********************************************************************************************************/
-		
-		//用于动态生成tab标签
-		function addTab(text,url,id){
-		  	tab.tabAdd({"title":text,"href":url,"id":id});
-		};
 
-	</script>
+		//element.tabDelete(filter, layid);
+
+		$(window).on('resize', function() {
+			var $content = $('.admin-nav-card .layui-tab-content');
+			$content.height($(this).height() - 147);
+			$content.find('iframe').each(function() {
+				$(this).height($content.height());
+			});
+		}).resize();
+
+		var $timer = null;
+		$('.e_header_right_divs').mouseover(function(){
+			clearTimeout($timer);
+			$(".e_header_right_div3_ul").show();
+			$('.e_header_right_div3_ul').removeClass('ulHideQu').addClass('ulShowQu');
+			$('.e_header_right_img_1').removeClass('q_header_img_xuan_2').addClass('q_header_img_xuan');
+		});
+		$('.e_header_right_divs').mouseleave(function(){
+			$timer=setTimeout(function(){
+				$(".e_header_right_div3_ul").fadeOut();
+				$(".e_header_right_div3_ul").removeClass('ulShowQu').addClass('ulHideQu');
+				$('.e_header_right_img_1').removeClass('q_header_img_xuan').addClass('q_header_img_xuan_2');
+			},500);
+		});
+	});
+	//退出函数
+	loginOut = function(){
+		$.layer.openContent($("#loginOut"),"退出提示",{"area":['200px','145px'],btn:["确定","取消"],
+			yes:function(index, layero){
+				alert("我是确认按钮");
+			}
+		});
+	};
+	/**********************************************************************************************************/
+
+	//用于动态生成tab标签
+	function addTab(text,url,id){
+		tab.tabAdd({"title":text,"href":url,"id":id});
+	};
+
+</script>
 
 </html>
