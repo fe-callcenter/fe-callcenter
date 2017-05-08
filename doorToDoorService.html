@@ -254,13 +254,14 @@
                 <!--上门时间-->
                 <div class="marginT15 z_object clearfix">
                     <div class="z_leftDiv pull-left">上门时间:</div>
-                    <div class="z_rightDiv pull-left">
+                    <div class="z_rightDiv pull-left" style="width:80%;">
                         <div class="z_object_radio" style="height: 35px">
 
                             <input style="float: left;" type="checkbox" name="like1[write]" lay-skin="primary">
                             <span>夜间模式</span>
                             <span class="marginL30">7月12日 12:00 ~ </span><span>12:30</span><span>（系统推荐）</span>
-                            <span class="zColor z_pointer marginL30 e_rengongxuanzedfg">人工选择</span>
+                            <span class="zColor z_pointer marginL30 e_rengongxuanzedfg">改用人工选择方式</span>
+                            <span class="zColor z_pointer marginL30 e_rengongxuanzedfgChange" style="display: none">改用系统推荐方式</span>
 
                         </div>
                         <section class="rengongxuanze_time" style="width: 590px;  display: none;">
@@ -316,6 +317,7 @@
 							</ul>
 						</section>
                     </div>
+
                 </div>
 
                 <!--多行输入框-->
@@ -495,14 +497,9 @@
 		
 		//是否选择人工选择
 		$('.e_rengongxuanzedfg').click(function(){
-			if($('.e_rengongxuanzedfg').text() == '人工选择'){
-				$('.e_rengongxuanzedfg').text('系统推荐');
-				$('.rengongxuanze_time').show();
-			}else{
-				$('.e_rengongxuanzedfg').text('人工选择');
-				$('.rengongxuanze_time').hide();
-			}
+            $('.rengongxuanze_time').toggle();
 		});
+
 		
 		//模拟动态生成获取的天数 25代表获取的总天数
 			var rowNum = Math.floor(25/7);//获取要生成的ul数
@@ -537,6 +534,11 @@
 				var table = "<div><ul  style='width: 100%; display: inline-block;'>"+$(this).parent().html()+"</ul></div>";
 				$(this).parent().remove();
 				$('.ul_e_shijianduan').before(table);
+
+                $('.rengongxuanze_time').fadeOut();
+                $('.e_rengongxuanzedfgChange').show();
+                $('.e_rengongxuanzedfg').html('重选时间');
+
 			});
 
     });

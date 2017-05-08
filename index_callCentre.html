@@ -19,6 +19,13 @@
      <script src="js/jquery.pagination.min.js" type="text/javascript"></script>
 	 <script src="layui/layui.js" type="text/javascript"></script>
 	 <script type="text/javascript" src="js/layer-extend.js"></script>
+
+    <style>
+        .z_addright .layui-input-inline input {
+            height: 28px;
+        }
+    </style>
+
 </head>
 <body style="position: relative; background-color: #EAEBED;">
 
@@ -28,12 +35,12 @@
          <!--第三部分,和代码的部分-->
          <div class="z_workbench layui-form">
 
-             <div class="z_wb_title z_mt10">
+             <!--<div class="z_wb_title z_mt10">-->
 
-                 <span>主叫号码:</span><span>&nbsp;&nbsp;15011546520</span><span style="margin-left: 15px">归属地:</span>
-                 <span>&nbsp;&nbsp;北京市北京市</span><span style="margin-left: 15px">渠道:</span><span>&nbsp;&nbsp;新奥燃气</span>
-                 <span style="margin-left: 15px">列队:</span><span>&nbsp;&nbsp;新_新奥</span>
-             </div>
+                 <!--<span>主叫号码:</span><span>&nbsp;&nbsp;15011546520</span><span style="margin-left: 15px">归属地:</span>-->
+                 <!--<span>&nbsp;&nbsp;北京市北京市</span><span style="margin-left: 15px">渠道:</span><span>&nbsp;&nbsp;新奥燃气</span>-->
+                 <!--<span style="margin-left: 15px">列队:</span><span>&nbsp;&nbsp;新_新奥</span>-->
+             <!--</div>-->
 
              <form class="z_wb_search z_mt10">
 
@@ -183,7 +190,7 @@
                              <form style="position: absolute; left: 0; top:0;" class="z_addright"  action="">
 
                                  <div>
-                                     <div class="layui-input-inline" style="margin-top: -18px"> 
+                                     <div class="layui-input-inline" style="margin-top: -18px;width: 25%"> 
                                          <select name="quiz1"> 
                                              <option value="1">咨询一级分类</option> 
                                              <option value="2">咨询二级分类</option> 
@@ -192,7 +199,7 @@
                                          </select>
                                      </div>
 
-                                     <div class="layui-input-inline" style="margin-top: -18px;margin-left: 12px"> 
+                                     <div class="layui-input-inline" style="margin-top: -18px;margin-left: 12px;width: 25%"> 
                                          <select name="quiz2"> 
                                              <option value="2">咨询二级分类</option> 
                                              <option value="3">咨询三级分类</option> 
@@ -202,7 +209,7 @@
                                  </div>
 
                                  <div style="margin-top: -3px">
-                                     <div class="layui-input-inline"> 
+                                     <div class="layui-input-inline" style="width: 25%"> 
                                          <select name="quiz3"> 
                                              <option value="1">请选择大类</option> 
                                              <option value="2">一类</option> 
@@ -211,7 +218,7 @@
                                          </select>
                                      </div>
 
-                                     <div class="layui-input-inline" style="margin-left: 12px"> 
+                                     <div class="layui-input-inline" style="margin-left: 12px;width: 25%"> 
                                          <select name="quiz4"> 
                                              <option value="2">请选择设备</option> 
                                              <option value="3">1</option> 
@@ -219,13 +226,16 @@
                                          </select>
                                      </div>
 
-                                     <div class="layui-input-inline" style="margin-left: 12px"> 
+                                     <div class="layui-input-inline" style="margin-left: 12px;width: 25%"> 
                                          <select name="quiz5"> 
                                              <option value="2">请选择品类</option> 
                                              <option value="3">2</option> 
                                              <option value="4">4</option> 
                                          </select>
                                      </div>
+
+                                     <span style="margin-left: 30px">目标价: </span>
+                                     <span>80元</span>
                                  </div>
 
                                  <!--<input type="text" class="z_input z_questionInput" placeholder="请输入咨询内容">-->
@@ -665,27 +675,7 @@
                              <span class="pull-right z_openyhhd" style="color: rgb(134,215,245);margin-left: 3px;cursor: default;">展开</span>
                              <span class="pull-right" style="background-image: url('img/z_xljt.png');width: 10px;height: 10px;margin-top: 5px;"></span>
                          </div>
-                         <!--<div class="z_line z_yhhd_line">-->
-                             <!--<div><span>水盆下水疏通</span><span> (次)</span></div>-->
-                             <!--<div class="z_mt10"><span>活动时间:</span><span>&nbsp;&nbsp;2018-1-1 12:22</span></div>-->
-                             <!--<div class="z_mt10"><span>原价:</span><span>100元</span><span style="margin-left: 5px">APP优惠价:</span><span style="color: rgb(253,109,100);">80元</span><span style="margin-left: 5px">CRM优惠价:</span><span style="color: rgb(253,109,100);">80元</span></div>-->
-                         <!--</div>-->
-                         <!--<div class="z_line z_yhhd_line">-->
-                             <!--<div><span>水盆下水疏通</span><span> (次)</span></div>-->
-                             <!--<div class="z_mt10"><span>活动时间:</span><span>&nbsp;&nbsp;2018-1-1 12:22</span></div>-->
-                             <!--<div class="z_mt10"><span>原价:</span><span>100元</span><span style="margin-left: 5px">APP优惠价:</span><span style="color: rgb(253,109,100);">80</span><span style="margin-left: 5px">CRM优惠价:</span><span style="color: rgb(253,109,100);">80元</span></div>-->
-                         <!--</div>-->
-                         <!--<div class="z_line z_yhhd_line">-->
-                             <!--<div><span>水盆下水疏通</span><span> (次)</span></div>-->
-                             <!--<div class="z_mt10"><span>活动时间:</span><span>&nbsp;&nbsp;2018-1-1 12:22</span></div>-->
-                             <!--<div class="z_mt10"><span>原价:</span><span>100元</span><span style="margin-left: 5px">APP优惠价:</span><span style="color: rgb(253,109,100);">80</span><span style="margin-left: 5px">CRM优惠价:</span><span style="color: rgb(253,109,100);">80元</span></div>-->
-                         <!--</div>-->
-                         <!--<div class="z_line z_yhhd_bottom">-->
-                             <!--<p>*以上报价为维修人工费, 不包含材料配件费</p>-->
-                             <!--<nav aria-label=''>-->
-                                 <!--<ul  class='pagination' id='pagination'></ul>-->
-                             <!--</nav>-->
-                         <!--</div>-->
+
                      </div>
                      <div class="isShowYHList" style="display: none;background-color: white;margin-top: -4px;padding: 0 10px 10px 10px">
                          <div class="z_line z_yhhd_line">
