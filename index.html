@@ -108,15 +108,19 @@
 
 	<div style="margin: 0;" class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-nav-card" >
 		<ul class="layui-tab-title" style="border-bottom: none">
-			<li lay-id="index" class="layui-this" >首页</li>
-			<li lay-id="callworking">呼叫工作台</li>
+			<li lay-id="index" class="layui-this" >首页
+				<i class="layui-icon layui-unselect layui-tab-close layui-refresh" onclick="refreshTab('index')">&#x1002;</i>
+			</li>
+			<li lay-id="callworking">呼叫工作台
+				<i class="layui-icon layui-unselect layui-tab-close layui-refresh" onclick="refreshTab('callworking')">&#x1002;</i>
+			</li>
 		</ul>
 		<div  class="layui-tab-content" >
 			<div   class="layui-tab-item layui-show ">
-				<iframe style="width: 100%; border:none; " data-id = "10000"    src="index_Main.html"></iframe>
+				<iframe style="width: 100%; border:none; " data-id = "10000" src="index_Main.html"></iframe>
 			</div>
 			<div class="layui-tab-item">
-				<iframe style="width: 100%; border:none;" data-id = "100001"     src="index_callCentre.html"></iframe>
+				<iframe style="width: 100%; border:none;" data-id = "100001" src="index_callCentre.html"></iframe>
 			</div>
 		</div>
 	</div>
@@ -175,6 +179,11 @@
 	//用于动态生成tab标签
 	function addTab(text,url,id){
 		tab.tabAdd({"title":text,"href":url,"id":id});
+	};
+	
+	//用于刷新tab标签
+	function refreshTab(layId){
+		tab.refreshByLayId(layId);
 	};
 
 </script>

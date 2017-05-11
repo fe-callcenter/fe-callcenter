@@ -84,8 +84,9 @@ layui.define(['element'], function (exports) {
                 }
             }
             title += data.title ;
+            title += '<i class="layui-icon layui-unselect layui-tab-close layui-refresh" data-id="' + globalTabIdIndex + '">&#x1002;</i>';
             if (that.config.closed) {
-                title += '<i class="layui-icon layui-unselect layui-tab-close" data-id="' + globalTabIdIndex + '">&#x1006;</i>';
+                title += '<i class="layui-icon layui-unselect layui-tab-close layui-close" data-id="' + globalTabIdIndex + '">&#x1006;</i>';
             }
             //添加tab
             element.tabAdd(ELEM.tabFilter, {
@@ -98,10 +99,13 @@ layui.define(['element'], function (exports) {
             ELEM.contentBox.find('iframe[data-id=' + globalTabIdIndex + ']').each(function () {
                 $(this).height(ELEM.contentBox.height());
             });
+            //tab刷新
+            ELEM.titleBox.find('li').children('i.layui-refresh[data-id=' + globalTabIdIndex + ']').on('click', function () {
+                   that.refreshByIndex($(this).parent('li').index());
+                });
             if (that.config.closed) {
                 //监听关闭事件
-               
-                ELEM.titleBox.find('li').children('i.layui-tab-close[data-id=' + globalTabIdIndex + ']').on('click', function () {
+                ELEM.titleBox.find('li').children('i.layui-close[data-id=' + globalTabIdIndex + ']').on('click', function () {
                     element.tabDelete(ELEM.tabFilter, that.getTabId($(this).parent('li').index())).init();
                 });
             };
@@ -112,6 +116,29 @@ layui.define(['element'], function (exports) {
         }
     };
     
+    Tab.prototype.refreshByIndex=function(i)
+    {
+    	var that = ELEM.contentBox === undefined ? this.init() : this;
+    	ELEM.contentBox.find('.layui-tab-item').each(function (j, e) {
+            if(i==j)
+            {
+            	var _iframeUrl = $(this).children().attr("src");
+            	$(this).children().attr("src",_iframeUrl);
+            }
+        });
+    }
+    
+    Tab.prototype.refreshByLayId=function(id)
+    {
+    	var that = ELEM.titleBox === undefined ? this.init() : this;
+    	ELEM.titleBox.find('li').each(function (j, e) {
+            if($(this).attr("lay-id")==id)
+            {
+            	that.refreshByIndex(j);
+            	return;
+            }
+        });
+    }
 
     Tab.prototype.getTabId=function(i){
     	var that = ELEM.titleBox === undefined ? this.init() : this,
