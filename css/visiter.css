@@ -12,6 +12,15 @@ th,td {
 .clickBackGColor {
 	background-color: #EAEBED;
 }
+.grayColor {
+	color: #999999;
+}
+.question_tip{
+	color: red;
+	margin-bottom: 10px;
+	margin-left: 55px;
+	margin-top: 15px
+}
 
 .vit_main_header_span{
 	display: inline-block;
@@ -32,7 +41,6 @@ th,td {
 	background-color: #ffffff;
 }
 .vit_main_header_span2 span{
-	color:#666666;
 }
 .vit_main_table{
 	width: 98%;
@@ -68,6 +76,18 @@ th,td {
 	margin-top: 8px;
 	float: left;
 }
+
+.vit_content_left_tip {
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 55px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding-left: 10px;
+	background-color: #EAEBED;
+}
+
 .vit_content_left_span{
 	display: inline-block;
 	width: 100%;
@@ -78,16 +98,40 @@ th,td {
 	font-weight: 300;
 	margin-bottom: 12px;
 }
+
+.vit_content_left_norTitle {
+	height: 60px;
+	line-height: 60px;
+	margin: 20px 35px;
+	text-align: center;
+	background-color: #EAEBED;
+}
+
 .vit_content_left_title{
 	width: 98%;
 	margin-left:1%;
 	border-bottom: dashed 1px #cccccc;
 	margin-bottom: 8px;
 }
+
+.vit_content_left_title .layui-input-block {
+	margin-left: 55px;
+}
+
+.vit_content_left_title .layui-input {
+	border-radius: 0;
+	padding-left: 0;
+	margin-left: -14px;
+	width: 300px;
+	height: 20px;
+	display: inline-block;
+	border: none;
+	border-bottom: 1px solid #999;
+}
 .vit_content_left_title_span{
 	display: inline-block;
 	font-size: 14px;
-	color: #000000;
+	/*color: #000000;*/
 }
 .vit_content_left_title_span2{
 	display: inline-block;
@@ -99,11 +143,9 @@ th,td {
 	display: inline-block;
 	margin-top: 8px;
 	text-indent: 24px;
-	color:#000000;
 	margin-bottom: 8px;
 }
 .vit_content_left_title_p span{
-	color: #cccccc;
 }
 .vit_lable_inp{
 	display: inline-block;

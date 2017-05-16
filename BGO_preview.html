@@ -9,69 +9,140 @@
 
     <!--自定义样式-->
     <link rel="stylesheet" href="css/visiter.css" />
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 </head>
-<body style="background-color: #EAEBED;" class="e_main layui-form">
+<body style="background-color: #EAEBED;color: #333333;" class="e_main layui-form">
+	<!-- 勿删
+    	 <i class="layui-anim layui-icon layui-anim-scaleSpring"></i>
+         <i class="layui-anim layui-icon"></i>
+    -->
 <div class="vit_main">
-
     <div class="vit_content">
-
         <div style="width: 100%" class="vit_content_left">
             <span class="vit_content_left_span">我是问卷标题</span>
-            <div class="vit_content_left_title">
-                <span class="vit_content_left_title_span">亲爱的客户：</span><br />
-                <span class="vit_content_left_title_span2">寄丢额外加覅额外发文地位凤凰iwehfiudewidjweidjiwidwjidw地为降低为焦点网打击我饿叫爹爹的结尾的金额我的均为的今晚iodjewidjwe寄丢额外加覅额外发文地位凤凰iwehfiudewidjweidjiwidwjidw地为降低为焦点网打击我饿叫爹爹的结尾的金额我的均为的今晚iodjewidjwe</span>
+            <div class="vit_content_left_norTitle ">
+                亲爱的用户您好,你昨天是不是买了啥啥啥?
             </div>
-            <div class="vit_content_left_title">
-                <p class="vit_content_left_title_p"><span style="color: #333333;">问题1: </span><span style="color: #333333;">您一般多久购买一次燃气</span><span>（用户不愿意回答可以不选择）</span></p><br />
-                <label style="text-indent: 24px; color: #666666; font-weight:100;">
-                    <div class="layui-input-block" style="margin-left: 0;margin-top: -5px">
-                        <input type="radio" name="sex1" value="7天以内" title="7天以内" checked="">
-                    </div>
-                </label><br />
-                <label style="text-indent: 24px; color: #666666; font-weight:100;">
-                    <div class="layui-input-block" style="margin-left: 0;margin-top: -5px">
-                        <input type="radio" name="sex1" value="7-30天" title="7-30天">
-                    </div>
-                </label><br />
-                <label style="text-indent: 24px; color: #666666; font-weight:100; margin-bottom: 20px;">
-                    <div class="layui-input-block pull-left" style="margin-left: 0;margin-top: -5px">
-                        <input type="radio" name="sex1" value="31天以上" title="31天以上">
-                    </div>
-                    <input placeholder="请注明" class="vit_lable_inp pull-left" style="margin-top: 6px" type="text"/>
-                </label>
-            </div>
-            <div class="vit_content_left_title">
-                <p class="vit_content_left_title_p"><span style="color: #333333;">问题1: </span><span style="color: #333333;">您一般多久购买一次燃气</span><span>（用户不愿意回答可以不选择）</span></p><br />
-                <label style="text-indent: 24px; color: #666666; font-weight:100;">
-                    <div class="layui-input-block" style="margin-left: 0;margin-top: -5px">
-                        <input type="radio" name="sex" value="7天以内" title="7天以内" checked="">
-                    </div>
-                </label><br />
-                <label style="text-indent: 24px; color: #666666; font-weight:100;">
-                    <div class="layui-input-block" style="margin-left: 0;margin-top: -5px">
-                        <input type="radio" name="sex" value="7-30天" title="7-30天">
-                    </div>
-                </label><br />
-                <label style="text-indent: 24px; color: #666666; font-weight:100; margin-bottom: 20px;">
-                    <div class="layui-input-block pull-left" style="margin-left: 0;margin-top: -5px">
-                        <input type="radio" name="sex" value="31天以上" title="31天以上">
-                    </div>
-                    <input placeholder="请注明" class="vit_lable_inp pull-left" style="margin-top: 6px" type="text"/>
-                </label>
-            </div>
-            <div style="border:none;" class="vit_content_left_title">
-                <p class="vit_content_left_title_p">您一般多久购买一次燃气<span>（用户不愿意回答可以不选择）</span></p><br />
+            <div class="vit_content_left_title" question_id="1">
+                <p class="vit_content_left_title_p"><span style="font-weight: 800">
+                	问题1 : </span><span style="margin-left: 5px;">您一般多久购买一次燃气</span>
+                	<span>（用户不愿意回答可以不选择）</span></p><br />
+                <div class="vit_content_left_tip">提示点 : 1 . 用户不愿意回答可以不选择</div>
 
-                <div >
-                    <div class="layui-form-item layui-form-text">
-                        <div class="layui-input-block" style="margin-left: 25px">
-                            <textarea style="resize: none;width: 90%" placeholder="请输入内容" class="layui-textarea"></textarea>
-                        </div>
+                <div class="question_tip"></div>
+
+                <div class="layui-form-item question">
+                    <div class="layui-input-block">
+                        <input name="question1" value="" jump="5"  title="7天以内" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question1" value="" title="7-30天" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question1" value="" title="31天以上" type="radio" >
+                        <input name="title" lay-verify="title" autocomplete="off" class="layui-input" type="text">
                     </div>
                 </div>
-
             </div>
-            <span style="display: inline-block; margin-left: 48px; margin-top: 12px; margin-bottom: 12px;">感谢您的配合，有问题记得打电话哦</span>
+            <div class="vit_content_left_title" question_id="2">
+                <p class="vit_content_left_title_p"><span style="font-weight: 800">
+                	问题2 : </span><span style="margin-left: 5px;">您一般多久购买一次燃气</span>
+                	<span>（用户不愿意回答可以不选择）</span></p><br />
+
+                <div class="vit_content_left_tip">提示点 : 1 . 用户不愿意回答可以不选择</div>
+                
+                <div class="question_tip"></div>
+
+                <div class="layui-form-item question">
+                    <div class="layui-input-block">
+                        <input name="question2" value="" lay-skin="primary" title="7天以内" type="checkbox">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question2" value="" lay-skin="primary" title="7-30天" type="checkbox">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question2" value="" jump="3" lay-skin="primary" title="31天以上" type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div style="border:none;" class="vit_content_left_title" question_id="3">
+
+                <p class="vit_content_left_title_p"><span style="font-weight: 800">问题3 : </span><span style="margin-left: 5px;">您一般多久购买一次燃气</span><span>（用户不愿意回答可以不选择）</span></p><br />
+
+                <div class="vit_content_left_tip">提示点 : 1 . 用户不愿意回答可以不选择</div>
+
+                <div class="question_tip"></div>
+
+                <div class="layui-form-item question">
+                    <div class="layui-input-block">
+                        <input style="margin-left: 2px;width: 400px;" name="title" lay-verify="title" autocomplete="off" class="layui-input" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="vit_content_left_title" question_id="4">
+                <p class="vit_content_left_title_p"><span style="font-weight: 800">
+                	问题4 : </span><span style="margin-left: 5px;">您一般多久购买一次燃气</span>
+                	<span>（用户不愿意回答可以不选择）</span></p><br />
+                <div class="vit_content_left_tip">提示点 : 1 . 用户不愿意回答可以不选择</div>
+
+                <div class="question_tip"></div>
+
+                <div class="layui-form-item question">
+                    <div class="layui-input-block">
+                        <input name="question4" value="" jump="6" title="7天以内" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question4" value="" title="7-30天" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question4" value="" title="31天以上" type="radio">
+                        <input name="title" lay-verify="title" autocomplete="off" class="layui-input" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="vit_content_left_title" question_id="5">
+                <p class="vit_content_left_title_p"><span style="font-weight: 800">
+                	问题5 : </span><span style="margin-left: 5px;">您一般多久购买一次燃气</span>
+                	<span>（用户不愿意回答可以不选择）</span></p><br />
+                <div class="vit_content_left_tip">提示点 : 1 . 用户不愿意回答可以不选择</div>
+
+                <div class="question_tip"></div>
+
+                <div class="layui-form-item question">
+                    <div class="layui-input-block">
+                        <input name="question5" value="" title="7天以内" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question5" value="" title="7-30天" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question5" value="" title="31天以上" type="radio">
+                        <input name="title" lay-verify="title" autocomplete="off" class="layui-input" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="vit_content_left_title" question_id="6">
+                <p class="vit_content_left_title_p"><span style="font-weight: 800">
+                	问题6 : </span><span style="margin-left: 5px;">您一般多久购买一次燃气</span>
+                	<span>（用户不愿意回答可以不选择）</span></p><br />
+                <div class="vit_content_left_tip">提示点 : 1 . 用户不愿意回答可以不选择</div>
+
+                <div class="question_tip"></div>
+
+                <div class="layui-form-item question">
+                    <div class="layui-input-block">
+                        <input name="question6" value="" title="7天以内" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question6" value="" title="7-30天" type="radio">
+                    </div>
+                    <div class="layui-input-block">
+                        <input name="question6" value="" title="31天以上" type="radio">
+                        <input name="title" lay-verify="title" autocomplete="off" class="layui-input" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="vit_content_left_norTitle">感谢您的配合，有问题记得打电话哦</div>
             <div style="display: inline-block;text-align: center; width: 100%; margin-bottom: 40px;margin-top: 15px">
                 <div>
                     <button type="button" class="btn btn-primary">关 闭</button>
@@ -85,19 +156,86 @@
 </div>
 <!--弹出框-->
 </body>
-<script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
-<script src="js/jquery.pagination.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="layui/layui.js" type="text/javascript"></script>
 <script>
 
     layui.use(['form', 'layedit', 'laydate'], function(){
-        var form = layui.form()
+        	 form = layui.form()
                 ,layer = layui.layer
                 ,layedit = layui.layedit
                 ,laydate = layui.laydate;
+                
+                init();
 
     });
+    
+    function init(){
+    	$(".question .layui-form-radio").click(function(){
+    		if(!$(this).hasClass("layui-radio-disbaled"))
+    			check_ralation_jump($(this));
+    	});
+    }
+    //检测是否有关联跳题
+    function check_ralation_jump(_this)
+    {
+    	var question_id=_this.parent().parent().parent().attr("question_id");
+    		question_id = parseInt(question_id)+1;
+    		var jump = _this.prev(":radio").attr("jump");
+    		var ischecked = _this.hasClass("layui-form-radioed");
+    		if(jump!=undefined)
+    		{
+    			for(var i=question_id;i<jump;i++)
+    			{
+    				fun_jump(i);
+    			}
+    		}
+    		//查找改选项的同级元素是否有跳题
+    		_this.parent().siblings().each(function(){
+    			var _jump = $(this).find(":radio").attr("jump");
+    			if(_jump!=undefined)
+    			{
+    				for(var i=question_id;i<_jump;i++)
+    				{
+	    				fun_nojump(i);
+	    			}
+    			}
+    		});
+    }
+    function fun_jump(jump)
+    {
+    	var dom = $(".vit_content_left_title[question_id='"+jump+"'] .question .layui-form-radio");
+    	if(dom.html()!=undefined)
+    	{
+    		check_ralation_jump(dom);
+    	}
+    	$(".vit_content_left_title[question_id='"+jump+"']").addClass("grayColor");
+		//单选处理
+		$(".vit_content_left_title[question_id='"+jump+"'] .layui-form-radio").addClass("layui-radio-disbaled layui-disabled");
+		$(".vit_content_left_title[question_id='"+jump+"'] :radio").attr("disabled","disabled");
+		$(".vit_content_left_title[question_id='"+jump+"'] .layui-form-radio .layui-anim-scaleSpring").html("");
+		//多选处理
+		$(".vit_content_left_title[question_id='"+jump+"'] .layui-form-checkbox").addClass("layui-checkbox-disbaled layui-disabled");
+		$(".vit_content_left_title[question_id='"+jump+"'] :checkbox").attr("disabled","disabled");
+		//文本框处理
+		$(".vit_content_left_title[question_id='"+jump+"'] :text").attr("disabled","disabled");
+		//处理填写数据
+		$(".vit_content_left_title[question_id='"+jump+"'] .question_tip").html("(此题基于用户选择 , 跳过)");
+		$(".vit_content_left_title[question_id='"+jump+"'] :text").val("");
+    }
+    function fun_nojump(_jump)
+    {
+    	$(".vit_content_left_title[question_id='"+_jump+"']").removeClass("grayColor");
+		//单选处理
+		$(".vit_content_left_title[question_id='"+_jump+"'] .layui-form-radio").removeClass("layui-radio-disbaled layui-disabled");
+		$(".vit_content_left_title[question_id='"+_jump+"'] :radio").removeAttr("disabled");
+		//多选处理
+		$(".vit_content_left_title[question_id='"+_jump+"'] .layui-form-checkbox").removeClass("layui-checkbox-disbaled layui-disabled");
+		$(".vit_content_left_title[question_id='"+_jump+"'] :checkbox").removeAttr("disabled");
+		//文本框处理
+		$(".vit_content_left_title[question_id='"+_jump+"'] :text").removeAttr("disabled");
+		
+		$(".vit_content_left_title[question_id='"+_jump+"'] .question_tip").html("");
+    }
 </script>
 </html>
 
